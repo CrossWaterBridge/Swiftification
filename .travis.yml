@@ -1,0 +1,9 @@
+sudo: false
+language: objective-c
+
+xcode_project: Swiftification.xcodeproj
+xcode_scheme: Swiftification
+xcode_sdk: iphonesimulator9.1
+
+script:
+- xcodebuild clean build test -project Swiftification.xcodeproj -scheme Swiftification
