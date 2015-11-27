@@ -28,6 +28,7 @@
 import Dispatch
 
 public class ObserverSetEntry<Parameters> {
+
     private weak var object: AnyObject?
     private let f: AnyObject -> Parameters -> Void
     
@@ -35,6 +36,7 @@ public class ObserverSetEntry<Parameters> {
         self.object = object
         self.f = f
     }
+    
 }
 
 public class ObserverSet<Parameters> {
@@ -53,6 +55,10 @@ public class ObserverSet<Parameters> {
     
     public init() {}
     
+    /// Adds an observer `object`, whose method `f` will be called on notification.
+    /// - Note: Because `object` is held weakly there may be no need to keep a reference to the returned
+    /// observer set entry for explicit removal.
+    /// - returns: an observer set entry which can be passed to `remove:` to stop observing
     public func add<T: AnyObject>(object: T, _ f: T -> Parameters -> Void) -> ObserverSetEntry<Parameters> {
         let entry = ObserverSetEntry<Parameters>(object: object, f: { f($0 as! T) })
         synchronized {
@@ -61,16 +67,20 @@ public class ObserverSet<Parameters> {
         return entry
     }
     
+    /// Adds an observer `f` which will be called on notification.
+    /// - returns: an observer set entry which should be passed to `remove:` to stop observing
     public func add(f: Parameters -> Void) -> ObserverSetEntry<Parameters> {
         return self.add(self, { ignored in f })
     }
     
+    /// Removes an observer set entry.
     public func remove(entry: ObserverSetEntry<Parameters>) {
         synchronized {
             self.entries = self.entries.filter{ $0 !== entry }
         }
     }
     
+    /// Notifies current observers.
     public func notify(parameters: Parameters) {
         var toCall: [Parameters -> Void] = []
         

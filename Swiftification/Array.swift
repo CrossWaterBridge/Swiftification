@@ -24,6 +24,7 @@ import Foundation
 
 public extension Array {
     
+    /// Returns the element at `index`, or `nil` if `index` is out of bounds.
     subscript(safe index: Int) -> Element? {
         return (indices ~= index ? self[index] : nil)
     }

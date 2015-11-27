@@ -26,3 +26,7 @@ pod install
 ### Documentation
 
 See docs at http://cocoadocs.org/docsets/Swiftification/.
+
+### License
+
+Swiftification is released under the MIT license. See LICENSE for details.
