@@ -1,10 +1,10 @@
 Pod::Spec.new do |s|
   s.name         = "Swiftification"
-  s.version      = "1.0.0"
+  s.version      = "1.1.0"
   s.summary      = "Swift extensions to make life more pleasant."
   s.author       = 'Hilton Campbell'
   s.homepage     = "https://github.com/CrossWaterBridge/Swiftification"
-  s.license      = 'MIT'
+  s.license      = { :type => 'MIT', :file => 'LICENSE' }
   s.source       = { :git => "https://github.com/CrossWaterBridge/Swiftification.git", :tag => s.version.to_s }
   s.platform     = :ios, '8.0'
   s.source_files = 'Swiftification/*.swift'
