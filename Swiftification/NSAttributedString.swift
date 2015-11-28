@@ -22,13 +22,13 @@
 
 import Foundation
 
-func + (lhs: NSAttributedString, rhs: NSAttributedString) -> NSAttributedString {
+public func + (lhs: NSAttributedString, rhs: NSAttributedString) -> NSAttributedString {
     let result = NSMutableAttributedString(attributedString: lhs)
     result.appendAttributedString(rhs)
     return result
 }
 
-extension SequenceType where Generator.Element == NSAttributedString {
+public extension SequenceType where Generator.Element == NSAttributedString {
 
     /// Interpose the `separator` between elements of `self`, then concatenate the result.
     @warn_unused_result

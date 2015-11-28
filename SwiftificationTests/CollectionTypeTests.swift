@@ -21,7 +21,7 @@
 //
 
 import XCTest
-@testable import Swiftification
+import Swiftification
 
 class CollectionTypeTests: XCTestCase {
     
