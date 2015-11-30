@@ -31,7 +31,7 @@ public extension Array {
     
     /// Returns the first occurence of item, if found
     func find(condition: (Element) -> Bool) -> Element? {
-        if let index = indexOf( { condition($0) }) {
+        if let index = indexOf({ condition($0) }) {
             return self[index]
         }
 
