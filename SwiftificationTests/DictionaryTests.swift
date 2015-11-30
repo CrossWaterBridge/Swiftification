@@ -57,4 +57,11 @@ class DictionaryTests: XCTestCase {
         XCTAssertEqual(expected, actual)
     }
     
+    func testMapValues() {
+        let dictionary = ["lowercase": ["c", "a", "b"], "uppercase": ["A", "C", "B"]]
+        let sortedDictionary = dictionary.mapValues { $1.sort(<) }
+        XCTAssertEqual(sortedDictionary["lowercase"]!, ["a", "b", "c"])
+        XCTAssertEqual(sortedDictionary["uppercase"]!, ["A", "B", "C"])
+    }
+    
 }

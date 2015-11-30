@@ -20,40 +20,22 @@
 // THE SOFTWARE.
 //
 
-import Foundation
+import XCTest
+import Swiftification
 
-public extension Dictionary {
+class NSDateTests: XCTestCase {
     
-    /// Returns the union of `self` and the other dictionaries. If more than
-    /// one dictionary has the same key, it will take on the rightmost
-    /// dictionary's value.
-    @warn_unused_result
-    func union(first: Dictionary, _ rest: Dictionary...) -> Dictionary {
-        var result = self
-        for dictionary in [first] + rest {
-            for (key, value) in dictionary {
-                result[key] = value
-            }
-        }
-        return result
+    func testLessThanOperator() {
+        XCTAssertTrue(NSDate() > NSDate(timeIntervalSince1970: 0))
     }
     
-    /// Returns a new dictionary by running a map on each key and getting a new value
-    @warn_unused_result
-    func mapValues<V>(map: (Key, Value) -> V) -> [Key: V] {
-        var results = [Key: V]()
-        for (key, value) in self {
-            results[key] = map(key, value)
-        }
-        
-        return results
+    func testGreaterThanOperator() {
+        XCTAssertTrue(NSDate(timeIntervalSince1970: 0) < NSDate())
     }
     
-}
-
-/// Returns the union of the two dictionaries. For any keys that both
-/// dictionaries have in common, the result will take on the value from the
-/// right dictionary.
-public func | <K, V>(lhs: Dictionary<K, V>, rhs: Dictionary<K, V>) -> Dictionary<K, V> {
-    return lhs.union(rhs)
+    func testEqualToOperator() {
+        let now = NSDate()
+        XCTAssertTrue(now == now)
+    }
+    
 }
