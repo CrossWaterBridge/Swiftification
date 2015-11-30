@@ -23,7 +23,7 @@
 import XCTest
 import Swiftification
 
-class CollectionTypeTests: XCTestCase {
+class SequenceTypeTests: XCTestCase {
     
     func testMapFilter() {
         let array = [1, 2, 3]
