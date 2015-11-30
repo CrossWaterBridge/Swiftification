@@ -22,43 +22,16 @@
 
 import Foundation
 
-public extension Array {
-    
-    /// Returns the element at `index`, or `nil` if `index` is out of bounds.
-    subscript(safe index: Int) -> Element? {
-        return (indices ~= index ? self[index] : nil)
-    }
-    
-    /// Returns the first occurence of item, if found
-    func find(condition: (Element) -> Bool) -> Element? {
-        if let index = indexOf( { condition($0) }) {
-            return self[index]
-        }
+public extension Range {
 
-        return nil
+    /// Returns the Range as an Array
+    func toArray() -> [Element] {
+        return self.map { $0 }
     }
     
     /// Returns a random item
     func random() -> Element {
-        return self[Int(rand()) % count]
+        return toArray().random()
     }
-    
-    /// Randomly rearranges the elements of self using the Fisher-Yates shuffle
-    mutating func shuffleInPlace() {
-        for var index = count - 1; index >= 1; index-- {
-            let newIndex = (0...index).random()
-            if index != newIndex {
-                swap(&self[index], &self[newIndex])
-            }
-        }
-        
-    }
-    
-    func shuffled() -> [Element] {
-        var tempArray = self
-        tempArray.shuffleInPlace()
-        
-        return tempArray
-    }
-    
+
 }

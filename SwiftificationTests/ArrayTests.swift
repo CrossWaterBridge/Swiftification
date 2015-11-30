@@ -34,4 +34,34 @@ class ArrayTests: XCTestCase {
         XCTAssertNil(array[safe: 3])
     }
     
+    func testRandom() {
+        let array = Array(1...10)
+        for var index = 0; index < 500; index++ {
+            let random = array.random()
+            XCTAssertTrue(random <= 10 && random >= 1)
+        }
+    }
+    
+    func testFind() {
+        let array = Array(1...10)
+        XCTAssertNotNil(array.find { $0 == 2 })
+        XCTAssertNil(array.find { $0 == 15 })
+    }
+    
+    func testShuffled() {
+        let array = Array(1...10)
+        let shuffledArray = array.shuffled()
+        XCTAssertTrue(array == Array(1...10))
+        XCTAssertTrue(shuffledArray != Array(1...10))
+        for value in shuffledArray {
+            XCTAssertTrue(value >= 1 && value <= 10)
+        }
+    }
+    
+    func testShuffleInPlace() {
+        var array = Array(1...10)
+        array.shuffleInPlace()
+        XCTAssertTrue(array != Array(1...10))
+    }
+    
 }

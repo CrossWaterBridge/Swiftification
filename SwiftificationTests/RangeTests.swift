@@ -20,13 +20,25 @@
 // THE SOFTWARE.
 //
 
-import Foundation
+import XCTest
+import Swiftification
 
-public extension Int {
+class RangeTests: XCTestCase {
     
-    /// Random integer between min and max (inclusive)
-    static func random(min: Int = 0, max: Int) -> Int {
-        return Int(arc4random_uniform(UInt32((max - min) + 1))) + min
+    func testToArray() {
+        let range = 1...10
+        let array = range.toArray()
+        XCTAssertTrue(array.count == 10)
+        XCTAssertTrue(array[0] == 1)
+        XCTAssertTrue(array[9] == 10)
     }
-
+    
+    func testRandom() {
+        let range = 1...10
+        for var index = 0; index < 500; index++ {
+            let random = range.random()
+            XCTAssertTrue(random <= 10 && random >= 1)
+        }
+    }
+    
 }
