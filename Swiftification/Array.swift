@@ -54,11 +54,24 @@ public extension Array {
         
     }
     
+    /// Returns a randomly arranged array using the Fisher-Yates shuffle
     func shuffled() -> [Element] {
         var tempArray = self
         tempArray.shuffleInPlace()
         
         return tempArray
+    }
+    
+    /// Groups the array into a dictionary by key specified in closure
+    func groupedBy<U>(groupClosure: (Element) -> U) -> [U: Array] {
+        var grouped = [U: Array]()
+        for element in self {
+            let key = groupClosure(element)
+            grouped[key] = (grouped[key] ?? []) + [element]
+        }
+        
+        
+        return grouped
     }
     
 }

@@ -23,6 +23,13 @@
 import XCTest
 import Swiftification
 
+private struct TestObject {
+    
+    let name: String
+    let type: Int
+    
+}
+
 class ArrayTests: XCTestCase {
     
     func testSafe() {
@@ -62,6 +69,13 @@ class ArrayTests: XCTestCase {
         var array = Array(1...10)
         array.shuffleInPlace()
         XCTAssertTrue(array != Array(1...10))
+    }
+    
+    func testGroupedBy() {
+        let array = [TestObject(name: "Test", type: 0), TestObject(name: "Test1", type: 0), TestObject(name: "Test2", type: 0), TestObject(name: "Test3", type: 1)]
+        let grouped = array.groupedBy { $0.type }
+        XCTAssertTrue(grouped[0]?.count == 3)
+        XCTAssertTrue(grouped[1]?.count == 1)
     }
     
 }
