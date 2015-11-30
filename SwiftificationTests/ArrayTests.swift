@@ -23,6 +23,13 @@
 import XCTest
 import Swiftification
 
+private struct TestObject {
+    
+    let name: String
+    let type: Int
+    
+}
+
 class ArrayTests: XCTestCase {
     
     func testSafe() {
@@ -32,6 +39,40 @@ class ArrayTests: XCTestCase {
         XCTAssertEqual(array[safe: 1], array[1])
         XCTAssertEqual(array[safe: 2], array[2])
         XCTAssertNil(array[safe: 3])
+    }
+    
+    func testRandom() {
+        let array = Array(1...10)
+        for _ in 0...500 {
+            let random = array.random()
+            XCTAssertTrue(random <= 10 && random >= 1)
+        }
+    }
+    
+    func testFind() {
+        let array = Array(1...10)
+        XCTAssertNotNil(array.find { $0 == 2 })
+        XCTAssertNil(array.find { $0 == 15 })
+    }
+    
+    func testShuffle() {
+        let array = Array(1...1000)
+        let shuffledArray = array.shuffle()
+        XCTAssertNotEqual(shuffledArray, array)
+        XCTAssertEqual(shuffledArray.sort(), array)
+    }
+    
+    func testShuffleInPlace() {
+        var array = Array(1...1000)
+        array.shuffleInPlace()
+        XCTAssertTrue(array != Array(1...1000))
+    }
+    
+    func testGroupedBy() {
+        let array = [TestObject(name: "Test", type: 0), TestObject(name: "Test1", type: 0), TestObject(name: "Test2", type: 0), TestObject(name: "Test3", type: 1)]
+        let grouped = array.groupedBy { $0.type }
+        XCTAssertTrue(grouped[0]?.count == 3)
+        XCTAssertTrue(grouped[1]?.count == 1)
     }
     
 }

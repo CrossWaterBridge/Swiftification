@@ -29,4 +29,50 @@ public extension Array {
         return (indices ~= index ? self[index] : nil)
     }
     
+    /// Returns the first occurence of item, if found
+    func find(condition: (Element) -> Bool) -> Element? {
+        if let index = indexOf({ condition($0) }) {
+            return self[index]
+        }
+
+        return nil
+    }
+    
+    /// Returns a random item
+    func random() -> Element {
+        return self[Int.random(0..<count)]
+    }
+    
+    /// Randomly rearranges the elements of self using the Fisher-Yates shuffle
+    mutating func shuffleInPlace() {
+        for var index = count - 1; index >= 1; index-- {
+            let newIndex = Int.random(0...index)
+            if index != newIndex {
+                swap(&self[index], &self[newIndex])
+            }
+        }
+        
+    }
+    
+    /// Returns a randomly arranged array using the Fisher-Yates shuffle
+    @warn_unused_result(mutable_variant="shuffleInPlace")
+    func shuffle() -> [Element] {
+        var tempArray = self
+        tempArray.shuffleInPlace()
+        
+        return tempArray
+    }
+    
+    /// Groups the array into a dictionary by key specified in closure
+    func groupedBy<U>(groupClosure: (Element) -> U) -> [U: Array] {
+        var grouped = [U: Array]()
+        for element in self {
+            let key = groupClosure(element)
+            grouped[key] = (grouped[key] ?? []) + [element]
+        }
+        
+        
+        return grouped
+    }
+    
 }
