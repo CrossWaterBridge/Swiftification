@@ -22,26 +22,27 @@
 
 import Foundation
 
-/// Returns the second attributed string appended to the first.
-public func + (lhs: NSAttributedString, rhs: NSAttributedString) -> NSAttributedString {
-    let result = NSMutableAttributedString(attributedString: lhs)
-    result.appendAttributedString(rhs)
-    return result
-}
-
-public extension SequenceType where Generator.Element == NSAttributedString {
-
-    /// Interpose the `separator` between elements of `self`, then concatenate the result.
+public extension Dictionary {
+    
+    /// Returns the union of `self` and the other dictionaries. If more than
+    /// one dictionary has the same key, it will take on the rightmost
+    /// dictionary's value.
     @warn_unused_result
-    public func joinWithSeparator(separator: NSAttributedString) -> NSAttributedString {
-        let result = NSMutableAttributedString()
-        for (i, element) in self.enumerate() {
-            if i > 0 {
-                result.appendAttributedString(separator)
+    func union(first: Dictionary, _ rest: Dictionary...) -> Dictionary {
+        var result = self
+        for dictionary in [first] + rest {
+            for (key, value) in dictionary {
+                result[key] = value
             }
-            result.appendAttributedString(element)
         }
         return result
     }
+    
+}
 
+/// Returns the union of the two dictionaries. For any keys that both
+/// dictionaries have in common, the result will take on the value from the
+/// right dictionary.
+public func | <K, V>(lhs: Dictionary<K, V>, rhs: Dictionary<K, V>) -> Dictionary<K, V> {
+    return lhs.union(rhs)
 }

@@ -25,7 +25,7 @@ import Swiftification
 
 class NSAttributedStringTests: XCTestCase {
     
-    func testAdd() {
+    func testAddOperator() {
         let a = NSAttributedString(string: "a")
         let b = NSAttributedString(string: "b")
         let expected = NSAttributedString(string: "ab")

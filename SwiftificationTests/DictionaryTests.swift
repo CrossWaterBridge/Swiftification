@@ -20,28 +20,41 @@
 // THE SOFTWARE.
 //
 
-import Foundation
+import XCTest
+import Swiftification
 
-/// Returns the second attributed string appended to the first.
-public func + (lhs: NSAttributedString, rhs: NSAttributedString) -> NSAttributedString {
-    let result = NSMutableAttributedString(attributedString: lhs)
-    result.appendAttributedString(rhs)
-    return result
-}
-
-public extension SequenceType where Generator.Element == NSAttributedString {
-
-    /// Interpose the `separator` between elements of `self`, then concatenate the result.
-    @warn_unused_result
-    public func joinWithSeparator(separator: NSAttributedString) -> NSAttributedString {
-        let result = NSMutableAttributedString()
-        for (i, element) in self.enumerate() {
-            if i > 0 {
-                result.appendAttributedString(separator)
-            }
-            result.appendAttributedString(element)
-        }
-        return result
+class DictionaryTests: XCTestCase {
+    
+    func testUnion1() {
+        let dict1 = [1: 1, 2: 2, 3: 3]
+        let dict2 = [1: 4]
+        let expected = [1: 4, 2: 2, 3: 3]
+        let actual = dict1.union(dict2)
+        XCTAssertEqual(expected, actual)
     }
-
+    
+    func testUnion2() {
+        let dict1 = [1: 2]
+        let dict2 = [3: 4]
+        let expected = [1: 2, 3: 4]
+        let actual = dict1.union(dict2)
+        XCTAssertEqual(expected, actual)
+    }
+    
+    func testUnionOperator1() {
+        let dict1 = [1: 1, 2: 2, 3: 3]
+        let dict2 = [1: 4]
+        let expected = [1: 4, 2: 2, 3: 3]
+        let actual = dict1 | dict2
+        XCTAssertEqual(expected, actual)
+    }
+    
+    func testUnionOperator2() {
+        let dict1 = [1: 2]
+        let dict2 = [3: 4]
+        let expected = [1: 2, 3: 4]
+        let actual = dict1 | dict2
+        XCTAssertEqual(expected, actual)
+    }
+    
 }
