@@ -19,8 +19,8 @@
 		D96A72DF1C08D46F002CCCEE /* ObserverSetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96A72DE1C08D46F002CCCEE /* ObserverSetTests.swift */; };
 		D98FCD451C0A2D1700ABBBA8 /* NSAttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98FCD441C0A2D1700ABBBA8 /* NSAttributedString.swift */; };
 		D98FCD471C0A2EFB00ABBBA8 /* NSAttributedStringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98FCD461C0A2EFB00ABBBA8 /* NSAttributedStringTests.swift */; };
-		EC3D47691C0CCA3600BA99CC /* Range.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3D47681C0CCA3600BA99CC /* Range.swift */; };
-		EC3D476B1C0CD20C00BA99CC /* RangeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3D476A1C0CD20C00BA99CC /* RangeTests.swift */; };
+		EC3D476D1C0CFB3D00BA99CC /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3D476C1C0CFB3D00BA99CC /* Int.swift */; };
+		EC3D476F1C0CFBF700BA99CC /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3D476E1C0CFBF700BA99CC /* Int.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,8 +49,8 @@
 		D96A72DE1C08D46F002CCCEE /* ObserverSetTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObserverSetTests.swift; sourceTree = "<group>"; };
 		D98FCD441C0A2D1700ABBBA8 /* NSAttributedString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSAttributedString.swift; sourceTree = "<group>"; };
 		D98FCD461C0A2EFB00ABBBA8 /* NSAttributedStringTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSAttributedStringTests.swift; sourceTree = "<group>"; };
-		EC3D47681C0CCA3600BA99CC /* Range.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Range.swift; sourceTree = "<group>"; };
-		EC3D476A1C0CD20C00BA99CC /* RangeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RangeTests.swift; sourceTree = "<group>"; };
+		EC3D476C1C0CFB3D00BA99CC /* Int.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Int.swift; sourceTree = "<group>"; };
+		EC3D476E1C0CFBF700BA99CC /* Int.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Int.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,8 +95,8 @@
 			children = (
 				D96A72D61C089B5C002CCCEE /* Array.swift */,
 				D9144D1F1C0BCA81005B2BEE /* Dictionary.swift */,
+				EC3D476C1C0CFB3D00BA99CC /* Int.swift */,
 				D96A72D71C089B5C002CCCEE /* SequenceType.swift */,
-				EC3D47681C0CCA3600BA99CC /* Range.swift */,
 				D98FCD441C0A2D1700ABBBA8 /* NSAttributedString.swift */,
 				D96A72DC1C08D271002CCCEE /* ObserverSet.swift */,
 				D96A72BF1C089B12002CCCEE /* Swiftification.h */,
@@ -110,8 +110,8 @@
 			children = (
 				D96A72CB1C089B13002CCCEE /* ArrayTests.swift */,
 				D9144D211C0BCBC7005B2BEE /* DictionaryTests.swift */,
+				EC3D476E1C0CFBF700BA99CC /* Int.swift */,
 				D96A72DA1C089CFD002CCCEE /* SequenceTypeTests.swift */,
-				EC3D476A1C0CD20C00BA99CC /* RangeTests.swift */,
 				D98FCD461C0A2EFB00ABBBA8 /* NSAttributedStringTests.swift */,
 				D96A72DE1C08D46F002CCCEE /* ObserverSetTests.swift */,
 				D96A72CD1C089B13002CCCEE /* Info.plist */,
@@ -230,7 +230,7 @@
 				D96A72DD1C08D271002CCCEE /* ObserverSet.swift in Sources */,
 				D9144D201C0BCA81005B2BEE /* Dictionary.swift in Sources */,
 				D96A72D81C089B5C002CCCEE /* Array.swift in Sources */,
-				EC3D47691C0CCA3600BA99CC /* Range.swift in Sources */,
+				EC3D476D1C0CFB3D00BA99CC /* Int.swift in Sources */,
 				D96A72D91C089B5C002CCCEE /* SequenceType.swift in Sources */,
 				D98FCD451C0A2D1700ABBBA8 /* NSAttributedString.swift in Sources */,
 			);
@@ -241,9 +241,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D9144D221C0BCBC7005B2BEE /* DictionaryTests.swift in Sources */,
+				EC3D476F1C0CFBF700BA99CC /* Int.swift in Sources */,
 				D96A72DF1C08D46F002CCCEE /* ObserverSetTests.swift in Sources */,
 				D96A72CC1C089B13002CCCEE /* ArrayTests.swift in Sources */,
-				EC3D476B1C0CD20C00BA99CC /* RangeTests.swift in Sources */,
 				D96A72DB1C089CFD002CCCEE /* SequenceTypeTests.swift in Sources */,
 				D98FCD471C0A2EFB00ABBBA8 /* NSAttributedStringTests.swift in Sources */,
 			);

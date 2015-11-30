@@ -22,16 +22,15 @@
 
 import Foundation
 
-public extension Range {
-
-    /// Returns the Range as an Array
-    func toArray() -> [Element] {
-        return self.map { $0 }
+public extension Int {
+    
+    /// Random integer between min and max (inclusive)
+    static func random(range: Range<Int>) -> Int {
+        let offset = range.startIndex < 0 ? abs(range.startIndex) : 0
+        let min = UInt32(range.startIndex + offset)
+        let max = UInt32(range.endIndex + offset)
+        
+        return Int(min + arc4random_uniform(max - min)) - offset
     }
     
-    /// Returns a random item
-    func random() -> Element {
-        return toArray().random()
-    }
-
 }

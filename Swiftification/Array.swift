@@ -40,13 +40,13 @@ public extension Array {
     
     /// Returns a random item
     func random() -> Element {
-        return self[Int(arc4random_uniform(UInt32(count)))]
+        return self[Int.random(0..<count)]
     }
     
     /// Randomly rearranges the elements of self using the Fisher-Yates shuffle
     mutating func shuffleInPlace() {
         for var index = count - 1; index >= 1; index-- {
-            let newIndex = (0...index).random()
+            let newIndex = Int.random(0...index)
             if index != newIndex {
                 swap(&self[index], &self[newIndex])
             }

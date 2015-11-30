@@ -23,20 +23,11 @@
 import XCTest
 import Swiftification
 
-class RangeTests: XCTestCase {
-    
-    func testToArray() {
-        let range = 1...10
-        let array = range.toArray()
-        XCTAssertTrue(array.count == 10)
-        XCTAssertTrue(array[0] == 1)
-        XCTAssertTrue(array[9] == 10)
-    }
-    
+class IntTests: XCTestCase {
+
     func testRandom() {
-        let range = 1...10
         for _ in 0...500 {
-            let random = range.random()
+            let random = Int.random(1...10)
             XCTAssertTrue(random <= 10 && random >= 1)
         }
     }
