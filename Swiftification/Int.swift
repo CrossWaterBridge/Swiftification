@@ -22,42 +22,11 @@
 
 import Foundation
 
-public extension Array {
+public extension Int {
     
-    /// Returns the element at `index`, or `nil` if `index` is out of bounds.
-    subscript(safe index: Int) -> Element? {
-        return (indices ~= index ? self[index] : nil)
+    /// Random integer between min and max (inclusive)
+    static func random(min: Int = 0, max: Int) -> Int {
+        return Int(arc4random_uniform(UInt32((max - min) + 1))) + min
     }
-    
-    /// Index of the first occurrence of item, if found.
-    func indexOf <U: Equatable> (item: U) -> Int? {
-        if item is Element {
-            return self.indexOf({ (object) -> Bool in
-                return (object as! U) == item
-            })
-        }
-        
-        return nil
-    }
-    
-    /// Returns the first occurence of item, if found
-    func find <U: Equatable> (item: U) -> Element? {
-        if let index: Int = indexOf(item) {
-            return self[index]
-        }
-        
-        return nil
-    }
-    
-    /// Randomly rearranges the elements of self using the Fisher-Yates shuffle
-    mutating func shuffle () {
-        for var index = self.count - 1; index >= 1; index-- {
-            let newIndex = Int.random(max: index)
-            if index != newIndex {
-                swap(&self[index], &self[newIndex])
-            }
-        }
-        
-    }
-    
+
 }
