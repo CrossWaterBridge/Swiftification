@@ -55,20 +55,17 @@ class ArrayTests: XCTestCase {
         XCTAssertNil(array.find { $0 == 15 })
     }
     
-    func testShuffled() {
-        let array = Array(1...10)
-        let shuffledArray = array.shuffled()
-        XCTAssertTrue(array == Array(1...10))
-        XCTAssertTrue(shuffledArray != Array(1...10))
-        for value in shuffledArray {
-            XCTAssertTrue(value >= 1 && value <= 10)
-        }
+    func testShuffle() {
+        let array = Array(1...1000)
+        let shuffledArray = array.shuffle()
+        XCTAssertNotEqual(shuffledArray, array)
+        XCTAssertEqual(shuffledArray.sort(), array)
     }
     
     func testShuffleInPlace() {
-        var array = Array(1...10)
+        var array = Array(1...1000)
         array.shuffleInPlace()
-        XCTAssertTrue(array != Array(1...10))
+        XCTAssertTrue(array != Array(1...1000))
     }
     
     func testGroupedBy() {
