@@ -40,7 +40,7 @@ public extension Array {
     
     /// Returns a random item
     func random() -> Element {
-        return self[Int(rand()) % count]
+        return self[Int(arc4random_uniform(UInt32(count)))]
     }
     
     /// Randomly rearranges the elements of self using the Fisher-Yates shuffle
@@ -55,7 +55,8 @@ public extension Array {
     }
     
     /// Returns a randomly arranged array using the Fisher-Yates shuffle
-    func shuffled() -> [Element] {
+    @warn_unused_result(mutable_variant="shuffleInPlace")
+    func shuffle() -> [Element] {
         var tempArray = self
         tempArray.shuffleInPlace()
         

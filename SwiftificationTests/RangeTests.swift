@@ -35,7 +35,7 @@ class RangeTests: XCTestCase {
     
     func testRandom() {
         let range = 1...10
-        for var index = 0; index < 500; index++ {
+        for _ in 0...500 {
             let random = range.random()
             XCTAssertTrue(random <= 10 && random >= 1)
         }
