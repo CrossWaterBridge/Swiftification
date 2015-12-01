@@ -33,7 +33,7 @@ public extension SequenceType where Generator.Element == NSAttributedString {
 
     /// Interpose the `separator` between elements of `self`, then concatenate the result.
     @warn_unused_result
-    public func joinWithSeparator(separator: NSAttributedString) -> NSAttributedString {
+    func joinWithSeparator(separator: NSAttributedString) -> NSAttributedString {
         let result = NSMutableAttributedString()
         for (i, element) in self.enumerate() {
             if i > 0 {
