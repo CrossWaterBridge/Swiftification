@@ -25,6 +25,13 @@ import Swiftification
 
 class DictionaryTests: XCTestCase {
     
+    func testInit() {
+        let array = [(1, 2), (3, 4)]
+        let expected = [1: 2, 3: 4]
+        let actual = [Int: Int](array)
+        XCTAssertEqual(expected, actual)
+    }
+    
     func testUnion1() {
         let dict1 = [1: 1, 2: 2, 3: 3]
         let dict2 = [1: 4]

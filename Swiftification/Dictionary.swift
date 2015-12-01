@@ -24,6 +24,13 @@ import Foundation
 
 public extension Dictionary {
     
+    init<C: CollectionType where C.Generator.Element == Element>(_ elements: C) {
+        self.init()
+        for (key, value) in elements {
+            self[key] = value
+        }
+    }
+    
     /// Returns the union of `self` and the other dictionaries. If more than
     /// one dictionary has the same key, it will take on the rightmost
     /// dictionary's value.
