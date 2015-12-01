@@ -25,17 +25,16 @@ import Swiftification
 
 class NSDateTests: XCTestCase {
     
-    func testLessThanOperator() {
+    func testGreaterThanOperator() {
         XCTAssertTrue(NSDate() > NSDate(timeIntervalSince1970: 0))
     }
     
-    func testGreaterThanOperator() {
+    func testLessThanOperator() {
         XCTAssertTrue(NSDate(timeIntervalSince1970: 0) < NSDate())
     }
     
     func testEqualToOperator() {
-        let now = NSDate()
-        XCTAssertTrue(now == now)
+        XCTAssertTrue(NSDate(timeIntervalSince1970: 0) == NSDate(timeIntervalSince1970: 0))
     }
     
 }
