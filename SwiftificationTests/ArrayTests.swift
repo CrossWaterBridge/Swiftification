@@ -70,7 +70,7 @@ class ArrayTests: XCTestCase {
     
     func testGroupedBy() {
         let array = [TestObject(name: "Test", type: 0), TestObject(name: "Test1", type: 0), TestObject(name: "Test2", type: 0), TestObject(name: "Test3", type: 1)]
-        let grouped = array.groupedBy { $0.type }
+        let grouped = array.groupBy { $0.type }
         XCTAssertTrue(grouped[0]?.count == 3)
         XCTAssertTrue(grouped[1]?.count == 1)
     }
