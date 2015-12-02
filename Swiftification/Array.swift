@@ -64,7 +64,7 @@ public extension Array {
     }
     
     /// Groups the array into a dictionary by key specified in closure
-    func groupedBy<U>(groupClosure: (Element) -> U) -> [U: Array] {
+    func groupBy<U>(groupClosure: (Element) -> U) -> [U: Array] {
         var grouped = [U: Array]()
         for element in self {
             let key = groupClosure(element)
