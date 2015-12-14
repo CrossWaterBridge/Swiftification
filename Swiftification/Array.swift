@@ -51,7 +51,6 @@ public extension Array {
                 swap(&self[index], &self[newIndex])
             }
         }
-        
     }
     
     /// Returns a randomly arranged array using the Fisher-Yates shuffle
@@ -71,8 +70,33 @@ public extension Array {
             grouped[key] = (grouped[key] ?? []) + [element]
         }
         
-        
         return grouped
+    }
+    
+    /// Sections the ordered array by the string specified in the closure, preserving the order of the original array.
+    func sectionBy(@noescape sectionFunction: (Element) -> String) -> [(title: String, items: [Element])] {
+        var lastTitle = ""
+        var currentGroup = [Element]()
+        var allGroups = [(title: String, items: [Element])]()
+        
+        for item in self {
+            let title = sectionFunction(item)
+            if title == lastTitle {
+                currentGroup.append(item)
+            } else {
+                if !currentGroup.isEmpty {
+                    allGroups.append((title: lastTitle, items: currentGroup))
+                }
+                lastTitle = title
+                currentGroup = [item]
+            }
+        }
+        
+        if !currentGroup.isEmpty {
+            allGroups.append((title: lastTitle, items: currentGroup))
+        }
+        
+        return allGroups
     }
     
 }
