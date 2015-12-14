@@ -75,4 +75,13 @@ class ArrayTests: XCTestCase {
         XCTAssertTrue(grouped[1]?.count == 1)
     }
     
+    func testSectionBy() {
+        let array = [TestObject(name: "Test", type: 0), TestObject(name: "Test", type: 0), TestObject(name: "Test2", type: 0), TestObject(name: "Test2", type: 1), TestObject(name: "Test2", type: 1)]
+        let sectioned = array.sectionBy { $0.name }
+        XCTAssertTrue(sectioned[0].title == "Test")
+        XCTAssertTrue(sectioned[0].items.count == 2)
+        XCTAssertTrue(sectioned[1].title == "Test2")
+        XCTAssertTrue(sectioned[1].items.count == 3)
+    }
+    
 }
