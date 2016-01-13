@@ -35,4 +35,51 @@ class StringTests: XCTestCase {
         XCTAssertEqual(string.trimmed(), "Test")
     }
     
+    func testRandomZeroLength() {
+        let random = String.random(0)
+        XCTAssertTrue(random == "")
+    }
+
+    func testRandomMinDefaultLength() {
+        for _ in 0...500 {
+            XCTAssertTrue(String.random().length >= 8)
+        }
+    }
+    
+    func testRandomMaxDefaultLength() {
+        for _ in 0...500 {
+            XCTAssertTrue(String.random().length <= 64)
+        }
+    }
+    
+    func testRandomLength() {
+        let random = String.random(21)
+        XCTAssertTrue(random.length == 21)
+    }
+
+    func testRandomZeroCharacters() {
+        let random = String.random(characters: "")
+        XCTAssertTrue(random == "")
+    }
+    
+    func testRandomDefaultCharacters() {
+        let characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz012345789"
+        let random = String.random(500)
+        for i in 0..<random.length {
+            let index = random.startIndex.advancedBy(i)
+            let character = random.substringWithRange(index..<index.advancedBy(1))
+            XCTAssertNotNil(characters.rangeOfString(character))
+        }
+    }
+    
+    func testRandomCharacters() {
+        let characters = "ABCDE"
+        let random = String.random(500, characters: characters)
+        for i in 0..<random.length {
+            let index = random.startIndex.advancedBy(i)
+            let character = random.substringWithRange(index..<index.advancedBy(1))
+            XCTAssertNotNil(characters.rangeOfString(character))
+        }
+    }
+    
 }
