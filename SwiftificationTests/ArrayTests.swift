@@ -84,4 +84,22 @@ class ArrayTests: XCTestCase {
         XCTAssertTrue(sectioned[1].items.count == 3)
     }
     
+    func testTail() {
+        let array = Array(1...10)
+        XCTAssertTrue(array.tail(1) == [10])
+        XCTAssertTrue(array.tail(3) == [8, 9, 10])
+    }
+    
+    func testShift() {
+        var array = Array(1...10)
+        let expected = Array(2...10)
+        XCTAssertEqual(array.shift(), 1)
+        XCTAssertEqual(array, expected)
+    }
+    
+    func testTake() {
+        let array = Array(1...10)
+        XCTAssertEqual(array.take(5), Array(1...5))
+    }
+        
 }

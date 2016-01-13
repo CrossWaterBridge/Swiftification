@@ -71,4 +71,12 @@ class DictionaryTests: XCTestCase {
         XCTAssertEqual(sortedDictionary["uppercase"]!, ["A", "B", "C"])
     }
     
+    func testToArray() {
+        let dictionary = [1: 2, 3: 4, 5: 6, 7: 8]
+        let expected = ["1=2", "3=4", "5=6", "7=8"]
+        let actual = dictionary.toArray { "\($0)=\($1)" }
+        actual.forEach { XCTAssertTrue(expected.contains($0)) }
+        expected.forEach { XCTAssertTrue(actual.contains($0)) }
+    }
+    
 }

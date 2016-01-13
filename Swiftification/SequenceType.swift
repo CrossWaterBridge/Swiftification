@@ -46,4 +46,42 @@ public extension SequenceType {
         return nil
     }
     
+    /// Returns the array of elements for which condition(element) is unique
+    @warn_unused_result
+    func uniqueBy<T: Equatable>(condition: (Generator.Element) -> T) -> [Generator.Element] {
+        var results: [Generator.Element] = []
+        var tempResults: [T] = []
+        for element in self {
+            let value: T = condition(element)
+            if !tempResults.contains(value) {
+                tempResults.append(value)
+                results.append(element)
+            }
+        }
+        return results
+    }
+    
+    /// Checks if test returns true for any element of self.
+    @warn_unused_result
+    func any(condition: (Generator.Element) -> Bool) -> Bool {
+        for element in self where condition(element) {
+            return true
+        }
+        return false
+    }
+   
+}
+
+public extension SequenceType where Generator.Element: Equatable {
+    
+    /// Returns an array removing the duplicate elements in self if Generator implements the Equatable protocol.
+    @warn_unused_result
+    func unique() -> [Generator.Element] {
+        var results: [Generator.Element] = []
+        for element in self where !results.contains(element) {
+            results.append(element)
+        }
+        return results
+    }
+    
 }

@@ -23,40 +23,16 @@
 import XCTest
 import Swiftification
 
-class SequenceTypeTests: XCTestCase {
+class StringTests: XCTestCase {
     
-    func testMapFilter() {
-        let array = [1, 2, 3]
-        let expected = ["1", "2", "3"]
-        let actual = array.map { "\($0)" }
-        XCTAssertEqual(expected, actual)
+    func testLength() {
+        let string = "123456789"
+        XCTAssertTrue(string.length == 9)
     }
     
-    func testTakeFirst() {
-        let array = [1, 2, 3]
-        let expected = 3
-        let actual = array.takeFirst { $0 > 2 }
-        XCTAssertEqual(expected, actual)
-    }
-    
-    func testUnique() {
-        let array = [1, 1, 2, 2, 3, 4]
-        let unique = array.unique()
-        XCTAssertTrue(array.count == 6)
-        XCTAssertTrue(unique.count == 4)
-    }
-    
-    func testUniqueBy() {
-        let array = [(a: 1, b: 1), (a: 1, b: 2), (a: 2, b: 2)]
-        let unique = array.uniqueBy { $0.a }
-        XCTAssertTrue(array.count == 3)
-        XCTAssertTrue(unique.count == 2)
-    }
-    
-    func testAny() {
-        let array = [1, 2, 3]
-        XCTAssertTrue(array.any({ $0 == 1 }))
-        XCTAssertFalse(array.any({ $0 == 4 }))
+    func testTrimmed() {
+        let string = "\n       Test        "
+        XCTAssertEqual(string.trimmed(), "Test")
     }
     
 }
