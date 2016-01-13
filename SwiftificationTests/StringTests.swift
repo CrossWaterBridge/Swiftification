@@ -36,30 +36,29 @@ class StringTests: XCTestCase {
     }
     
     func testRandomZeroLength() {
-        let random = String.random(0)
-        XCTAssertTrue(random == "")
-    }
-
-    func testRandomMinDefaultLength() {
         for _ in 0...500 {
-            XCTAssertTrue(String.random().length >= 8)
+            XCTAssertTrue(String.random(0) == "")
         }
     }
-    
-    func testRandomMaxDefaultLength() {
+
+    func testRandomDefaultLength() {
         for _ in 0...500 {
-            XCTAssertTrue(String.random().length <= 64)
+            let random = String.random()
+            XCTAssertTrue(random.length >= 8)
+            XCTAssertTrue(random.length <= 64)
         }
     }
     
     func testRandomLength() {
-        let random = String.random(21)
-        XCTAssertTrue(random.length == 21)
+        for i in 0...500 {
+            XCTAssertTrue(String.random(i).length == i)
+        }
     }
 
     func testRandomZeroCharacters() {
-        let random = String.random(characters: "")
-        XCTAssertTrue(random == "")
+        for _ in 0...500 {
+            XCTAssertTrue(String.random(characters: "") == "")
+        }
     }
     
     func testRandomDefaultCharacters() {
