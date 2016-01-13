@@ -35,4 +35,16 @@ public extension String {
         return stringByTrimmingCharactersInSet(.whitespaceAndNewlineCharacterSet())
     }
 
+    /// Returns random string of length with specified characters.
+    @warn_unused_result
+    static func random(length: Int = Int.random(8...64), characters: String = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz012345789") -> String {
+        if characters.isEmpty { return "" }
+        
+        var result = String()
+        for _ in 0..<length {
+            result.append(characters[characters.startIndex.advancedBy(Int.random(0..<characters.length))])
+        }
+        return result
+    }
+    
 }

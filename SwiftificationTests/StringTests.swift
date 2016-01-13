@@ -35,4 +35,50 @@ class StringTests: XCTestCase {
         XCTAssertEqual(string.trimmed(), "Test")
     }
     
+    func testRandomZeroLength() {
+        for _ in 0...500 {
+            XCTAssertTrue(String.random(0) == "")
+        }
+    }
+
+    func testRandomDefaultLength() {
+        for _ in 0...500 {
+            let random = String.random()
+            XCTAssertTrue(random.length >= 8)
+            XCTAssertTrue(random.length <= 64)
+        }
+    }
+    
+    func testRandomLength() {
+        for i in 0...500 {
+            XCTAssertTrue(String.random(i).length == i)
+        }
+    }
+
+    func testRandomZeroCharacters() {
+        for _ in 0...500 {
+            XCTAssertTrue(String.random(characters: "") == "")
+        }
+    }
+    
+    func testRandomDefaultCharacters() {
+        let characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz012345789"
+        let random = String.random(500)
+        for i in 0..<random.length {
+            let index = random.startIndex.advancedBy(i)
+            let character = random.substringWithRange(index..<index.advancedBy(1))
+            XCTAssertNotNil(characters.rangeOfString(character))
+        }
+    }
+    
+    func testRandomCharacters() {
+        let characters = "ABCDE"
+        let random = String.random(500, characters: characters)
+        for i in 0..<random.length {
+            let index = random.startIndex.advancedBy(i)
+            let character = random.substringWithRange(index..<index.advancedBy(1))
+            XCTAssertNotNil(characters.rangeOfString(character))
+        }
+    }
+    
 }
