@@ -48,13 +48,13 @@ public extension SequenceType {
     
     /// Returns the array of elements for which condition(element) is unique
     @warn_unused_result
-    func uniqueBy<T: Equatable>(condition: (Generator.Element) -> T) -> [Generator.Element] {
+    func uniqueBy<T: Hashable>(condition: (Generator.Element) -> T) -> [Generator.Element] {
         var results: [Generator.Element] = []
-        var tempResults: [T] = []
+        var tempSet = Set<T>()
         for element in self {
             let value: T = condition(element)
-            if !tempResults.contains(value) {
-                tempResults.append(value)
+            if !tempSet.contains(value) {
+                tempSet.insert(value)
                 results.append(element)
             }
         }
@@ -72,13 +72,15 @@ public extension SequenceType {
    
 }
 
-public extension SequenceType where Generator.Element: Equatable {
+public extension SequenceType where Generator.Element: Hashable {
     
     /// Returns an array removing the duplicate elements in self if Generator implements the Equatable protocol.
     @warn_unused_result
     func unique() -> [Generator.Element] {
         var results: [Generator.Element] = []
-        for element in self where !results.contains(element) {
+        var tempSet = Set<Generator.Element>()
+        for element in self where !tempSet.contains(element) {
+            tempSet.insert(element)
             results.append(element)
         }
         return results
