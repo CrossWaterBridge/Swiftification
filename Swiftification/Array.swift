@@ -98,5 +98,25 @@ public extension Array {
         
         return allGroups
     }
+        
+    /// Returns an array containing the the last numberOfElements elements of self.
+    @warn_unused_result
+    func tail(numberOfElements: Int) -> Array {
+        return Array(self[max(count - numberOfElements, 0)..<count])
+    }
     
+    /// Returns the first element of self and removes it from the array.
+    mutating func shift() -> Element? {
+        if !self.isEmpty {
+            return removeAtIndex(0)
+        }
+        return nil
+    }
+    
+    /// Returns an array containing the first n elements of self.
+    @warn_unused_result
+    func take(numberOfElements: Int) -> Array {
+        return Array(self[0..<max(min(numberOfElements, count), 0)])
+    }
+
 }

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D45479CB1C46D336007258A6 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45479CA1C46D336007258A6 /* String.swift */; };
+		D45479CD1C46D3AB007258A6 /* StringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45479CC1C46D3AB007258A6 /* StringTests.swift */; };
 		D9144D201C0BCA81005B2BEE /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9144D1F1C0BCA81005B2BEE /* Dictionary.swift */; };
 		D9144D221C0BCBC7005B2BEE /* DictionaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9144D211C0BCBC7005B2BEE /* DictionaryTests.swift */; };
 		D96A72C01C089B12002CCCEE /* Swiftification.h in Headers */ = {isa = PBXBuildFile; fileRef = D96A72BF1C089B12002CCCEE /* Swiftification.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -36,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D45479CA1C46D336007258A6 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		D45479CC1C46D3AB007258A6 /* StringTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringTests.swift; sourceTree = "<group>"; };
 		D9144D1F1C0BCA81005B2BEE /* Dictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dictionary.swift; sourceTree = "<group>"; };
 		D9144D211C0BCBC7005B2BEE /* DictionaryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryTests.swift; sourceTree = "<group>"; };
 		D96A72BC1C089B12002CCCEE /* Swiftification.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Swiftification.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -99,13 +103,14 @@
 			children = (
 				D96A72D61C089B5C002CCCEE /* Array.swift */,
 				D9144D1F1C0BCA81005B2BEE /* Dictionary.swift */,
+				D96A72C11C089B12002CCCEE /* Info.plist */,
 				EC3D476C1C0CFB3D00BA99CC /* Int.swift */,
-				D96A72D71C089B5C002CCCEE /* SequenceType.swift */,
 				D98FCD441C0A2D1700ABBBA8 /* NSAttributedString.swift */,
 				EC3D47701C0D0E7000BA99CC /* NSDate.swift */,
 				D96A72DC1C08D271002CCCEE /* ObserverSet.swift */,
+				D96A72D71C089B5C002CCCEE /* SequenceType.swift */,
+				D45479CA1C46D336007258A6 /* String.swift */,
 				D96A72BF1C089B12002CCCEE /* Swiftification.h */,
-				D96A72C11C089B12002CCCEE /* Info.plist */,
 			);
 			path = Swiftification;
 			sourceTree = "<group>";
@@ -115,12 +120,13 @@
 			children = (
 				D96A72CB1C089B13002CCCEE /* ArrayTests.swift */,
 				D9144D211C0BCBC7005B2BEE /* DictionaryTests.swift */,
+				D96A72CD1C089B13002CCCEE /* Info.plist */,
 				EC3D476E1C0CFBF700BA99CC /* Int.swift */,
-				D96A72DA1C089CFD002CCCEE /* SequenceTypeTests.swift */,
 				D98FCD461C0A2EFB00ABBBA8 /* NSAttributedStringTests.swift */,
 				EC3D47721C0D0F2D00BA99CC /* NSDateTests.swift */,
 				D96A72DE1C08D46F002CCCEE /* ObserverSetTests.swift */,
-				D96A72CD1C089B13002CCCEE /* Info.plist */,
+				D96A72DA1C089CFD002CCCEE /* SequenceTypeTests.swift */,
+				D45479CC1C46D3AB007258A6 /* StringTests.swift */,
 			);
 			path = SwiftificationTests;
 			sourceTree = "<group>";
@@ -239,6 +245,7 @@
 				EC3D476D1C0CFB3D00BA99CC /* Int.swift in Sources */,
 				EC3D47711C0D0E7000BA99CC /* NSDate.swift in Sources */,
 				D96A72D91C089B5C002CCCEE /* SequenceType.swift in Sources */,
+				D45479CB1C46D336007258A6 /* String.swift in Sources */,
 				D98FCD451C0A2D1700ABBBA8 /* NSAttributedString.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -253,6 +260,7 @@
 				D96A72DF1C08D46F002CCCEE /* ObserverSetTests.swift in Sources */,
 				D96A72CC1C089B13002CCCEE /* ArrayTests.swift in Sources */,
 				D96A72DB1C089CFD002CCCEE /* SequenceTypeTests.swift in Sources */,
+				D45479CD1C46D3AB007258A6 /* StringTests.swift in Sources */,
 				D98FCD471C0A2EFB00ABBBA8 /* NSAttributedStringTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

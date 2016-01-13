@@ -39,4 +39,60 @@ class SequenceTypeTests: XCTestCase {
         XCTAssertEqual(expected, actual)
     }
     
+    func testUnique() {
+        let array = [1, 1, 2, 2, 3, 4]
+        let unique = array.unique()
+        XCTAssertTrue(array.count == 6)
+        XCTAssertTrue(unique.count == 4)
+    }
+
+    func testUniqueOrder1() {
+        let array = [1, 1, 2, 2, 3, 4]
+        XCTAssertEqual(array.unique(), [1, 2, 3, 4])
+    }
+    
+    func testUniqueOrder2() {
+        let array = ["happy", "sad", "mad", "glad", "bad", "mad", "bad", "happy", "sad", "mad"]
+        XCTAssertEqual(array.unique(), ["happy", "sad", "mad", "glad", "bad"])
+    }
+    
+    func testUniqueBy() {
+        let array = [(a: 1, b: 1), (a: 1, b: 2), (a: 2, b: 2)]
+        let unique = array.uniqueBy { $0.a }
+        XCTAssertTrue(array.count == 3)
+        XCTAssertTrue(unique.count == 2)
+    }
+    
+    func testUniqueByOrder1() {
+        let array = [1, 1, 2, 2, 3, 4]
+        XCTAssertEqual(array.uniqueBy { $0 }, [1, 2, 3, 4])
+    }
+    
+    func testUniqueByOrder2() {
+        let array = ["happy", "sad", "mad", "glad", "bad", "mad", "bad", "happy", "sad", "mad"]
+        XCTAssertEqual(array.uniqueBy { $0 }, ["happy", "sad", "mad", "glad", "bad"])
+    }
+    
+    func testUniqueByOrder3() {
+        let array = [
+            ["man": "Bob"],
+            ["man": "Fred"],
+            ["woman": "Sally"],
+            ["woman": "Bertha"],
+            ["woman": "Jill"]
+        ]
+        let actual = array.uniqueBy { $0.keys.first! }
+        let expected = [
+            ["man": "Bob"],
+            ["woman": "Sally"]
+        ]
+        XCTAssertEqual(actual, expected)
+    }
+    
+    func testAny() {
+        let array = [1, 2, 3]
+        XCTAssertTrue(array.any({ $0 == 1 }))
+        XCTAssertFalse(array.any({ $0 == 4 }))
+    }
+    
 }
