@@ -1,5 +1,6 @@
 //
-// Copyright (c) 2015, Michael Ash
+// Original work Copyright (c) 2015, Michael Ash
+// Modified work Copyright (c) 2016 Hilton Campbell
 // All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without

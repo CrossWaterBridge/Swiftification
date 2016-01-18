@@ -2,7 +2,7 @@
 
 Swiftification is provided under the following license:
 
-    Copyright (c) 2015 Hilton Campbell
+    Copyright (c) 2016 Hilton Campbell
 
     Permission is hereby granted, free of charge, to any person obtaining a copy
     of this software and associated documentation files (the "Software"), to deal
@@ -24,7 +24,8 @@ Swiftification is provided under the following license:
 
 ObserverSet is provided under the following license:
 
-    Copyright (c) 2015, Michael Ash
+	Original work Copyright (c) 2015, Michael Ash
+	Modified work Copyright (c) 2016 Hilton Campbell
     All rights reserved.
 
     Redistribution and use in source and binary forms, with or without
