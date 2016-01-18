@@ -62,7 +62,7 @@ public class ObserverSet<Parameters> {
     /// - Note: Because `object` is held weakly there may be no need to keep a reference to the returned
     /// observer set entry for explicit removal.
     /// - returns: an observer set entry which can be passed to `remove:` to stop observing
-    public func add<T: AnyObject>(object: T, _ operationQueue: NSOperationQueue? = nil, _ f: T -> Parameters -> Void) -> ObserverSetEntry<Parameters> {
+    public func add<T: AnyObject>(object: T, operationQueue: NSOperationQueue? = nil, _ f: T -> Parameters -> Void) -> ObserverSetEntry<Parameters> {
         let entry = ObserverSetEntry<Parameters>(object: object, operationQueue: operationQueue, f: { f($0 as! T) })
         synchronized {
             self.entries.append(entry)
@@ -73,7 +73,7 @@ public class ObserverSet<Parameters> {
     /// Adds an observer `f` which will be called on notification. The method will be added to `queue` if supplied, otherwise it is run synchronously on the notifying thread.
     /// - returns: an observer set entry which should be passed to `remove:` to stop observing
     public func add(operationQueue: NSOperationQueue? = nil, f: Parameters -> Void) -> ObserverSetEntry<Parameters> {
-        return self.add(self, operationQueue, { _ in f })
+        return self.add(self, operationQueue: operationQueue, { _ in f })
     }
     
     /// Removes an observer set entry.
