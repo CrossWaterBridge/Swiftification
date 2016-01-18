@@ -31,12 +31,12 @@ import Dispatch
 public class ObserverSetEntry<Parameters> {
 
     private weak var object: AnyObject?
-    private let queue: dispatch_queue_t?
+    private let operationQueue: NSOperationQueue?
     private let f: AnyObject -> Parameters -> Void
     
-    private init(object: AnyObject, queue: dispatch_queue_t?, f: AnyObject -> Parameters -> Void) {
+    private init(object: AnyObject, operationQueue: NSOperationQueue?, f: AnyObject -> Parameters -> Void) {
         self.object = object
-        self.queue = queue
+        self.operationQueue = operationQueue
         self.f = f
     }
     
@@ -58,22 +58,22 @@ public class ObserverSet<Parameters> {
     
     public init() {}
     
-    /// Adds an observer `object`, whose method `f` will be called on notification. The method will be run synchronously on `queue` if supplied, otherwise on the notifying thread.
+    /// Adds an observer `object`, whose method `f` will be called on notification. The method will be added to `queue` if supplied, otherwise it is run synchronously on the notifying thread.
     /// - Note: Because `object` is held weakly there may be no need to keep a reference to the returned
     /// observer set entry for explicit removal.
     /// - returns: an observer set entry which can be passed to `remove:` to stop observing
-    public func add<T: AnyObject>(object: T, queue: dispatch_queue_t? = nil, _ f: T -> Parameters -> Void) -> ObserverSetEntry<Parameters> {
-        let entry = ObserverSetEntry<Parameters>(object: object, queue: queue, f: { f($0 as! T) })
+    public func add<T: AnyObject>(object: T, _ operationQueue: NSOperationQueue? = nil, _ f: T -> Parameters -> Void) -> ObserverSetEntry<Parameters> {
+        let entry = ObserverSetEntry<Parameters>(object: object, operationQueue: operationQueue, f: { f($0 as! T) })
         synchronized {
             self.entries.append(entry)
         }
         return entry
     }
     
-    /// Adds an observer `f` which will be called on notification. The method will be run synchronously on `queue` if supplied, otherwise on the notifying thread.
+    /// Adds an observer `f` which will be called on notification. The method will be added to `queue` if supplied, otherwise it is run synchronously on the notifying thread.
     /// - returns: an observer set entry which should be passed to `remove:` to stop observing
-    public func add(queue: dispatch_queue_t? = nil, f: Parameters -> Void) -> ObserverSetEntry<Parameters> {
-        return self.add(self, queue: queue, { _ in f })
+    public func add(operationQueue: NSOperationQueue? = nil, f: Parameters -> Void) -> ObserverSetEntry<Parameters> {
+        return self.add(self, operationQueue, { _ in f })
     }
     
     /// Removes an observer set entry.
@@ -85,22 +85,22 @@ public class ObserverSet<Parameters> {
     
     /// Notifies current observers.
     public func notify(parameters: Parameters) {
-        var toCall: [(dispatch_queue_t?, Parameters -> Void)] = []
+        var toCall: [(NSOperationQueue?, Parameters -> Void)] = []
         
         synchronized {
             for entry in self.entries {
                 if let object: AnyObject = entry.object {
-                    toCall.append((entry.queue, entry.f(object)))
+                    toCall.append((entry.operationQueue, entry.f(object)))
                 }
             }
             self.entries = self.entries.filter { $0.object != nil }
         }
         
-        for (queue, f) in toCall {
-            if let queue = queue {
-                dispatch_sync(queue) {
+        for (operationQueue, f) in toCall {
+            if let operationQueue = operationQueue {
+                operationQueue.addOperation(NSBlockOperation(block: {
                     f(parameters)
-                }
+                }))
             } else {
                 f(parameters)
             }
