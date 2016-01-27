@@ -105,9 +105,9 @@ public extension Array {
         return Array(self[max(count - numberOfElements, 0)..<count])
     }
     
-    /// Returns the first element of self and removes it from the array.
+    /// Returns the first element of self and removes it from the array. Returns `nil` if array is empty.
     mutating func shift() -> Element? {
-        if !self.isEmpty {
+        if !isEmpty {
             return removeAtIndex(0)
         }
         return nil

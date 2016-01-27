@@ -74,13 +74,27 @@ public extension SequenceType {
 
 public extension SequenceType where Generator.Element: Hashable {
     
-    /// Returns an array removing the duplicate elements in self if Generator implements the Equatable protocol.
+    /// Returns an array removing the duplicate elements in self. The original element order is preserved.
     @warn_unused_result
     func unique() -> [Generator.Element] {
         var results: [Generator.Element] = []
         var tempSet = Set<Generator.Element>()
         for element in self where !tempSet.contains(element) {
             tempSet.insert(element)
+            results.append(element)
+        }
+        return results
+    }
+    
+}
+
+public extension SequenceType where Generator.Element: Equatable {
+    
+    /// Returns an array removing the duplicate elements in self. The original element order is preserved.
+    @warn_unused_result
+    func unique() -> [Generator.Element] {
+        var results: [Generator.Element] = []
+        for element in self where !results.contains(element) {
             results.append(element)
         }
         return results

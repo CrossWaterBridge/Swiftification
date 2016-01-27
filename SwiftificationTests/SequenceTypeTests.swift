@@ -23,6 +23,14 @@
 import XCTest
 import Swiftification
 
+struct EquatableButNotHashable: Equatable {
+    let value: Int
+}
+
+func == (lhs: EquatableButNotHashable, rhs: EquatableButNotHashable) -> Bool {
+    return lhs.value == rhs.value
+}
+
 class SequenceTypeTests: XCTestCase {
     
     func testMapFilter() {
@@ -38,22 +46,20 @@ class SequenceTypeTests: XCTestCase {
         let actual = array.takeFirst { $0 > 2 }
         XCTAssertEqual(expected, actual)
     }
-    
-    func testUnique() {
-        let array = [1, 1, 2, 2, 3, 4]
-        let unique = array.unique()
-        XCTAssertTrue(array.count == 6)
-        XCTAssertTrue(unique.count == 4)
-    }
 
-    func testUniqueOrder1() {
+    func testUnique1() {
         let array = [1, 1, 2, 2, 3, 4]
         XCTAssertEqual(array.unique(), [1, 2, 3, 4])
     }
     
-    func testUniqueOrder2() {
+    func testUnique2() {
         let array = ["happy", "sad", "mad", "glad", "bad", "mad", "bad", "happy", "sad", "mad"]
         XCTAssertEqual(array.unique(), ["happy", "sad", "mad", "glad", "bad"])
+    }
+    
+    func testUnique3() {
+        let array = [EquatableButNotHashable(value: 1), EquatableButNotHashable(value: 2), EquatableButNotHashable(value: 1)]
+        XCTAssertEqual(array.unique(), [EquatableButNotHashable(value: 1), EquatableButNotHashable(value: 2)])
     }
     
     func testUniqueBy() {
