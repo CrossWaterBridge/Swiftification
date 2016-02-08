@@ -33,13 +33,6 @@ func == (lhs: EquatableButNotHashable, rhs: EquatableButNotHashable) -> Bool {
 
 class SequenceTypeTests: XCTestCase {
     
-    func testMapFilter() {
-        let array = [1, 2, 3]
-        let expected = ["1", "2", "3"]
-        let actual = array.map { "\($0)" }
-        XCTAssertEqual(expected, actual)
-    }
-    
     func testTakeFirst() {
         let array = [1, 2, 3]
         let expected = 3
