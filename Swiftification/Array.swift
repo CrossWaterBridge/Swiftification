@@ -24,9 +24,15 @@ import Foundation
 
 public extension Array {
     
-    /// Returns the element at `index`, or `nil` if `index` is out of bounds.
+    /// Access element at `index`. Reading returns the element or `nil` if `index` is out of bounds. Writing only sets if `index` is in bounds.
     subscript(safe index: Int) -> Element? {
-        return (indices ~= index ? self[index] : nil)
+        get {
+            return (indices ~= index ? self[index] : nil)
+        }
+        set {
+            guard indices ~= index, let newValue = newValue else { return }
+            self[index] = newValue
+        }
     }
     
     /// Returns the first occurence of item, if found
