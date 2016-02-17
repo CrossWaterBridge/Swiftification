@@ -31,6 +31,17 @@ public extension Dictionary {
         }
     }
     
+    /// Passthrough 'safe' subscript to make linters happy
+    /// (because SwiftLint can't currently differentiate between array and dictionary subscripts)
+    subscript(safe key: Key) -> Value? {
+        get {
+            return self[key]
+        }
+        set {
+            self[key] = newValue
+        }
+    }
+    
     /// Returns the union of `self` and the other dictionaries. If more than
     /// one dictionary has the same key, it will take on the rightmost
     /// dictionary's value.

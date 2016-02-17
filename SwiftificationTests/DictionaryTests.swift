@@ -79,4 +79,14 @@ class DictionaryTests: XCTestCase {
         expected.forEach { XCTAssertTrue(actual.contains($0)) }
     }
     
+    func testSafeSubscript() {
+        var dict = ["a": 1, "b": 2]
+        var dict2 = dict
+        XCTAssertEqual(dict[safe: "a"], dict["a"])
+        XCTAssertEqual(dict[safe: "b"], dict["b"])
+        dict["c"] = 3
+        dict2[safe: "c"] = 3
+        XCTAssertEqual(dict, dict2)
+    }
+    
 }

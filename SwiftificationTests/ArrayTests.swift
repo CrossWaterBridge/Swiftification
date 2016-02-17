@@ -33,12 +33,17 @@ private struct TestObject {
 class ArrayTests: XCTestCase {
     
     func testSafe() {
-        let array: [Int] = [1, 2, 3]
+        var array: [Int] = [1, 2, 3]
         XCTAssertNil(array[safe: -1])
         XCTAssertEqual(array[safe: 0], array[0])
         XCTAssertEqual(array[safe: 1], array[1])
         XCTAssertEqual(array[safe: 2], array[2])
         XCTAssertNil(array[safe: 3])
+        array[safe: 2] = 4
+        XCTAssertEqual(array, [1, 2, 4])
+        array[safe: 5] = 5
+        array[safe: -1] = 7
+        XCTAssertEqual(array, [1, 2, 4])
     }
     
     func testRandom() {
