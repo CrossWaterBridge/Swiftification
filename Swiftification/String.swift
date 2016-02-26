@@ -29,6 +29,12 @@ public extension String {
         return characters.count
     }
     
+    /// Safely access the character at the given index, returning `nil` if `index` is out of bounds
+    /// This should be used in conjunction with indexes `advancedBy(_:limit)` to avoid crashes
+    subscript(safe index: Index) -> Character? {
+        return index < endIndex ? self[index] : nil
+    }
+    
     /// Strips whitespaces from both the beginning and the end of self.
     @warn_unused_result
     func trimmed() -> String {
