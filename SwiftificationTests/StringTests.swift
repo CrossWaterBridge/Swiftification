@@ -81,4 +81,10 @@ class StringTests: XCTestCase {
         }
     }
     
+    func testSafeSubscript() {
+        let str = "Hi"
+        XCTAssertEqual(str[str.startIndex.advancedBy(1)], str[safe: str.startIndex.advancedBy(1)]!)
+        XCTAssertNil(str[safe: str.startIndex.advancedBy(5, limit: str.endIndex)])
+    }
+    
 }
