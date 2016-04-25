@@ -51,9 +51,8 @@ public extension Array {
     
     /// Randomly rearranges the elements of self using the Fisher-Yates shuffle
     mutating func shuffleInPlace() {
-        if count <= 1 {
-            return
-        }
+        guard count > 1 else { return }
+        
         for index in (1..<count).reverse() {
             let newIndex = Int.random(0...index)
             if index != newIndex {
