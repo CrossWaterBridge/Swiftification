@@ -67,6 +67,18 @@ class ArrayTests: XCTestCase {
         XCTAssertEqual(shuffledArray.sort(), array)
     }
     
+    func testShuffleInPlaceEmpty() {
+        var array = [Int]()
+        array.shuffleInPlace()
+        XCTAssertTrue(array == [])
+    }
+    
+    func testShuffleInPlaceSingleElement() {
+        var array = [1]
+        array.shuffleInPlace()
+        XCTAssertTrue(array == [1])
+    }
+    
     func testShuffleInPlace() {
         var array = Array(1...1000)
         array.shuffleInPlace()
