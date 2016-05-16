@@ -92,6 +92,13 @@ class ArrayTests: XCTestCase {
         XCTAssertTrue(grouped[1]?.count == 1)
     }
     
+    func testPartitionBy() {
+        let array = Array(1...10)
+        let expected = [Array(1...3), Array(4...10)]
+        let actual = array.partitionBy { $0 <= 3 }
+        XCTAssertEqual(actual, expected)
+    }
+    
     func testSectionBy() {
         let array = [TestObject(name: "Test", type: 0), TestObject(name: "Test", type: 0), TestObject(name: "Test2", type: 0), TestObject(name: "Test2", type: 1), TestObject(name: "Test2", type: 1)]
         let sectioned = array.sectionBy { $0.name }
