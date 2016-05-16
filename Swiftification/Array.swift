@@ -36,7 +36,7 @@ public extension Array {
     }
     
     /// Returns the first occurence of item, if found
-    func find(condition: (Element) -> Bool) -> Element? {
+    func find(@noescape condition: (Element) -> Bool) -> Element? {
         if let index = indexOf({ condition($0) }) {
             return self[index]
         }
@@ -71,7 +71,7 @@ public extension Array {
     }
     
     /// Groups the array into a dictionary by key specified in closure
-    func groupBy<U>(groupClosure: (Element) -> U) -> [U: Array] {
+    func groupBy<U>(@noescape groupClosure: (Element) -> U) -> [U: Array] {
         var grouped = [U: Array]()
         for element in self {
             let key = groupClosure(element)

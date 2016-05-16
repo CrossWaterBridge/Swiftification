@@ -35,7 +35,7 @@ public extension SequenceType {
     
     /// Returns the array of elements for which condition(element) is unique
     @warn_unused_result
-    func uniqueBy<T: Hashable>(condition: (Generator.Element) -> T) -> [Generator.Element] {
+    func uniqueBy<T: Hashable>(@noescape condition: (Generator.Element) -> T) -> [Generator.Element] {
         var results: [Generator.Element] = []
         var tempSet = Set<T>()
         for element in self {
@@ -50,7 +50,7 @@ public extension SequenceType {
     
     /// Checks if test returns true for any element of self.
     @warn_unused_result
-    func any(condition: (Generator.Element) -> Bool) -> Bool {
+    func any(@noescape condition: (Generator.Element) -> Bool) -> Bool {
         for element in self where condition(element) {
             return true
         }
