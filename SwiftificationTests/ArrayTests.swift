@@ -141,5 +141,12 @@ class ArrayTests: XCTestCase {
         let array = [1, 2]
         XCTAssertEqual(array.take(10), [1, 2])
     }
+    
+    func testToDictionary() {
+        let array = [1, 2, 3]
+        let expected = ["1": 1, "2": 2, "3": 3]
+        let actual = array.toDictionary { "\($0)" }
+        XCTAssertEqual(actual, expected)
+    }
         
 }
