@@ -141,5 +141,17 @@ class ArrayTests: XCTestCase {
         let array = [1, 2]
         XCTAssertEqual(array.take(10), [1, 2])
     }
+    
+    func testSkip1() {
+        let array = Array(1...10)
+        XCTAssertEqual(array.skip(5), Array(6...10))
+    }
+    
+    func testSkip2() {
+        let array = [1, 2]
+        XCTAssertEqual(array.skip(1), [2])
+        XCTAssertEqual(array.skip(2), [])
+        XCTAssertEqual(array.skip(3), [])
+    }
         
 }

@@ -143,5 +143,14 @@ public extension Array {
     func take(numberOfElements: Int) -> Array {
         return Array(self[0..<max(min(numberOfElements, count), 0)])
     }
+    
+    /// Returns an array containing the remaining elements of self after skipping the first n.
+    @warn_unused_result
+    func skip(numberOfElements: Int) -> Array {
+        if count > numberOfElements {
+            return Array(self[numberOfElements..<count])
+        }
+        return []
+    }
 
 }
