@@ -81,6 +81,23 @@ public extension Array {
         return grouped
     }
     
+    /// Splits the array each time the closure returns a new value.
+    func partitionBy<T: Equatable>(@noescape closure: (Element) -> T) -> [[Element]] {
+        var partitions = [[Element]]()
+        var lastValue: T?
+        for element in self {
+            let value = closure(element)
+            if value == lastValue {
+                partitions[partitions.count - 1].append(element)
+            } else {
+                partitions.append([element])
+                lastValue = value
+            }
+        }
+        
+        return partitions
+    }
+    
     /// Sections the ordered array by the string specified in the closure, preserving the order of the original array.
     func sectionBy(@noescape sectionFunction: (Element) -> String) -> [(title: String, items: [Element])] {
         var lastTitle = ""
