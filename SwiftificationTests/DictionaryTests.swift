@@ -64,6 +64,24 @@ class DictionaryTests: XCTestCase {
         XCTAssertEqual(expected, actual)
     }
     
+    func testFormUnionOperator1() {
+        let dict1 = [1: 1, 2: 2, 3: 3]
+        let dict2 = [1: 4]
+        let expected = [1: 4, 2: 2, 3: 3]
+        var actual = dict1
+        actual |= dict2
+        XCTAssertEqual(expected, actual)
+    }
+    
+    func testFormUnionOperator2() {
+        let dict1 = [1: 2]
+        let dict2 = [3: 4]
+        let expected = [1: 2, 3: 4]
+        var actual = dict1
+        actual |= dict2
+        XCTAssertEqual(expected, actual)
+    }
+    
     func testMapValues() {
         let dictionary = ["lowercase": ["c", "a", "b"], "uppercase": ["A", "C", "B"]]
         let sortedDictionary = dictionary.mapValues { $1.sort(<) }

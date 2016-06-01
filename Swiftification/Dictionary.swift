@@ -85,3 +85,10 @@ public extension Dictionary {
 public func | <K, V>(lhs: Dictionary<K, V>, rhs: Dictionary<K, V>) -> Dictionary<K, V> {
     return lhs.union(rhs)
 }
+
+/// Returns the union of the two dictionaries. For any keys that both
+/// dictionaries have in common, the result will take on the value from the
+/// right dictionary.
+public func |= <K, V>(inout lhs: Dictionary<K, V>, rhs: Dictionary<K, V>) {
+    lhs = lhs.union(rhs)
+}
