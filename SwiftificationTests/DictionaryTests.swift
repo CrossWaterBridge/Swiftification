@@ -48,6 +48,24 @@ class DictionaryTests: XCTestCase {
         XCTAssertEqual(expected, actual)
     }
     
+    func testFormUnion1() {
+        let dict1 = [1: 1, 2: 2, 3: 3]
+        let dict2 = [1: 4]
+        let expected = [1: 4, 2: 2, 3: 3]
+        var actual = dict1
+        actual.formUnion(dict2)
+        XCTAssertEqual(expected, actual)
+    }
+
+    func testFormUnion2() {
+        let dict1 = [1: 2]
+        let dict2 = [3: 4]
+        let expected = [1: 2, 3: 4]
+        var actual = dict1
+        actual.formUnion(dict2)
+        XCTAssertEqual(expected, actual)
+    }
+
     func testUnionOperator1() {
         let dict1 = [1: 1, 2: 2, 3: 3]
         let dict2 = [1: 4]
@@ -61,6 +79,24 @@ class DictionaryTests: XCTestCase {
         let dict2 = [3: 4]
         let expected = [1: 2, 3: 4]
         let actual = dict1 | dict2
+        XCTAssertEqual(expected, actual)
+    }
+    
+    func testFormUnionOperator1() {
+        let dict1 = [1: 1, 2: 2, 3: 3]
+        let dict2 = [1: 4]
+        let expected = [1: 4, 2: 2, 3: 3]
+        var actual = dict1
+        actual |= dict2
+        XCTAssertEqual(expected, actual)
+    }
+    
+    func testFormUnionOperator2() {
+        let dict1 = [1: 2]
+        let dict2 = [3: 4]
+        let expected = [1: 2, 3: 4]
+        var actual = dict1
+        actual |= dict2
         XCTAssertEqual(expected, actual)
     }
     

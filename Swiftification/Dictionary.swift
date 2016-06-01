@@ -56,6 +56,17 @@ public extension Dictionary {
         return result
     }
     
+    /// Unions the other dictionaries with `self`. If more than
+    /// one dictionary has the same key, it will take on the rightmost
+    /// dictionary's value.
+    mutating func formUnion(first: Dictionary, _ rest: Dictionary...) {
+        for dictionary in [first] + rest {
+            for (key, value) in dictionary {
+                self[key] = value
+            }
+        }
+    }
+
     /// Returns a new dictionary by running a map on each key and getting a new value
     @warn_unused_result
     func mapValues<V>(@noescape map: (Key, Value) -> V) -> [Key: V] {
@@ -84,4 +95,10 @@ public extension Dictionary {
 /// right dictionary.
 public func | <K, V>(lhs: Dictionary<K, V>, rhs: Dictionary<K, V>) -> Dictionary<K, V> {
     return lhs.union(rhs)
+}
+
+/// Unions two dictionaries. For any keys that both dictionaries have
+/// in common, the left dictionary will take on the value from the right.
+public func |= <K, V>(inout lhs: Dictionary<K, V>, rhs: Dictionary<K, V>) {
+    lhs.formUnion(rhs)
 }
