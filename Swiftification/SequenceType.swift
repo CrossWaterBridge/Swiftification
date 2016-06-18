@@ -26,20 +26,32 @@ public extension SequenceType {
     
     /// Returns the first element of `self` that tests `true`, or `nil` if no element tests `true`.
     @warn_unused_result
-    func takeFirst(@noescape test: Generator.Element throws -> Bool) rethrows -> Generator.Element? {
+    func takeFirst(@noescape test: (Generator.Element) throws -> Bool) rethrows -> Generator.Element? {
         for element in self where try test(element) {
             return element
         }
         return nil
     }
     
+    @warn_unused_result
+    func takeWhile(@noescape test: (Generator.Element) throws -> Bool) rethrows -> [Generator.Element] {
+        var results: [Generator.Element] = []
+        for element in self {
+            if try !test(element) {
+                break
+            }
+            results.append(element)
+        }
+        return results
+    }
+    
     /// Returns the array of elements for which condition(element) is unique
     @warn_unused_result
-    func uniqueBy<T: Hashable>(@noescape condition: (Generator.Element) -> T) -> [Generator.Element] {
+    func uniqueBy<T: Hashable>(@noescape condition: (Generator.Element) throws -> T) rethrows -> [Generator.Element] {
         var results: [Generator.Element] = []
         var tempSet = Set<T>()
         for element in self {
-            let value: T = condition(element)
+            let value: T = try condition(element)
             if !tempSet.contains(value) {
                 tempSet.insert(value)
                 results.append(element)
@@ -50,8 +62,8 @@ public extension SequenceType {
     
     /// Checks if test returns true for any element of self.
     @warn_unused_result
-    func any(@noescape condition: (Generator.Element) -> Bool) -> Bool {
-        for element in self where condition(element) {
+    func any(@noescape condition: (Generator.Element) throws -> Bool) rethrows -> Bool {
+        for element in self where try condition(element) {
             return true
         }
         return false
