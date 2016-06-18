@@ -33,6 +33,7 @@ public extension SequenceType {
         return nil
     }
     
+    /// Returns all elements until the first element of `self` that tests `false`.
     @warn_unused_result
     func takeWhile(@noescape test: (Generator.Element) throws -> Bool) rethrows -> [Generator.Element] {
         var results: [Generator.Element] = []
