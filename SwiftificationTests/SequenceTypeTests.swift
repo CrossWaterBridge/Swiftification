@@ -39,6 +39,27 @@ class SequenceTypeTests: XCTestCase {
         let actual = array.takeFirst { $0 > 2 }
         XCTAssertEqual(expected, actual)
     }
+    
+    func testTakeWhile1() {
+        let array = [1, 2, 3]
+        let expected = [1, 2]
+        let actual = array.takeWhile { $0 < 3 }
+        XCTAssertEqual(expected, actual)
+    }
+    
+    func testTakeWhile2() {
+        let array = [1, 2, 3]
+        let expected = []
+        let actual = array.takeWhile { _ in false }
+        XCTAssertEqual(expected, actual)
+    }
+    
+    func testTakeWhile3() {
+        let array = [1, 2, 3]
+        let expected = array
+        let actual = array.takeWhile { _ in true }
+        XCTAssertEqual(expected, actual)
+    }
 
     func testUnique1() {
         let array = [1, 1, 2, 2, 3, 4]
