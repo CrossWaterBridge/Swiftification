@@ -103,26 +103,9 @@ class StringTests: XCTestCase {
     }
     
     func testInsertAtIndex() {
-        let insertString = "TEST"
-        let string = "string"
-        let optional = Optional("optional")
-        let optionalNil: String? = nil
-        
-        XCTAssertEqual(string.insert(insertString, atIndex: 0), "TESTstring")
-        XCTAssertEqual(string.insert(insertString, atIndex: 3), "strTESTing")
-        XCTAssertEqual(string.insert(insertString, atIndex: 10), "stringTEST")
-        
-        XCTAssertNil(optionalNil?.insert(insertString, atIndex: 0))
-        XCTAssertNil(optionalNil?.insert(insertString, atIndex: 3))
-        XCTAssertNil(optionalNil?.insert(insertString, atIndex: 10))
-        
-        XCTAssertEqual(optional?.insert(insertString, atIndex: 0), Optional("TESToptional"))
-        XCTAssertEqual(optional?.insert(insertString, atIndex: 3), Optional("optTESTional"))
-        XCTAssertEqual(optional?.insert(insertString, atIndex: 10), Optional("optionalTEST"))
-        
-        XCTAssertEqual(string.insert(optionalNil, atIndex: 0), string)
-        XCTAssertEqual(string.insert(optionalNil, atIndex: 3), string)
-        XCTAssertEqual(string.insert(optionalNil, atIndex: 10), string)
+        XCTAssertEqual("string".insert("TEST", atIndex: 0), "TESTstring")
+        XCTAssertEqual("string".insert("TEST", atIndex: 3), "strTESTing")
+        XCTAssertEqual("string".insert("TEST", atIndex: 100), "stringTEST")
     }
     
 }

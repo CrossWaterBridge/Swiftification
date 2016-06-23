@@ -55,8 +55,7 @@ public extension String {
 
     /// Returns a value with string inserted at index.
     @warn_unused_result
-    func insert(string: String?, atIndex index: Int) -> String {
-        guard let string = string else { return self }
+    func insert(string: String, atIndex index: Int) -> String {
         let stringIndex = startIndex.advancedBy(min(index, length))
         let start = substringToIndex(stringIndex)
         let end = substringFromIndex(stringIndex)
