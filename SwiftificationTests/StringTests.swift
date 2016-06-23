@@ -100,8 +100,6 @@ class StringTests: XCTestCase {
         XCTAssertEqual(str1 + nonNilString, "HiI'm not Nil!")
         XCTAssertEqual(strNil + nonNilString, "I'm not Nil!")
         XCTAssertEqual(nonNilString + strNil, "I'm not Nil!")
-        
-        
     }
     
 }
