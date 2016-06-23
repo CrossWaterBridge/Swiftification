@@ -52,5 +52,11 @@ public extension String {
         }
         return result
     }
-    
+
+}
+
+public func +(lhs: String?, rhs: String?) -> String? {
+    guard let lhs = lhs else { return rhs }
+    guard let rhs = rhs else { return lhs }
+    return lhs + rhs
 }

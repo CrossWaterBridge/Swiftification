@@ -87,4 +87,21 @@ class StringTests: XCTestCase {
         XCTAssertNil(str[safe: str.startIndex.advancedBy(5, limit: str.endIndex)])
     }
     
+    func testAppendAndPrependOptionalString() {
+        let str1: String? = "Hi"
+        let str2: String? = " Bob "
+        let strNil: String? = nil
+        let nonNilString = "I'm not Nil!"
+        XCTAssertEqual(str1 + str2, "Hi Bob ")
+        XCTAssertEqual(str2 + str1, " Bob Hi")
+        XCTAssertEqual(str1 + strNil, "Hi")
+        XCTAssertEqual(strNil + str1, "Hi")
+        XCTAssertEqual(nonNilString + str1, "I'm not Nil!Hi")
+        XCTAssertEqual(str1 + nonNilString, "HiI'm not Nil!")
+        XCTAssertEqual(strNil + nonNilString, "I'm not Nil!")
+        XCTAssertEqual(nonNilString + strNil, "I'm not Nil!")
+        
+        
+    }
+    
 }
