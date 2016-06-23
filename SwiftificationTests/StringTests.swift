@@ -103,9 +103,9 @@ class StringTests: XCTestCase {
     }
     
     func testInsertAtIndex() {
-        XCTAssertEqual("string".insert("TEST", atIndex: 0), "TESTstring")
-        XCTAssertEqual("string".insert("TEST", atIndex: 3), "strTESTing")
-        XCTAssertEqual("string".insert("TEST", atIndex: 100), "stringTEST")
+        XCTAssertEqual("string".insert("TEST", at: 0), "TESTstring")
+        XCTAssertEqual("string".insert("TEST", at: 3), "strTESTing")
+        XCTAssertEqual("string".insert("TEST", at: 100), "stringTEST")
     }
     
 }
