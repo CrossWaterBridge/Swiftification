@@ -91,16 +91,16 @@ class StringTests: XCTestCase {
         let str1: String? = "Hi"
         let str2: String? = " Bob "
         let strNil: String? = nil
+        let nonNilString = "I'm not Nil!"
+        XCTAssertEqual(str1 + str2, "Hi Bob ")
+        XCTAssertEqual(str2 + str1, " Bob Hi")
+        XCTAssertEqual(str1 + strNil, "Hi")
+        XCTAssertEqual(strNil + str1, "Hi")
+        XCTAssertEqual(nonNilString + str1, "I'm not Nil!Hi")
+        XCTAssertEqual(str1 + nonNilString, "HiI'm not Nil!")
+        XCTAssertEqual(strNil + nonNilString, "I'm not Nil!")
+        XCTAssertEqual(nonNilString + strNil, "I'm not Nil!")
         
-        let prependString1On2 = str1 + str2 // "Hi Bob "
-        let appendString1On2 = str2 + str1 // " Bob Hi"
-        let onlyString1 = str1 + strNil // "Hi"
-        let onlyString1Append = strNil + str1 // "Hi"
-        
-        XCTAssertEqual(prependString1On2, "Hi Bob ")
-        XCTAssertEqual(appendString1On2, " Bob Hi")
-        XCTAssertEqual(onlyString1, "Hi")
-        XCTAssertEqual(onlyString1Append, "Hi")
         
     }
     
