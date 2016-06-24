@@ -102,4 +102,10 @@ class StringTests: XCTestCase {
         XCTAssertEqual(nonNilString + strNil, "I'm not Nil!")
     }
     
+    func testInsertAtIndex() {
+        XCTAssertEqual("string".insert("TEST", at: 0), "TESTstring")
+        XCTAssertEqual("string".insert("TEST", at: 3), "strTESTing")
+        XCTAssertEqual("string".insert("TEST", at: 100), "stringTEST")
+    }
+    
 }

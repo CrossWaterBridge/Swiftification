@@ -53,6 +53,12 @@ public extension String {
         return result
     }
 
+    /// Returns a value with string inserted at index.
+    @warn_unused_result
+    func insert(string: String, at i: Int) -> String {
+        let index = startIndex.advancedBy(min(i, length))
+        return [substringToIndex(index), string, substringFromIndex(index)].joinWithSeparator("")
+    }
 }
 
 public func + (lhs: String?, rhs: String?) -> String? {
