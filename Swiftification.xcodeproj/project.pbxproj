@@ -23,6 +23,8 @@
 		D96A72DF1C08D46F002CCCEE /* ObserverSetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96A72DE1C08D46F002CCCEE /* ObserverSetTests.swift */; };
 		D98FCD451C0A2D1700ABBBA8 /* NSAttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98FCD441C0A2D1700ABBBA8 /* NSAttributedString.swift */; };
 		D98FCD471C0A2EFB00ABBBA8 /* NSAttributedStringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98FCD461C0A2EFB00ABBBA8 /* NSAttributedStringTests.swift */; };
+		D9E25A5A1D2E9F0A0065A2C2 /* CaseCountable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E25A591D2E9F0A0065A2C2 /* CaseCountable.swift */; };
+		D9E25A5C1D2EA1210065A2C2 /* CaseCountableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E25A5B1D2EA1210065A2C2 /* CaseCountableTests.swift */; };
 		EC3D476D1C0CFB3D00BA99CC /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3D476C1C0CFB3D00BA99CC /* Int.swift */; };
 		EC3D476F1C0CFBF700BA99CC /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3D476E1C0CFBF700BA99CC /* Int.swift */; };
 		EC3D47711C0D0E7000BA99CC /* NSDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3D47701C0D0E7000BA99CC /* NSDate.swift */; };
@@ -59,6 +61,8 @@
 		D96A72DE1C08D46F002CCCEE /* ObserverSetTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObserverSetTests.swift; sourceTree = "<group>"; };
 		D98FCD441C0A2D1700ABBBA8 /* NSAttributedString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSAttributedString.swift; sourceTree = "<group>"; };
 		D98FCD461C0A2EFB00ABBBA8 /* NSAttributedStringTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSAttributedStringTests.swift; sourceTree = "<group>"; };
+		D9E25A591D2E9F0A0065A2C2 /* CaseCountable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaseCountable.swift; sourceTree = "<group>"; };
+		D9E25A5B1D2EA1210065A2C2 /* CaseCountableTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaseCountableTests.swift; sourceTree = "<group>"; };
 		EC3D476C1C0CFB3D00BA99CC /* Int.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Int.swift; sourceTree = "<group>"; };
 		EC3D476E1C0CFBF700BA99CC /* Int.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Int.swift; sourceTree = "<group>"; };
 		EC3D47701C0D0E7000BA99CC /* NSDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDate.swift; sourceTree = "<group>"; };
@@ -106,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				D96A72D61C089B5C002CCCEE /* Array.swift */,
+				D9E25A591D2E9F0A0065A2C2 /* CaseCountable.swift */,
 				D9144D1F1C0BCA81005B2BEE /* Dictionary.swift */,
 				D96A72C11C089B12002CCCEE /* Info.plist */,
 				EC3D476C1C0CFB3D00BA99CC /* Int.swift */,
@@ -124,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				D96A72CB1C089B13002CCCEE /* ArrayTests.swift */,
+				D9E25A5B1D2EA1210065A2C2 /* CaseCountableTests.swift */,
 				D9144D211C0BCBC7005B2BEE /* DictionaryTests.swift */,
 				D96A72CD1C089B13002CCCEE /* Info.plist */,
 				EC3D476E1C0CFBF700BA99CC /* Int.swift */,
@@ -250,6 +256,7 @@
 				D96A72D81C089B5C002CCCEE /* Array.swift in Sources */,
 				EC3D476D1C0CFB3D00BA99CC /* Int.swift in Sources */,
 				EC3D47711C0D0E7000BA99CC /* NSDate.swift in Sources */,
+				D9E25A5A1D2E9F0A0065A2C2 /* CaseCountable.swift in Sources */,
 				D96A72D91C089B5C002CCCEE /* SequenceType.swift in Sources */,
 				D45479CB1C46D336007258A6 /* String.swift in Sources */,
 				D943054F1C59886900FA14B6 /* Memoize.swift in Sources */,
@@ -270,6 +277,7 @@
 				D96A72DB1C089CFD002CCCEE /* SequenceTypeTests.swift in Sources */,
 				D45479CD1C46D3AB007258A6 /* StringTests.swift in Sources */,
 				D98FCD471C0A2EFB00ABBBA8 /* NSAttributedStringTests.swift in Sources */,
+				D9E25A5C1D2EA1210065A2C2 /* CaseCountableTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
