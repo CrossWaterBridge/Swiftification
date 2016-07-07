@@ -28,12 +28,12 @@ class CaseCountableTests: XCTestCase {
         case a
     }
     
-    enum Two: Int, CaseCountable {
+    enum Two: Int64, CaseCountable {
         case a
         case b
     }
     
-    enum Three: Int, CaseCountable {
+    enum Three: UInt8, CaseCountable {
         case a
         case b
         case c
