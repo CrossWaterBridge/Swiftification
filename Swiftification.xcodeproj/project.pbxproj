@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D410D8241DA404E6008FB951 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = D410D8231DA404E6008FB951 /* Double.swift */; };
+		D410D8261DA40612008FB951 /* DoubleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D410D8251DA40612008FB951 /* DoubleTests.swift */; };
 		D45479CB1C46D336007258A6 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45479CA1C46D336007258A6 /* String.swift */; };
 		D45479CD1C46D3AB007258A6 /* StringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45479CC1C46D3AB007258A6 /* StringTests.swift */; };
 		D9144D201C0BCA81005B2BEE /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9144D1F1C0BCA81005B2BEE /* Dictionary.swift */; };
@@ -42,6 +44,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D410D8231DA404E6008FB951 /* Double.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
+		D410D8251DA40612008FB951 /* DoubleTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoubleTests.swift; sourceTree = "<group>"; };
 		D45479CA1C46D336007258A6 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		D45479CC1C46D3AB007258A6 /* StringTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringTests.swift; sourceTree = "<group>"; };
 		D9144D1F1C0BCA81005B2BEE /* Dictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dictionary.swift; sourceTree = "<group>"; };
@@ -112,15 +116,16 @@
 				D96A72D61C089B5C002CCCEE /* Array.swift */,
 				D9E25A591D2E9F0A0065A2C2 /* CaseCountable.swift */,
 				D9144D1F1C0BCA81005B2BEE /* Dictionary.swift */,
+				D410D8231DA404E6008FB951 /* Double.swift */,
 				D96A72C11C089B12002CCCEE /* Info.plist */,
 				EC3D476C1C0CFB3D00BA99CC /* Int.swift */,
+				D943054E1C59886900FA14B6 /* Memoize.swift */,
 				D98FCD441C0A2D1700ABBBA8 /* NSAttributedString.swift */,
 				EC3D47701C0D0E7000BA99CC /* NSDate.swift */,
 				D96A72DC1C08D271002CCCEE /* ObserverSet.swift */,
 				D96A72D71C089B5C002CCCEE /* SequenceType.swift */,
 				D45479CA1C46D336007258A6 /* String.swift */,
 				D96A72BF1C089B12002CCCEE /* Swiftification.h */,
-				D943054E1C59886900FA14B6 /* Memoize.swift */,
 			);
 			path = Swiftification;
 			sourceTree = "<group>";
@@ -139,6 +144,7 @@
 				D96A72DA1C089CFD002CCCEE /* SequenceTypeTests.swift */,
 				D45479CC1C46D3AB007258A6 /* StringTests.swift */,
 				D94305501C5988EC00FA14B6 /* MemoizeTests.swift */,
+				D410D8251DA40612008FB951 /* DoubleTests.swift */,
 			);
 			path = SwiftificationTests;
 			sourceTree = "<group>";
@@ -262,6 +268,7 @@
 				D96A72D91C089B5C002CCCEE /* SequenceType.swift in Sources */,
 				D45479CB1C46D336007258A6 /* String.swift in Sources */,
 				D943054F1C59886900FA14B6 /* Memoize.swift in Sources */,
+				D410D8241DA404E6008FB951 /* Double.swift in Sources */,
 				D98FCD451C0A2D1700ABBBA8 /* NSAttributedString.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -273,6 +280,7 @@
 				D9144D221C0BCBC7005B2BEE /* DictionaryTests.swift in Sources */,
 				EC3D47731C0D0F2D00BA99CC /* NSDateTests.swift in Sources */,
 				EC3D476F1C0CFBF700BA99CC /* Int.swift in Sources */,
+				D410D8261DA40612008FB951 /* DoubleTests.swift in Sources */,
 				D96A72DF1C08D46F002CCCEE /* ObserverSetTests.swift in Sources */,
 				D96A72CC1C089B13002CCCEE /* ArrayTests.swift in Sources */,
 				D94305511C5988EC00FA14B6 /* MemoizeTests.swift in Sources */,
