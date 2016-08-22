@@ -50,12 +50,13 @@ class ObserverSetTests: XCTestCase {
     
     class TestObserver {
         init(observee: TestObservee) {
-            observee.voidObservers.add(self, self.dynamicType.voidSent)
-            observee.stringObservers.add(self, self.dynamicType.stringChanged)
-            observee.twoStringObservers.add(self, self.dynamicType.twoStringChanged)
-            observee.intObservers.add(self, self.dynamicType.intChanged)
-            observee.intAndStringObservers.add(self, self.dynamicType.intAndStringChanged)
-            observee.namedParameterObservers.add(self, self.dynamicType.namedParameterSent)
+            observee.voidObservers.add(self, type(of: self).voidSent)
+            observee.voidObservers.add(self, type(of: self).voidSent)
+            observee.stringObservers.add(self, type(of: self).stringChanged)
+            observee.twoStringObservers.add(self, type(of: self).twoStringChanged)
+            observee.intObservers.add(self, type(of: self).intChanged)
+            observee.intAndStringObservers.add(self, type(of: self).intAndStringChanged)
+            observee.namedParameterObservers.add(self, type(of: self).namedParameterSent)
         }
         
         deinit {

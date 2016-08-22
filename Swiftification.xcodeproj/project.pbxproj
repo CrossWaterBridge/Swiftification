@@ -27,8 +27,6 @@
 		D9E25A5C1D2EA1210065A2C2 /* CaseCountableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E25A5B1D2EA1210065A2C2 /* CaseCountableTests.swift */; };
 		EC3D476D1C0CFB3D00BA99CC /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3D476C1C0CFB3D00BA99CC /* Int.swift */; };
 		EC3D476F1C0CFBF700BA99CC /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3D476E1C0CFBF700BA99CC /* Int.swift */; };
-		EC3D47711C0D0E7000BA99CC /* NSDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3D47701C0D0E7000BA99CC /* NSDate.swift */; };
-		EC3D47731C0D0F2D00BA99CC /* NSDateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3D47721C0D0F2D00BA99CC /* NSDateTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,8 +63,6 @@
 		D9E25A5B1D2EA1210065A2C2 /* CaseCountableTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaseCountableTests.swift; sourceTree = "<group>"; };
 		EC3D476C1C0CFB3D00BA99CC /* Int.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Int.swift; sourceTree = "<group>"; };
 		EC3D476E1C0CFBF700BA99CC /* Int.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Int.swift; sourceTree = "<group>"; };
-		EC3D47701C0D0E7000BA99CC /* NSDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDate.swift; sourceTree = "<group>"; };
-		EC3D47721C0D0F2D00BA99CC /* NSDateTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDateTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,7 +111,6 @@
 				D96A72C11C089B12002CCCEE /* Info.plist */,
 				EC3D476C1C0CFB3D00BA99CC /* Int.swift */,
 				D98FCD441C0A2D1700ABBBA8 /* NSAttributedString.swift */,
-				EC3D47701C0D0E7000BA99CC /* NSDate.swift */,
 				D96A72DC1C08D271002CCCEE /* ObserverSet.swift */,
 				D96A72D71C089B5C002CCCEE /* SequenceType.swift */,
 				D45479CA1C46D336007258A6 /* String.swift */,
@@ -134,7 +129,6 @@
 				D96A72CD1C089B13002CCCEE /* Info.plist */,
 				EC3D476E1C0CFBF700BA99CC /* Int.swift */,
 				D98FCD461C0A2EFB00ABBBA8 /* NSAttributedStringTests.swift */,
-				EC3D47721C0D0F2D00BA99CC /* NSDateTests.swift */,
 				D96A72DE1C08D46F002CCCEE /* ObserverSetTests.swift */,
 				D96A72DA1C089CFD002CCCEE /* SequenceTypeTests.swift */,
 				D45479CC1C46D3AB007258A6 /* StringTests.swift */,
@@ -257,7 +251,6 @@
 				D9144D201C0BCA81005B2BEE /* Dictionary.swift in Sources */,
 				D96A72D81C089B5C002CCCEE /* Array.swift in Sources */,
 				EC3D476D1C0CFB3D00BA99CC /* Int.swift in Sources */,
-				EC3D47711C0D0E7000BA99CC /* NSDate.swift in Sources */,
 				D9E25A5A1D2E9F0A0065A2C2 /* CaseCountable.swift in Sources */,
 				D96A72D91C089B5C002CCCEE /* SequenceType.swift in Sources */,
 				D45479CB1C46D336007258A6 /* String.swift in Sources */,
@@ -271,7 +264,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D9144D221C0BCBC7005B2BEE /* DictionaryTests.swift in Sources */,
-				EC3D47731C0D0F2D00BA99CC /* NSDateTests.swift in Sources */,
 				EC3D476F1C0CFBF700BA99CC /* Int.swift in Sources */,
 				D96A72DF1C08D46F002CCCEE /* ObserverSetTests.swift in Sources */,
 				D96A72CC1C089B13002CCCEE /* ArrayTests.swift in Sources */,
@@ -307,8 +299,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -355,8 +349,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -376,6 +372,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -387,6 +384,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -398,7 +396,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -406,6 +404,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -416,8 +415,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.crosswaterbridge.Swiftification;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -428,7 +426,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.crosswaterbridge.SwiftificationTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -439,8 +437,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.crosswaterbridge.SwiftificationTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

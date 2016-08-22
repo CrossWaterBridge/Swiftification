@@ -27,7 +27,7 @@ class IntTests: XCTestCase {
 
     func testRandom() {
         for _ in 0...500 {
-            let random = Int.random(1...10)
+            let random = Int.random(1..<11)
             XCTAssertTrue(random <= 10 && random >= 1)
         }
     }

@@ -64,7 +64,7 @@ class ArrayTests: XCTestCase {
         let array = Array(1...1000)
         let shuffledArray = array.shuffle()
         XCTAssertNotEqual(shuffledArray, array)
-        XCTAssertEqual(shuffledArray.sort(), array)
+        XCTAssertEqual(shuffledArray.sorted(), array)
     }
     
     func testShuffleInPlaceEmpty() {
@@ -95,7 +95,7 @@ class ArrayTests: XCTestCase {
     func testPartitionBy() {
         let array = Array(1...10)
         let expected = [Array(1...3), Array(4...10)]
-        let actual = array.partitionBy { $0 <= 3 }
+        let actual = array.partitionBy { $0 <= 3 } 
         XCTAssertEqual(actual, expected)
     }
     

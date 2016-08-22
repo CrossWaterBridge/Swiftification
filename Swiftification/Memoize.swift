@@ -22,7 +22,7 @@
 
 import Foundation
 
-public func memoize<T>(f: () -> T) -> () -> T {
+public func memoize<T>(_ f: @escaping () -> T) -> () -> T {
     var cache: T?
     return {
         if cache == nil {
@@ -32,7 +32,7 @@ public func memoize<T>(f: () -> T) -> () -> T {
     }
 }
 
-public func memoize<T: Hashable, U>(f: (T) -> U) -> (T) -> U {
+public func memoize<T: Hashable, U>(_ f: @escaping (T) -> U) -> (T) -> U {
     var cache = [T: U]()
     return { parameter in
         if cache[parameter] == nil {

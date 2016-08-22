@@ -25,21 +25,21 @@ import Foundation
 /// Returns the second attributed string appended to the first.
 public func + (lhs: NSAttributedString, rhs: NSAttributedString) -> NSAttributedString {
     let result = NSMutableAttributedString(attributedString: lhs)
-    result.appendAttributedString(rhs)
+    result.append(rhs)
     return result
 }
 
-public extension SequenceType where Generator.Element == NSAttributedString {
+public extension Sequence where Iterator.Element == NSAttributedString {
 
     /// Interpose the `separator` between elements of `self`, then concatenate the result.
-    @warn_unused_result
-    func joinWithSeparator(separator: NSAttributedString) -> NSAttributedString {
+    
+    func joinWithSeparator(_ separator: NSAttributedString) -> NSAttributedString {
         let result = NSMutableAttributedString()
-        for (i, element) in self.enumerate() {
+        for (i, element) in self.enumerated() {
             if i > 0 {
-                result.appendAttributedString(separator)
+                result.append(separator)
             }
-            result.appendAttributedString(element)
+            result.append(element)
         }
         return result
     }
