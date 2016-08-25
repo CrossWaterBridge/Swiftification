@@ -24,7 +24,7 @@ import Foundation
 
 public extension Dictionary {
     
-    init<C: Collection>(elements: C) where C.Iterator.Element == Element {
+    init(elements: [(Key, Value)]) {
         self.init()
         for (key, value) in elements {
             self[key] = value
