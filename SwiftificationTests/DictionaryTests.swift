@@ -28,7 +28,7 @@ class DictionaryTests: XCTestCase {
     func testInit() {
         let array: Array<(Int, Int)> = [(1, 2), (3, 4)]
         let expected = [1: 2, 3: 4]
-        let actual = [Int, Int](elements: array)
+        let actual = [Int: Int](elements: array)
         XCTAssertEqual(expected, actual)
     }
     

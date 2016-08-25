@@ -96,7 +96,10 @@ class ArrayTests: XCTestCase {
         let array = Array(1...10)
         let expected = [Array(1...3), Array(4...10)]
         let actual = array.partitionBy { $0 <= 3 } 
-        XCTAssertEqual(actual, expected)
+        XCTAssertTrue(actual.elementsEqual(expected, by: { actual, expected in  
+            return actual.elementsEqual(expected) { $0 == $1 } 
+        }))
+
     }
     
     func testSectionBy() {

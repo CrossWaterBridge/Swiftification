@@ -106,7 +106,10 @@ class SequenceTypeTests: XCTestCase {
             ["man": "Bob"],
             ["woman": "Sally"]
         ]
-        XCTAssertEqual(actual, expected)
+        
+        XCTAssertTrue(actual.elementsEqual(expected, by: { actual, expected in  
+            return actual.elementsEqual(expected) { $0 == $1 } 
+        }))
     }
     
     func testAny() {
