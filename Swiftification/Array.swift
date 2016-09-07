@@ -99,10 +99,10 @@ public extension Array {
     }
     
     /// Sections the ordered array by the string specified in the closure, preserving the order of the original array.
-    func sectionBy(@noescape sectionFunction: (Element) -> String) -> [(title: String, items: [Element])] {
-        var lastTitle = ""
+    func sectionBy(@noescape sectionFunction: (Element) -> String?) -> [(title: String?, items: [Element])] {
+        var lastTitle: String? = nil
         var currentGroup = [Element]()
-        var allGroups = [(title: String, items: [Element])]()
+        var allGroups = [(title: String?, items: [Element])]()
         
         for item in self {
             let title = sectionFunction(item)
