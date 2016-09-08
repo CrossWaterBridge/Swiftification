@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "Swiftification"
-  s.version      = "6.0.0"
+  s.version      = "6.0.1"
   s.summary      = "Swift extensions to make life more pleasant."
   s.authors      = 'Hilton Campbell', 'Stephan Heilner', 'Branden Russell', 'Nick Shelley'
   s.homepage     = "https://github.com/CrossWaterBridge/Swiftification"
