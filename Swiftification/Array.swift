@@ -99,26 +99,26 @@ public extension Array {
     }
     
     /// Sections the ordered array by the string specified in the closure, preserving the order of the original array.
-    func sectionBy(@noescape sectionFunction: (Element) -> String) -> [(title: String, items: [Element])] {
-        var lastTitle = ""
+    func sectionBy<T: Equatable>(@noescape sectionFunction: (Element) -> T) -> [(header: T, items: [Element])] {
+        var previousSectionHeader: T? = nil
         var currentGroup = [Element]()
-        var allGroups = [(title: String, items: [Element])]()
+        var allGroups = [(header: T, items: [Element])]()
         
         for item in self {
-            let title = sectionFunction(item)
-            if title == lastTitle {
+            let sectionHeader = sectionFunction(item)
+            if sectionHeader == previousSectionHeader {
                 currentGroup.append(item)
             } else {
-                if !currentGroup.isEmpty {
-                    allGroups.append((title: lastTitle, items: currentGroup))
+                if let previousSectionHeader = previousSectionHeader where !currentGroup.isEmpty {
+                    allGroups.append((header: previousSectionHeader, items: currentGroup))
                 }
-                lastTitle = title
+                previousSectionHeader = sectionHeader
                 currentGroup = [item]
             }
         }
         
-        if !currentGroup.isEmpty {
-            allGroups.append((title: lastTitle, items: currentGroup))
+        if let previousSectionHeader = previousSectionHeader where !currentGroup.isEmpty {
+            allGroups.append((header: previousSectionHeader, items: currentGroup))
         }
         
         return allGroups
