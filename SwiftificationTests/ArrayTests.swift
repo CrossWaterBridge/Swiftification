@@ -25,9 +25,16 @@ import Swiftification
 
 private struct TestObject {
     
-    let name: String?
+    let name: String
     let type: Int
 
+}
+
+private struct TestObjectWithOptionals {
+    
+    let name: String?
+    let type: Int
+    
 }
 
 class ArrayTests: XCTestCase {
@@ -100,14 +107,23 @@ class ArrayTests: XCTestCase {
     }
     
     func testSectionBy() {
-        let array = [TestObject(name: "Test", type: 0), TestObject(name: "Test", type: 0), TestObject(name: "Test2", type: 0), TestObject(name: "Test2", type: 1), TestObject(name: nil, type: 1),  TestObject(name: nil, type: 1)]
+        let array = [TestObject(name: "Test", type: 0), TestObject(name: "Test", type: 0), TestObject(name: "Test2", type: 0), TestObject(name: "Test2", type: 1), TestObject(name: "Test2", type: 1)]
+        let sectioned = array.sectionBy { $0.name }
+        XCTAssertTrue(sectioned[0].header == "Test")
+        XCTAssertTrue(sectioned[0].items.count == 2)
+        XCTAssertTrue(sectioned[1].header == "Test2")
+        XCTAssertTrue(sectioned[1].items.count == 3)
+    }
+    
+    func testSectionByWithOptionals() {
+        let array = [TestObjectWithOptionals(name: "Test", type: 0), TestObjectWithOptionals(name: "Test", type: 0), TestObjectWithOptionals(name: "Test2", type: 0), TestObjectWithOptionals(name: "Test2", type: 1), TestObjectWithOptionals(name: nil, type: 1),  TestObjectWithOptionals(name: nil, type: 1), TestObjectWithOptionals(name: nil, type: 0)]
         let sectioned = array.sectionBy { $0.name }
         XCTAssertTrue(sectioned[0].header == "Test")
         XCTAssertTrue(sectioned[0].items.count == 2)
         XCTAssertTrue(sectioned[1].header == "Test2")
         XCTAssertTrue(sectioned[1].items.count == 2)
         XCTAssertTrue(sectioned[2].header == nil)
-        XCTAssertTrue(sectioned[2].items.count == 2)
+        XCTAssertTrue(sectioned[2].items.count == 3)
     }
     
     func testTail1() {
