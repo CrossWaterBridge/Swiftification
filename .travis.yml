@@ -2,8 +2,8 @@ sudo: false
 language: objective-c
 osx_image: xcode8
 notifications:
-	slack: lyokotech:7AmemNHORB2ShidELPFrYeUO
-	email: false
+  slack: lyokotech:7AmemNHORB2ShidELPFrYeUO
+  email: false
 xcode_project: Swiftification.xcodeproj
 xcode_scheme: Swiftification
 xcode_sdk: iphonesimulator9.3
