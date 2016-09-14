@@ -4,6 +4,5 @@ osx_image: xcode8
 notifications:
   slack: lyokotech:7AmemNHORB2ShidELPFrYeUO
   email: false
-xcode_project: Swiftification.xcodeproj
-xcode_scheme: Swiftification
-xcode_sdk: iphonesimulator9.3
+script:
+- xcodebuild clean build test -project Swiftification.xcodeproj -scheme Swiftification -sdk iphonesimulator -destination "OS=9.3,name=iPhone 5,platform=iOS Simulator"
