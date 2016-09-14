@@ -7,6 +7,3 @@ notifications:
 xcode_project: Swiftification.xcodeproj
 xcode_scheme: Swiftification
 xcode_sdk: iphonesimulator9.3
-
-script:
-- xcodebuild clean build test -project Swiftification.xcodeproj -scheme Swiftification 
