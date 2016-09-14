@@ -98,27 +98,53 @@ public extension Array {
         return partitions
     }
     
-    /// Sections the ordered array by the string specified in the closure, preserving the order of the original array.
-    func sectionBy(_ sectionFunction: (Element) -> String) -> [(title: String, items: [Element])] {
-        var lastTitle = ""
+    /// Sections the ordered array by the element specified in the closure, preserving the order of the original array.
+    func sectionBy<T: Equatable>(sectionFunction: (Element) -> T) -> [(header: T, items: [Element])] {
+        var previousSectionHeader: T? = nil
         var currentGroup = [Element]()
-        var allGroups = [(title: String, items: [Element])]()
+        var allGroups = [(header: T, items: [Element])]()
         
         for item in self {
-            let title = sectionFunction(item)
-            if title == lastTitle {
+            let sectionHeader = sectionFunction(item)
+            if sectionHeader == previousSectionHeader {
+                currentGroup.append(item)
+            } else {
+                if let previousSectionHeader = previousSectionHeader, !currentGroup.isEmpty {
+                    allGroups.append((header: previousSectionHeader, items: currentGroup))
+                }
+                previousSectionHeader = sectionHeader
+                currentGroup = [item]
+            }
+        }
+        
+        if let previousSectionHeader = previousSectionHeader, !currentGroup.isEmpty {
+            allGroups.append((header: previousSectionHeader, items: currentGroup))
+        }
+        
+        return allGroups
+    }
+    
+    /// Sections the ordered array by the element specified in the closure, preserving the order of the original array.
+    func sectionBy<T: Equatable>(sectionFunction: (Element) -> T?) -> [(header: T?, items: [Element])] {
+        var previousSectionHeader: T? = nil
+        var currentGroup = [Element]()
+        var allGroups = [(header: T?, items: [Element])]()
+        
+        for item in self {
+            let sectionHeader = sectionFunction(item)
+            if sectionHeader == previousSectionHeader {
                 currentGroup.append(item)
             } else {
                 if !currentGroup.isEmpty {
-                    allGroups.append((title: lastTitle, items: currentGroup))
+                    allGroups.append((header: previousSectionHeader, items: currentGroup))
                 }
-                lastTitle = title
+                previousSectionHeader = sectionHeader
                 currentGroup = [item]
             }
         }
         
         if !currentGroup.isEmpty {
-            allGroups.append((title: lastTitle, items: currentGroup))
+            allGroups.append((header: previousSectionHeader, items: currentGroup))
         }
         
         return allGroups

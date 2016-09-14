@@ -32,7 +32,7 @@ open class ObserverSetEntry<Parameters> {
 
     fileprivate weak var object: AnyObject?
     fileprivate let operationQueue: OperationQueue?
-    fileprivate let f: @escaping (AnyObject) -> (Parameters) -> Void
+    fileprivate let f: (AnyObject) -> (Parameters) -> Void
     
     fileprivate init(object: AnyObject, operationQueue: OperationQueue?, f: @escaping (AnyObject) -> (Parameters) -> Void) {
         self.object = object
