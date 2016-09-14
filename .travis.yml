@@ -7,4 +7,4 @@ xcode_scheme: Swiftification
 xcode_sdk: iphonesimulator
 
 script:
-- xcodebuild clean build test -project Swiftification.xcodeproj -scheme Swiftification -sdk iphonesimulator -destination "OS=9.333,name=iPhone 5"
+- xcodebuild clean build test -project Swiftification.xcodeproj -scheme Swiftification -sdk iphonesimulator -destination "name=iPhone 5"
