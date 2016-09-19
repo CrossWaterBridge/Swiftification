@@ -69,32 +69,32 @@ class ArrayTests: XCTestCase {
     
     func testShuffle() {
         let array = Array(1...1000)
-        let shuffledArray = array.shuffle()
+        let shuffledArray = array.shuffled()
         XCTAssertNotEqual(shuffledArray, array)
         XCTAssertEqual(shuffledArray.sorted(), array)
     }
     
     func testShuffleInPlaceEmpty() {
         var array = [Int]()
-        array.shuffleInPlace()
+        array.shuffle()
         XCTAssertTrue(array == [])
     }
     
     func testShuffleInPlaceSingleElement() {
         var array = [1]
-        array.shuffleInPlace()
+        array.shuffle()
         XCTAssertTrue(array == [1])
     }
     
     func testShuffleInPlace() {
         var array = Array(1...1000)
-        array.shuffleInPlace()
+        array.shuffle()
         XCTAssertTrue(array != Array(1...1000))
     }
     
     func testGroupBy() {
         let array = [TestObject(name: "Test", type: 0), TestObject(name: "Test1", type: 0), TestObject(name: "Test2", type: 0), TestObject(name: "Test3", type: 1)]
-        let grouped = array.groupBy { $0.type }
+        let grouped = array.grouped { $0.type }
         XCTAssertTrue(grouped[0]?.count == 3)
         XCTAssertTrue(grouped[1]?.count == 1)
     }
@@ -102,16 +102,15 @@ class ArrayTests: XCTestCase {
     func testPartitionBy() {
         let array = Array(1...10)
         let expected = [Array(1...3), Array(4...10)]
-        let actual = array.partitionBy { $0 <= 3 } 
+        let actual = array.partitioned { $0 <= 3 }
         XCTAssertTrue(actual.elementsEqual(expected, by: { actual, expected in  
             return actual.elementsEqual(expected) { $0 == $1 } 
         }))
-
     }
     
     func testSectionBy() {
         let array = [TestObject(name: "Test", type: 0), TestObject(name: "Test", type: 0), TestObject(name: "Test2", type: 0), TestObject(name: "Test2", type: 1), TestObject(name: "Test2", type: 1)]
-        let sectioned = array.sectionBy { $0.name }
+        let sectioned = array.sectioned { $0.name }
         XCTAssertTrue(sectioned[0].header == "Test")
         XCTAssertTrue(sectioned[0].items.count == 2)
         XCTAssertTrue(sectioned[1].header == "Test2")
@@ -120,7 +119,7 @@ class ArrayTests: XCTestCase {
     
     func testSectionByWithOptionals() {
         let array = [TestObjectWithOptionals(name: "Test", type: 0), TestObjectWithOptionals(name: "Test", type: 0), TestObjectWithOptionals(name: "Test2", type: 0), TestObjectWithOptionals(name: "Test2", type: 1), TestObjectWithOptionals(name: nil, type: 1),  TestObjectWithOptionals(name: nil, type: 1), TestObjectWithOptionals(name: nil, type: 0)]
-        let sectioned = array.sectionBy { $0.name }
+        let sectioned = array.sectioned { $0.name }
         XCTAssertTrue(sectioned[0].header == "Test")
         XCTAssertTrue(sectioned[0].items.count == 2)
         XCTAssertTrue(sectioned[1].header == "Test2")

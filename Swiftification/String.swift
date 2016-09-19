@@ -36,13 +36,11 @@ public extension String {
     }
     
     /// Strips whitespaces from both the beginning and the end of self.
-    
     func trimmed() -> String {
         return trimmingCharacters(in: .whitespacesAndNewlines)
     }
 
     /// Returns random string of length with specified characters.
-    
     static func random(_ length: Int = Int.random(8..<65), characters: String = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz012345789") -> String {
         if characters.isEmpty { return "" }
         
@@ -54,7 +52,6 @@ public extension String {
     }
 
     /// Returns a value with string inserted at index.
-    
     func insert(_ string: String, at i: Int) -> String {
         let index = characters.index(startIndex, offsetBy: min(i, length))
         return [substring(to: index), string, substring(from: index)].joined(separator: "")

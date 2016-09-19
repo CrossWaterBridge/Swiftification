@@ -28,7 +28,7 @@
 
 import Dispatch
 
-open class ObserverSetEntry<Parameters> {
+public class ObserverSetEntry<Parameters> {
 
     fileprivate weak var object: AnyObject?
     fileprivate let operationQueue: OperationQueue?
@@ -42,7 +42,7 @@ open class ObserverSetEntry<Parameters> {
     
 }
 
-open class ObserverSet<Parameters> {
+public class ObserverSet<Parameters> {
 
     // Locking support
     
@@ -63,7 +63,7 @@ open class ObserverSet<Parameters> {
     /// observer set entry for explicit removal.
     /// - returns: an observer set entry which can be passed to `remove:` to stop observing
     @discardableResult
-    open func add<T: AnyObject>(_ object: T, operationQueue: OperationQueue? = nil, _ f: @escaping (T) -> (Parameters) -> Void) -> ObserverSetEntry<Parameters> {
+    public func add<T: AnyObject>(_ object: T, operationQueue: OperationQueue? = nil, _ f: @escaping (T) -> (Parameters) -> Void) -> ObserverSetEntry<Parameters> {
         let entry = ObserverSetEntry<Parameters>(object: object, operationQueue: operationQueue, f: { f($0 as! T) })
         synchronized {
             self.entries.append(entry)
@@ -74,19 +74,19 @@ open class ObserverSet<Parameters> {
     /// Adds an observer `f` which will be called on notification. The method will be added to `queue` if supplied, otherwise it is run synchronously on the notifying thread.
     /// - returns: an observer set entry which should be passed to `remove:` to stop observing
     @discardableResult
-    open func add(_ operationQueue: OperationQueue? = nil, _ f: @escaping (Parameters) -> Void) -> ObserverSetEntry<Parameters> {
+    public func add(_ operationQueue: OperationQueue? = nil, _ f: @escaping (Parameters) -> Void) -> ObserverSetEntry<Parameters> {
         return self.add(self, operationQueue: operationQueue, { _ in f })
     }
     
     /// Removes an observer set entry.
-    open func remove(_ entry: ObserverSetEntry<Parameters>) {
+    public func remove(_ entry: ObserverSetEntry<Parameters>) {
         synchronized {
             self.entries = self.entries.filter { $0 !== entry }
         }
     }
     
     /// Notifies current observers.
-    open func notify(_ parameters: Parameters) {
+    public func notify(_ parameters: Parameters) {
         var toCall: [(OperationQueue?, (Parameters) -> Void)] = []
         
         synchronized {

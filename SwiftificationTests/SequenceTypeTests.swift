@@ -108,7 +108,7 @@ class SequenceTypeTests: XCTestCase {
         ]
         
         XCTAssertTrue(actual.elementsEqual(expected, by: { actual, expected in  
-            return actual.elementsEqual(expected) { $0 == $1 } 
+            return actual == expected
         }))
     }
     
