@@ -33,4 +33,9 @@ public extension Int {
         return Int(min + arc4random_uniform(max - min)) - offset
     }
     
+    static func random(_ range: ClosedRange<Int>) -> Int {
+        let range = Range(range)
+        return Int.random(range)
+    }
+    
 }
