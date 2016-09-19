@@ -107,15 +107,13 @@ class SequenceTypeTests: XCTestCase {
             ["woman": "Sally"]
         ]
         
-        XCTAssertTrue(actual.elementsEqual(expected, by: { actual, expected in  
-            return actual == expected
-        }))
+        XCTAssertTrue(actual.elementsEqual(expected) { $0 == $1 })
     }
     
     func testAny() {
         let array = [1, 2, 3]
-        XCTAssertTrue(array.any(condition: { $0 == 1 }))
-        XCTAssertFalse(array.any(condition: { $0 == 4 }))
+        XCTAssertTrue(array.any { $0 == 1 })
+        XCTAssertFalse(array.any { $0 == 4 })
     }
     
 }
