@@ -49,7 +49,7 @@ class SequenceTypeTests: XCTestCase {
     
     func testTakeWhile2() {
         let array = [1, 2, 3]
-        let expected = []
+        let expected = [Int]()
         let actual = array.takeWhile { _ in false }
         XCTAssertEqual(expected, actual)
     }
@@ -106,13 +106,14 @@ class SequenceTypeTests: XCTestCase {
             ["man": "Bob"],
             ["woman": "Sally"]
         ]
-        XCTAssertEqual(actual, expected)
+        
+        XCTAssertTrue(actual.elementsEqual(expected) { $0 == $1 })
     }
     
     func testAny() {
         let array = [1, 2, 3]
-        XCTAssertTrue(array.any({ $0 == 1 }))
-        XCTAssertFalse(array.any({ $0 == 4 }))
+        XCTAssertTrue(array.any { $0 == 1 })
+        XCTAssertFalse(array.any { $0 == 4 })
     }
     
 }

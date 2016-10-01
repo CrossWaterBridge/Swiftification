@@ -65,9 +65,9 @@ class StringTests: XCTestCase {
         let characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz012345789"
         let random = String.random(500)
         for i in 0..<random.length {
-            let index = random.startIndex.advancedBy(i)
-            let character = random.substringWithRange(index..<index.advancedBy(1))
-            XCTAssertNotNil(characters.rangeOfString(character))
+            let index = random.characters.index(random.startIndex, offsetBy: i)
+            let character = random.substring(with: index..<random.characters.index(index, offsetBy: 1))
+            XCTAssertNotNil(characters.range(of: character))
         }
     }
     
@@ -75,16 +75,15 @@ class StringTests: XCTestCase {
         let characters = "ABCDE"
         let random = String.random(500, characters: characters)
         for i in 0..<random.length {
-            let index = random.startIndex.advancedBy(i)
-            let character = random.substringWithRange(index..<index.advancedBy(1))
-            XCTAssertNotNil(characters.rangeOfString(character))
+            let index = random.characters.index(random.startIndex, offsetBy: i)
+            let character = random.substring(with: index..<random.characters.index(index, offsetBy: 1))
+            XCTAssertNotNil(characters.range(of: character))
         }
     }
     
     func testSafeSubscript() {
         let str = "Hi"
-        XCTAssertEqual(str[str.startIndex.advancedBy(1)], str[safe: str.startIndex.advancedBy(1)]!)
-        XCTAssertNil(str[safe: str.startIndex.advancedBy(5, limit: str.endIndex)])
+        XCTAssertEqual(str[str.characters.index(str.startIndex, offsetBy: 1)], str[safe: str.characters.index(str.startIndex, offsetBy: 1)]!)
     }
     
     func testAppendAndPrependOptionalString() {

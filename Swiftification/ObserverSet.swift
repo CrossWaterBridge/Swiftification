@@ -30,11 +30,11 @@ import Dispatch
 
 public class ObserverSetEntry<Parameters> {
 
-    private weak var object: AnyObject?
-    private let operationQueue: NSOperationQueue?
-    private let f: AnyObject -> Parameters -> Void
+    fileprivate weak var object: AnyObject?
+    fileprivate let operationQueue: OperationQueue?
+    fileprivate let f: (AnyObject) -> (Parameters) -> Void
     
-    private init(object: AnyObject, operationQueue: NSOperationQueue?, f: AnyObject -> Parameters -> Void) {
+    fileprivate init(object: AnyObject, operationQueue: OperationQueue?, f: @escaping (AnyObject) -> (Parameters) -> Void) {
         self.object = object
         self.operationQueue = operationQueue
         self.f = f
@@ -46,15 +46,15 @@ public class ObserverSet<Parameters> {
 
     // Locking support
     
-    private var queue = dispatch_queue_create("com.mikeash.ObserverSet", nil)
+    fileprivate var queue = DispatchQueue(label: "com.mikeash.ObserverSet", attributes: [])
     
-    private func synchronized(f: Void -> Void) {
-        dispatch_sync(queue, f)
+    fileprivate func synchronized(_ f: (Void) -> Void) {
+        queue.sync(execute: f)
     }
     
     // Main implementation
     
-    private var entries: [ObserverSetEntry<Parameters>] = []
+    fileprivate var entries: [ObserverSetEntry<Parameters>] = []
     
     public init() {}
     
@@ -62,7 +62,8 @@ public class ObserverSet<Parameters> {
     /// - Note: Because `object` is held weakly there may be no need to keep a reference to the returned
     /// observer set entry for explicit removal.
     /// - returns: an observer set entry which can be passed to `remove:` to stop observing
-    public func add<T: AnyObject>(object: T, operationQueue: NSOperationQueue? = nil, _ f: T -> Parameters -> Void) -> ObserverSetEntry<Parameters> {
+    @discardableResult
+    public func add<T: AnyObject>(_ object: T, operationQueue: OperationQueue? = nil, _ f: @escaping (T) -> (Parameters) -> Void) -> ObserverSetEntry<Parameters> {
         let entry = ObserverSetEntry<Parameters>(object: object, operationQueue: operationQueue, f: { f($0 as! T) })
         synchronized {
             self.entries.append(entry)
@@ -72,20 +73,21 @@ public class ObserverSet<Parameters> {
     
     /// Adds an observer `f` which will be called on notification. The method will be added to `queue` if supplied, otherwise it is run synchronously on the notifying thread.
     /// - returns: an observer set entry which should be passed to `remove:` to stop observing
-    public func add(operationQueue: NSOperationQueue? = nil, f: Parameters -> Void) -> ObserverSetEntry<Parameters> {
+    @discardableResult
+    public func add(_ operationQueue: OperationQueue? = nil, _ f: @escaping (Parameters) -> Void) -> ObserverSetEntry<Parameters> {
         return self.add(self, operationQueue: operationQueue, { _ in f })
     }
     
     /// Removes an observer set entry.
-    public func remove(entry: ObserverSetEntry<Parameters>) {
+    public func remove(_ entry: ObserverSetEntry<Parameters>) {
         synchronized {
             self.entries = self.entries.filter { $0 !== entry }
         }
     }
     
     /// Notifies current observers.
-    public func notify(parameters: Parameters) {
-        var toCall: [(NSOperationQueue?, Parameters -> Void)] = []
+    public func notify(_ parameters: Parameters) {
+        var toCall: [(OperationQueue?, (Parameters) -> Void)] = []
         
         synchronized {
             for entry in self.entries {
@@ -98,7 +100,7 @@ public class ObserverSet<Parameters> {
         
         for (operationQueue, f) in toCall {
             if let operationQueue = operationQueue {
-                operationQueue.addOperation(NSBlockOperation(block: {
+                operationQueue.addOperation(BlockOperation(block: {
                     f(parameters)
                 }))
             } else {
@@ -123,7 +125,7 @@ extension ObserverSet: CustomStringConvertible {
                 ? "\(entry.f)"
                 : "\(entry.object) \(entry.f)")
         }
-        let joined = strings.joinWithSeparator(", ")
+        let joined = strings.joined(separator: ", ")
         
         return "\(Mirror(reflecting: self)): (\(joined))"
     }

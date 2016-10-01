@@ -26,9 +26,9 @@ import Swiftification
 class DictionaryTests: XCTestCase {
     
     func testInit() {
-        let array = [(1, 2), (3, 4)]
+        let array: [(Int, Int)] = [(1, 2), (3, 4)]
         let expected = [1: 2, 3: 4]
-        let actual = [Int: Int](array)
+        let actual = [Int: Int](elements: array)
         XCTAssertEqual(expected, actual)
     }
     
@@ -102,7 +102,7 @@ class DictionaryTests: XCTestCase {
     
     func testMapValues() {
         let dictionary = ["lowercase": ["c", "a", "b"], "uppercase": ["A", "C", "B"]]
-        let sortedDictionary = dictionary.mapValues { $1.sort(<) }
+        let sortedDictionary = dictionary.mapValues { $1.sorted(by: <) }
         XCTAssertEqual(sortedDictionary["lowercase"]!, ["a", "b", "c"])
         XCTAssertEqual(sortedDictionary["uppercase"]!, ["A", "B", "C"])
     }

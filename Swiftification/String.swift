@@ -36,28 +36,25 @@ public extension String {
     }
     
     /// Strips whitespaces from both the beginning and the end of self.
-    @warn_unused_result
     func trimmed() -> String {
-        return stringByTrimmingCharactersInSet(.whitespaceAndNewlineCharacterSet())
+        return trimmingCharacters(in: .whitespacesAndNewlines)
     }
 
     /// Returns random string of length with specified characters.
-    @warn_unused_result
-    static func random(length: Int = Int.random(8...64), characters: String = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz012345789") -> String {
+    static func random(_ length: Int = Int.random(8..<65), characters: String = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz012345789") -> String {
         if characters.isEmpty { return "" }
         
         var result = String()
         for _ in 0..<length {
-            result.append(characters[characters.startIndex.advancedBy(Int.random(0..<characters.length))])
+            result.append(characters[characters.characters.index(characters.startIndex, offsetBy: Int.random(0..<characters.characters.count))])
         }
         return result
     }
 
     /// Returns a value with string inserted at index.
-    @warn_unused_result
-    func insert(string: String, at i: Int) -> String {
-        let index = startIndex.advancedBy(min(i, length))
-        return [substringToIndex(index), string, substringFromIndex(index)].joinWithSeparator("")
+    func insert(_ string: String, at i: Int) -> String {
+        let index = characters.index(startIndex, offsetBy: min(i, length))
+        return [substring(to: index), string, substring(from: index)].joined(separator: "")
     }
 }
 
