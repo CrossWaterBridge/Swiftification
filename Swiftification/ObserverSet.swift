@@ -27,6 +27,7 @@
 //
 
 import Dispatch
+import Foundation
 
 public class ObserverSetEntry<Parameters> {
 
