@@ -78,19 +78,19 @@ class SequenceTypeTests: XCTestCase {
     
     func testUniqueBy() {
         let array = [(a: 1, b: 1), (a: 1, b: 2), (a: 2, b: 2)]
-        let unique = array.uniqueBy { $0.a }
+        let unique = array.unique { $0.a }
         XCTAssertTrue(array.count == 3)
         XCTAssertTrue(unique.count == 2)
     }
     
     func testUniqueByOrder1() {
         let array = [1, 1, 2, 2, 3, 4]
-        XCTAssertEqual(array.uniqueBy { $0 }, [1, 2, 3, 4])
+        XCTAssertEqual(array.unique { $0 }, [1, 2, 3, 4])
     }
     
     func testUniqueByOrder2() {
         let array = ["happy", "sad", "mad", "glad", "bad", "mad", "bad", "happy", "sad", "mad"]
-        XCTAssertEqual(array.uniqueBy { $0 }, ["happy", "sad", "mad", "glad", "bad"])
+        XCTAssertEqual(array.unique { $0 }, ["happy", "sad", "mad", "glad", "bad"])
     }
     
     func testUniqueByOrder3() {
@@ -101,7 +101,7 @@ class SequenceTypeTests: XCTestCase {
             ["woman": "Bertha"],
             ["woman": "Jill"]
         ]
-        let actual = array.uniqueBy { $0.keys.first! }
+        let actual = array.unique { $0.keys.first! }
         let expected = [
             ["man": "Bob"],
             ["woman": "Sally"]

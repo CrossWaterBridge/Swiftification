@@ -44,7 +44,7 @@ public extension Sequence {
     }
     
     /// Returns the array of elements for which condition(element) is unique
-    func uniqueBy<T: Hashable>(_ condition: (Iterator.Element) throws -> T) rethrows -> [Iterator.Element] {
+    func unique<T: Hashable>(by condition: (Iterator.Element) throws -> T) rethrows -> [Iterator.Element] {
         var results: [Iterator.Element] = []
         var tempSet = Set<T>()
         for element in self {
