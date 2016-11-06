@@ -23,7 +23,6 @@
 import Foundation
 
 public extension Int {
-    
     /// Random integer between min and max (inclusive)
     static func random(_ range: Range<Int>) -> Int {
         let offset = range.lowerBound < 0 ? abs(range.lowerBound) : 0
@@ -37,5 +36,4 @@ public extension Int {
         let range = Range(range)
         return Int.random(range)
     }
-    
 }

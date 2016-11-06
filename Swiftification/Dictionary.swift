@@ -23,7 +23,6 @@
 import Foundation
 
 public extension Dictionary {
-    
     init(elements: [(Key, Value)]) {
         self.init()
         for (key, value) in elements {
@@ -84,7 +83,6 @@ public extension Dictionary {
         }
         return mapped
     }
-    
 }
 
 /// Returns the union of the two dictionaries. For any keys that both

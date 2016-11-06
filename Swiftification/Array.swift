@@ -23,7 +23,6 @@
 import Foundation
 
 public extension Array {
-    
     /// Access element at `index`. Reading returns the element or `nil` if `index` is out of bounds. Writing only sets if `index` is in bounds.
     subscript(safe index: Int) -> Element? {
         get {
@@ -174,5 +173,4 @@ public extension Array {
         }
         return []
     }
-
 }

@@ -30,9 +30,8 @@ public func + (lhs: NSAttributedString, rhs: NSAttributedString) -> NSAttributed
 }
 
 public extension Sequence where Iterator.Element == NSAttributedString {
-
     /// Interpose the `separator` between elements of `self`, then concatenate the result.
-    func joinWithSeparator(_ separator: NSAttributedString) -> NSAttributedString {
+    func joined(separator: NSAttributedString) -> NSAttributedString {
         let result = NSMutableAttributedString()
         for (i, element) in self.enumerated() {
             if i > 0 {
@@ -42,5 +41,4 @@ public extension Sequence where Iterator.Element == NSAttributedString {
         }
         return result
     }
-
 }

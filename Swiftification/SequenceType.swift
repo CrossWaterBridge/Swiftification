@@ -23,9 +23,8 @@
 import Foundation
 
 public extension Sequence {
-    
     /// Returns the first element of `self` that tests `true`, or `nil` if no element tests `true`.
-    func takeFirst(test: (Iterator.Element) throws -> Bool) rethrows -> Iterator.Element? {
+    func takeFirst(_ test: (Iterator.Element) throws -> Bool) rethrows -> Iterator.Element? {
         for element in self where try test(element) {
             return element
         }
@@ -33,7 +32,7 @@ public extension Sequence {
     }
     
     /// Returns all elements until the first element of `self` that tests `false`.
-    func takeWhile(test: (Iterator.Element) throws -> Bool) rethrows -> [Iterator.Element] {
+    func takeWhile(_ test: (Iterator.Element) throws -> Bool) rethrows -> [Iterator.Element] {
         var results: [Iterator.Element] = []
         for element in self {
             if try !test(element) {
@@ -45,7 +44,7 @@ public extension Sequence {
     }
     
     /// Returns the array of elements for which condition(element) is unique
-    func uniqueBy<T: Hashable>(condition: (Iterator.Element) throws -> T) rethrows -> [Iterator.Element] {
+    func unique<T: Hashable>(by condition: (Iterator.Element) throws -> T) rethrows -> [Iterator.Element] {
         var results: [Iterator.Element] = []
         var tempSet = Set<T>()
         for element in self {
@@ -59,17 +58,15 @@ public extension Sequence {
     }
     
     /// Checks if test returns true for any element of self.
-    func any(condition: (Iterator.Element) throws -> Bool) rethrows -> Bool {
+    func any(_ condition: (Iterator.Element) throws -> Bool) rethrows -> Bool {
         for element in self where try condition(element) {
             return true
         }
         return false
     }
-   
 }
 
 public extension Sequence where Iterator.Element: Hashable {
-    
     /// Returns an array removing the duplicate elements in self. The original element order is preserved.
     func unique() -> [Iterator.Element] {
         var results: [Iterator.Element] = []
@@ -80,11 +77,9 @@ public extension Sequence where Iterator.Element: Hashable {
         }
         return results
     }
-    
 }
 
 public extension Sequence where Iterator.Element: Equatable {
-    
     /// Returns an array removing the duplicate elements in self. The original element order is preserved.
     func unique() -> [Iterator.Element] {
         var results: [Iterator.Element] = []
@@ -93,5 +88,4 @@ public extension Sequence where Iterator.Element: Equatable {
         }
         return results
     }
-    
 }
