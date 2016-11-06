@@ -33,11 +33,11 @@ class NSAttributedStringTests: XCTestCase {
         XCTAssertEqual(expected, actual)
     }
     
-    func testJoinWithSeparator() {
+    func testJoined() {
         let array = [NSAttributedString(string: "a"), NSAttributedString(string: "b"), NSAttributedString(string: "c")]
         let separator = NSAttributedString(string: " ")
         let expected = NSAttributedString(string: "a b c")
-        let actual = array.joinWithSeparator(separator)
+        let actual = array.joined(separator: separator)
         XCTAssertEqual(expected, actual)
     }
     

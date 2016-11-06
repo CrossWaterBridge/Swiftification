@@ -23,7 +23,6 @@
 import Foundation
 
 public extension String {
-
     /// Return the character length of self.
     public var length: Int {
         return characters.count
