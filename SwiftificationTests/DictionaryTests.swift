@@ -26,9 +26,9 @@ import Swiftification
 class DictionaryTests: XCTestCase {
     
     func testInit() {
-        let array: [(Int, Int)] = [(1, 2), (3, 4)]
+        let array = [(1, 2), (3, 4)]
         let expected = [1: 2, 3: 4]
-        let actual = [Int: Int](elements: array)
+        let actual = Dictionary(array)
         XCTAssertEqual(expected, actual)
     }
     
