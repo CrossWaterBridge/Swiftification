@@ -31,8 +31,7 @@ func == (lhs: EquatableButNotHashable, rhs: EquatableButNotHashable) -> Bool {
     return lhs.value == rhs.value
 }
 
-class SequenceTypeTests: XCTestCase {
-    
+class SequenceTests: XCTestCase {
     func testTakeFirst() {
         let array = [1, 2, 3]
         let expected = 3
@@ -109,11 +108,16 @@ class SequenceTypeTests: XCTestCase {
         
         XCTAssertTrue(actual.elementsEqual(expected) { $0 == $1 })
     }
-    
+
     func testAny() {
         let array = [1, 2, 3]
         XCTAssertTrue(array.any { $0 == 1 })
         XCTAssertFalse(array.any { $0 == 4 })
     }
-    
+
+    func testAll() {
+        let array = [1, 2, 3]
+        XCTAssertTrue(array.all { $0 > 0 })
+        XCTAssertFalse(array.all { $0 == 1 })
+    }
 }

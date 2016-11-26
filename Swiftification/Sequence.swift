@@ -64,6 +64,14 @@ public extension Sequence {
         }
         return false
     }
+    
+    /// Checks if test returns true for every element of self.
+    func all(_ condition: (Iterator.Element) throws -> Bool) rethrows -> Bool {
+        for element in self where try !condition(element) {
+            return false
+        }
+        return true
+    }
 }
 
 public extension Sequence where Iterator.Element: Hashable {
