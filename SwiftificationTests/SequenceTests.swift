@@ -32,6 +32,21 @@ func == (lhs: EquatableButNotHashable, rhs: EquatableButNotHashable) -> Bool {
 }
 
 class SequenceTests: XCTestCase {
+    func testFirst1() {
+        let sequence = [1, 2, 3].makeIterator()
+        let expected = 1
+        let actual = sequence.first
+        XCTAssertEqual(expected, actual)
+    }
+
+    func testFirst2() {
+        let sequence = [Int]().makeIterator()
+        let expected: Int? = nil
+        let actual = sequence.first
+        XCTAssertEqual(expected, actual)
+    }
+
+    @available(*, deprecated)
     func testTakeFirst() {
         let array = [1, 2, 3]
         let expected = 3
