@@ -33,16 +33,16 @@ func == (lhs: EquatableButNotHashable, rhs: EquatableButNotHashable) -> Bool {
 
 class SequenceTests: XCTestCase {
     func testFirst1() {
-        let array = [1, 2, 3]
+        let sequence = [1, 2, 3].makeIterator()
         let expected = 1
-        let actual = array.first
+        let actual = sequence.first
         XCTAssertEqual(expected, actual)
     }
 
     func testFirst2() {
-        let array = [Int]()
+        let sequence = [Int]().makeIterator()
         let expected: Int? = nil
-        let actual = array.first
+        let actual = sequence.first
         XCTAssertEqual(expected, actual)
     }
 
