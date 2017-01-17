@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "Swiftification"
-  s.version      = "9.2.0"
+  s.version      = "9.2.1"
   s.summary      = "Swift extensions to make life more pleasant."
   s.authors      = 'Hilton Campbell', 'Stephan Heilner', 'Branden Russell', 'Nick Shelley', 'Rhett Rogers'
   s.homepage     = "https://github.com/CrossWaterBridge/Swiftification"
@@ -9,6 +9,6 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '8.0'
   s.osx.deployment_target = '10.10'
   s.tvos.deployment_target = '9.0'
-  s.source_files = 'Swiftification/*.swift'
+  s.source_files = 'Sources/*.swift'
   s.requires_arc = true
 end
