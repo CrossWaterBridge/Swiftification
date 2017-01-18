@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0800"
+   LastUpgradeVersion = "9999"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D96A72BB1C089B12002CCCEE"
+               BlueprintIdentifier = "OBJ_34"
                BuildableName = "Swiftification.framework"
                BlueprintName = "Swiftification"
                ReferencedContainer = "container:Swiftification.xcodeproj">
@@ -32,22 +32,13 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D96A72C51C089B13002CCCEE"
+               BlueprintIdentifier = "OBJ_50"
                BuildableName = "SwiftificationTests.xctest"
                BlueprintName = "SwiftificationTests"
                ReferencedContainer = "container:Swiftification.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D96A72BB1C089B12002CCCEE"
-            BuildableName = "Swiftification.framework"
-            BlueprintName = "Swiftification"
-            ReferencedContainer = "container:Swiftification.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -64,7 +55,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D96A72BB1C089B12002CCCEE"
+            BlueprintIdentifier = "OBJ_34"
             BuildableName = "Swiftification.framework"
             BlueprintName = "Swiftification"
             ReferencedContainer = "container:Swiftification.xcodeproj">
@@ -79,15 +70,6 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D96A72BB1C089B12002CCCEE"
-            BuildableName = "Swiftification.framework"
-            BlueprintName = "Swiftification"
-            ReferencedContainer = "container:Swiftification.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

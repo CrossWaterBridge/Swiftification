@@ -5,4 +5,4 @@ notifications:
   slack: lyokotech:7AmemNHORB2ShidELPFrYeUO
   email: false
 script:
-- xcodebuild clean build test -project Swiftification.xcodeproj -scheme Swiftification -sdk iphonesimulator -destination "OS=9.3,name=iPhone 5,platform=iOS Simulator"
+- swift test
