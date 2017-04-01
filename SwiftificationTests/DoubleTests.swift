@@ -45,14 +45,14 @@ class DoubleTests: XCTestCase {
         for i in 0...500 {
             let d = Double(i)
             let random = Double.random(min: d)
-            XCTAssertTrue(random <= DBL_MAX && random >= d)
+            XCTAssertTrue(random <= .greatestFiniteMagnitude && random >= d)
         }
     }
     
     func testRandomWithDefaults() {
         for _ in 0...500 {
             let random = Double.random()
-            XCTAssertTrue(random <= DBL_MAX && random >= 0)
+            XCTAssertTrue(random <= .greatestFiniteMagnitude && random >= 0)
         }
     }
     
