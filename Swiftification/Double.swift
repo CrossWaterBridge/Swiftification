@@ -24,7 +24,7 @@ import Foundation
 
 public extension Double {
     /// Random Double between min and max (inclusive).
-    static func random(min: Double = 0, max: Double = DBL_MAX) -> Double {
+    static func random(min: Double = 0, max: Double = .greatestFiniteMagnitude) -> Double {
         let diff = max - min
         let rand = Double(arc4random() % (UInt32(RAND_MAX) + 1))
         return ((rand / Double(RAND_MAX)) * diff) + min
