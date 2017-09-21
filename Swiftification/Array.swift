@@ -55,7 +55,7 @@ public extension Array {
         for index in (1..<count).reversed() {
             let newIndex = Int.random(0...index)
             if index != newIndex {
-                swap(&self[index], &self[newIndex])
+                self.swapAt(index, newIndex)
             }
         }
     }

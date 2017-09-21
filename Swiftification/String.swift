@@ -51,7 +51,7 @@ public extension String {
     }
 
     /// Returns a value with string inserted at index.
-    func insert(_ string: String, at i: Int) -> String {
+    func inserts(_ string: String, at i: Int) -> String {
         let index = characters.index(startIndex, offsetBy: min(i, length))
         return [substring(to: index), string, substring(from: index)].joined(separator: "")
     }
