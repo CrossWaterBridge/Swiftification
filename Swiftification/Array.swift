@@ -35,6 +35,7 @@ public extension Array {
     }
     
     /// Returns the first occurence of item, if found
+    @available(*, deprecated, message: "Use `first(where:)` instead.")
     func find(where condition: (Element) -> Bool) -> Element? {
         if let index = index(where: { condition($0) }) {
             return self[index]
@@ -69,6 +70,7 @@ public extension Array {
     }
     
     /// Groups the array into a dictionary by key specified in closure
+    @available(*, deprecated, message: "Use `Dictionary(grouping:by:)` instead.")
     func grouped<U>(by groupClosure: (Element) -> U) -> [U: Array] {
         var grouped = [U: Array]()
         for element in self {
