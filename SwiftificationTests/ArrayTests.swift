@@ -61,6 +61,7 @@ class ArrayTests: XCTestCase {
         }
     }
     
+    @available(*, deprecated)
     func testFind() {
         let array = Array(1...10)
         XCTAssertNotNil(array.find { $0 == 2 })
@@ -92,6 +93,7 @@ class ArrayTests: XCTestCase {
         XCTAssertTrue(array != Array(1...1000))
     }
     
+    @available(*, deprecated)
     func testGroupBy() {
         let array = [TestObject(name: "Test", type: 0), TestObject(name: "Test1", type: 0), TestObject(name: "Test2", type: 0), TestObject(name: "Test3", type: 1)]
         let grouped = array.grouped { $0.type }

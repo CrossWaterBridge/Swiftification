@@ -24,10 +24,10 @@ import Foundation
 
 public protocol CaseCountable: RawRepresentable {}
 
-public extension CaseCountable where RawValue: Integer {
-    static var count: Int {
+public extension CaseCountable where RawValue: BinaryInteger {
+    static var count: UInt64 {
         var i: RawValue = 0
         while let new = Self(rawValue: i) { i = new.rawValue.advanced(by: 1) }
-        return Int(i.toIntMax())
+        return UInt64(i)
     }
 }

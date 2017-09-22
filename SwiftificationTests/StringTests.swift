@@ -25,6 +25,7 @@ import Swiftification
 
 class StringTests: XCTestCase {
     
+    @available(*, deprecated)
     func testLength() {
         let string = "123456789"
         XCTAssertTrue(string.length == 9)
@@ -44,14 +45,14 @@ class StringTests: XCTestCase {
     func testRandomDefaultLength() {
         for _ in 0...500 {
             let random = String.random()
-            XCTAssertTrue(random.length >= 8)
-            XCTAssertTrue(random.length <= 64)
+            XCTAssertTrue(random.count >= 8)
+            XCTAssertTrue(random.count <= 64)
         }
     }
     
     func testRandomLength() {
         for i in 0...500 {
-            XCTAssertTrue(String.random(i).length == i)
+            XCTAssertTrue(String.random(i).count == i)
         }
     }
 
@@ -64,20 +65,20 @@ class StringTests: XCTestCase {
     func testRandomDefaultCharacters() {
         let characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz012345789"
         let random = String.random(500)
-        for i in 0..<random.length {
-            let index = random.characters.index(random.startIndex, offsetBy: i)
-            let character = random.substring(with: index..<random.characters.index(index, offsetBy: 1))
-            XCTAssertNotNil(characters.range(of: character))
+        for i in 0..<random.count {
+            let index = random.index(random.startIndex, offsetBy: i)
+            let character = random[index]
+            XCTAssertNotNil(characters.range(of: String(character)))
         }
     }
     
     func testRandomCharacters() {
         let characters = "ABCDE"
         let random = String.random(500, characters: characters)
-        for i in 0..<random.length {
+        for i in 0..<random.count {
             let index = random.characters.index(random.startIndex, offsetBy: i)
-            let character = random.substring(with: index..<random.characters.index(index, offsetBy: 1))
-            XCTAssertNotNil(characters.range(of: character))
+            let character = random[index]
+            XCTAssertNotNil(characters.range(of: String(character)))
         }
     }
     
@@ -102,9 +103,9 @@ class StringTests: XCTestCase {
     }
     
     func testInsertAtIndex() {
-        XCTAssertEqual("string".insert("TEST", at: 0), "TESTstring")
-        XCTAssertEqual("string".insert("TEST", at: 3), "strTESTing")
-        XCTAssertEqual("string".insert("TEST", at: 100), "stringTEST")
+        XCTAssertEqual("string".inserting("TEST", at: 0), "TESTstring")
+        XCTAssertEqual("string".inserting("TEST", at: 3), "strTESTing")
+        XCTAssertEqual("string".inserting("TEST", at: 100), "stringTEST")
     }
     
 }

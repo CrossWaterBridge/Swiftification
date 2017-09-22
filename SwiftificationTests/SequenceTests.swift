@@ -45,14 +45,6 @@ class SequenceTests: XCTestCase {
         let actual = sequence.first
         XCTAssertEqual(expected, actual)
     }
-
-    @available(*, deprecated)
-    func testTakeFirst() {
-        let array = [1, 2, 3]
-        let expected = 3
-        let actual = array.takeFirst { $0 > 2 }
-        XCTAssertEqual(expected, actual)
-    }
     
     func testTakeWhile1() {
         let array = [1, 2, 3]
@@ -123,7 +115,8 @@ class SequenceTests: XCTestCase {
         
         XCTAssertTrue(actual.elementsEqual(expected) { $0 == $1 })
     }
-
+    
+    @available(*, deprecated)
     func testAny() {
         let array = [1, 2, 3]
         XCTAssertTrue(array.any { $0 == 1 })
