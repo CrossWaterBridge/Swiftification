@@ -27,7 +27,7 @@ private struct TestObject {
     
     let name: String
     let type: Int
-
+    
 }
 
 private struct TestObjectWithOptionals {
@@ -61,6 +61,7 @@ class ArrayTests: XCTestCase {
         }
     }
     
+    @available(*, deprecated)
     func testFind() {
         let array = Array(1...10)
         XCTAssertNotNil(array.find { $0 == 2 })
@@ -92,6 +93,7 @@ class ArrayTests: XCTestCase {
         XCTAssertTrue(array != Array(1...1000))
     }
     
+    @available(*, deprecated)
     func testGroupBy() {
         let array = [TestObject(name: "Test", type: 0), TestObject(name: "Test1", type: 0), TestObject(name: "Test2", type: 0), TestObject(name: "Test3", type: 1)]
         let grouped = array.grouped { $0.type }
@@ -103,8 +105,8 @@ class ArrayTests: XCTestCase {
         let array = Array(1...10)
         let expected = [Array(1...3), Array(4...10)]
         let actual = array.partitioned { $0 <= 3 }
-        XCTAssertTrue(actual.elementsEqual(expected, by: { actual, expected in  
-            return actual.elementsEqual(expected) { $0 == $1 } 
+        XCTAssertTrue(actual.elementsEqual(expected, by: { actual, expected in
+            return actual.elementsEqual(expected) { $0 == $1 }
         }))
     }
     
@@ -133,7 +135,7 @@ class ArrayTests: XCTestCase {
         XCTAssertTrue(array.tail(1) == [10])
         XCTAssertTrue(array.tail(3) == [8, 9, 10])
     }
-
+    
     func testTail2() {
         let array = [1, 2]
         XCTAssertTrue(array.tail(10) == [1, 2])
@@ -173,5 +175,5 @@ class ArrayTests: XCTestCase {
         XCTAssertEqual(array.skip(2), [])
         XCTAssertEqual(array.skip(3), [])
     }
-        
+    
 }

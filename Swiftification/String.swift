@@ -22,10 +22,11 @@
 
 import Foundation
 
-public extension String {
+public extension StringProtocol {
     /// Return the character length of self.
+    @available(*, deprecated, message: "Use `.count` instead.")
     public var length: Int {
-        return characters.count
+        return Int(count)
     }
     
     /// Safely access the character at the given index, returning `nil` if `index` is out of bounds
@@ -36,9 +37,9 @@ public extension String {
     
     /// Strips whitespaces from both the beginning and the end of self.
     func trimmed() -> String {
-        return trimmingCharacters(in: .whitespacesAndNewlines)
+        return String(self).trimmingCharacters(in: .whitespacesAndNewlines)
     }
-
+    
     /// Returns random string of length with specified characters.
     static func random(_ length: Int = Int.random(8..<65), characters: String = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz012345789") -> String {
         if characters.isEmpty { return "" }
@@ -49,11 +50,13 @@ public extension String {
         }
         return result
     }
-
+    
     /// Returns a value with string inserted at index.
-    func insert(_ string: String, at i: Int) -> String {
-        let index = characters.index(startIndex, offsetBy: min(i, length))
-        return [substring(to: index), string, substring(from: index)].joined(separator: "")
+    func inserting(_ string: String, at i: String.IndexDistance) -> String {
+        var str = String(self)
+        let index = str.index(str.startIndex, offsetBy: i, limitedBy: str.endIndex) ?? str.endIndex
+        str.insert(contentsOf: string, at: index)
+        return str
     }
 }
 
