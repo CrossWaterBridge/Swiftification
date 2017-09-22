@@ -26,15 +26,6 @@ public extension Sequence {
     var first: Iterator.Element? {
         return first(where: { _ in return true })
     }
-
-    /// Returns the first element of `self` that tests `true`, or `nil` if no element tests `true`.
-    @available(*, deprecated, message: "please use 'first(where:)' instead")
-    func takeFirst(_ test: (Iterator.Element) throws -> Bool) rethrows -> Iterator.Element? {
-        for element in self where try test(element) {
-            return element
-        }
-        return nil
-    }
     
     /// Returns all elements until the first element of `self` that tests `false`.
     func takeWhile(_ test: (Iterator.Element) throws -> Bool) rethrows -> [Iterator.Element] {
@@ -63,6 +54,7 @@ public extension Sequence {
     }
     
     /// Checks if test returns true for any element of self.
+    @available(*, deprecated, message: "Use 'contains(where:)' instead")
     func any(_ condition: (Iterator.Element) throws -> Bool) rethrows -> Bool {
         for element in self where try condition(element) {
             return true
