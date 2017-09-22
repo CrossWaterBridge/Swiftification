@@ -53,11 +53,10 @@ public extension StringProtocol {
     
     /// Returns a value with string inserted at index.
     func inserting(_ string: String, at i: String.IndexDistance) -> String {
-        let str = String(self)
-        guard let index = str.index(str.startIndex, offsetBy: i, limitedBy: str.endIndex) else { return str + string }
-        let prefix = str[..<index]
-        let postfix = str[index...]
-        return prefix + string + postfix
+        var str = String(self)
+        let index = str.index(str.startIndex, offsetBy: i, limitedBy: str.endIndex) ?? str.endIndex
+        str.insert(contentsOf: string, at: index)
+        return str
     }
 }
 
