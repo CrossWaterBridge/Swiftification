@@ -1,3 +1,5 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
 target 'Swiftification' do
     use_frameworks!
     
