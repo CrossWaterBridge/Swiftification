@@ -46,7 +46,7 @@ public extension StringProtocol {
         
         var result = String()
         for _ in 0..<length {
-            result.append(characters[characters.characters.index(characters.startIndex, offsetBy: Int.random(0..<characters.characters.count))])
+            result.append(characters[characters.index(characters.startIndex, offsetBy: Int.random(0..<characters.count))])
         }
         return result
     }
