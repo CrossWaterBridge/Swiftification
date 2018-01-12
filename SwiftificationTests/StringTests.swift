@@ -84,7 +84,7 @@ class StringTests: XCTestCase {
     
     func testSafeSubscript() {
         let str = "Hi"
-        XCTAssertEqual(str[str.index(str.startIndex, offsetBy: 1)], str[safe: str.characters.index(str.startIndex, offsetBy: 1)]!)
+        XCTAssertEqual(str[str.index(str.startIndex, offsetBy: 1)], str[safe: str.index(str.startIndex, offsetBy: 1)]!)
     }
     
     func testAppendAndPrependOptionalString() {
