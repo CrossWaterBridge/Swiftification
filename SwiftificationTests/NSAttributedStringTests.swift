@@ -46,7 +46,16 @@ class NSAttributedStringTests: XCTestCase {
         let range = string.range(of: "good")!
         let attributedString = NSAttributedString(string: string)
         XCTAssertEqual(String(string[range]), attributedString.substring(from: range))
-        XCTAssertEqual(String(string[range]), attributedString[range])
+    }
+
+    func testAttributedSubstring() {
+        let string = "This is a string with some good stuff in it"
+        let range = string.range(of: "good")!
+        let attributedString = NSAttributedString(string: string)
+        let attributedSubstring = attributedString.attributedSubstring(from: NSRange(range, in: string))
+        
+        XCTAssertEqual(attributedSubstring, attributedString.attributedSubstring(from: range))
+        XCTAssertEqual(attributedSubstring, attributedString[range])
     }
     
     func testAddAttribute() {

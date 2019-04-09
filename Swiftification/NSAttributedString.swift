@@ -28,8 +28,12 @@ public extension NSAttributedString {
         return String(self.string[range])
     }
     
-    subscript(range: Range<String.Index>) -> String {
-        return substring(from: range)
+    func attributedSubstring(from range: Range<String.Index>) -> NSAttributedString {
+        return attributedSubstring(from: NSRange(range, in: string))
+    }
+    
+    subscript(range: Range<String.Index>) -> NSAttributedString {
+        return attributedSubstring(from: range)
     }
     
 }
