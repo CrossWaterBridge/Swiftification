@@ -1,5 +1,5 @@
 //
-// Copyright (c) 2016 Hilton Campbell
+// Copyright (c) 2019 Hilton Campbell
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -25,12 +25,12 @@ import Foundation
 public extension NSTextCheckingResult {
     
     /// Returns a Swift Range<String.Index> instead of a NSRange
-    public func range(at idx: Int = 0, in string: String) -> Range<String.Index>? {
+    func range(at idx: Int = 0, in string: String) -> Range<String.Index>? {
         return Range<String.Index>(range(at: idx), in: string)
     }
     
     /// Returns the substring for the Range within the string
-    public func substringForRange(at idx: Int = 0, in string: String) -> String? {
+    func substringForRange(at idx: Int = 0, in string: String) -> String? {
         guard let range = range(at: idx, in: string) else { return nil }
         
         return String(string[range])

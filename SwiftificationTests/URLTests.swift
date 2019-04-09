@@ -20,20 +20,14 @@
 // THE SOFTWARE.
 //
 
-import Foundation
+import XCTest
+import Swiftification
 
-public extension Int {
-    /// Random integer between min and max (inclusive)
-    static func random(_ range: Range<Int>) -> Int {
-        let offset = range.lowerBound < 0 ? abs(range.lowerBound) : 0
-        let min = UInt32(range.lowerBound + offset)
-        let max = UInt32(range.upperBound + offset)
-        
-        return Int(min + arc4random_uniform(max - min)) - offset
-    }
+class URLTests: XCTestCase {
     
-    static func random(_ range: ClosedRange<Int>) -> Int {
-        let range = Range(range)
-        return Int.random(range)
+    func testAppendingQueryString() {
+        let url = URL(string: "http://www.google.com")
+        XCTAssertEqual(URL(string: "http://www.google.com?test1=true&test2=false"), url?.appendingQueryString(parameters: ["test1": "true", "test2": "false" ]))
     }
+
 }
