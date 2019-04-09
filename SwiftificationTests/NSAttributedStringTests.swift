@@ -1,5 +1,5 @@
 //
-// Copyright (c) 2016 Hilton Campbell
+// Copyright (c) 2019 Hilton Campbell
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -39,6 +39,37 @@ class NSAttributedStringTests: XCTestCase {
         let expected = NSAttributedString(string: "a b c")
         let actual = array.joined(separator: separator)
         XCTAssertEqual(expected, actual)
+    }
+    
+    func testSubstring() {
+        let string = "This is a string with some good stuff in it"
+        let range = string.range(of: "good")!
+        let attributedString = NSAttributedString(string: string)
+        XCTAssertEqual(String(string[range]), attributedString.substring(from: range))
+    }
+
+    func testAttributedSubstring() {
+        let string = "This is a string with some good stuff in it"
+        let range = string.range(of: "good")!
+        let attributedString = NSAttributedString(string: string)
+        let attributedSubstring = attributedString.attributedSubstring(from: NSRange(range, in: string))
+        
+        XCTAssertEqual(attributedSubstring, attributedString.attributedSubstring(from: range))
+        XCTAssertEqual(attributedSubstring, attributedString[range])
+    }
+    
+    func testAddAttribute() {
+        let string = "This is a string with some good stuff in it"
+        let range = string.range(of: "good")!
+        let nsRange = NSRange(range, in: string)
+        
+        let attributedString1 = NSMutableAttributedString(string: string)
+        attributedString1.addAttribute(.font, value: UIFont.systemFont(ofSize: 55), range: range)
+        
+        let attributedString2 = NSMutableAttributedString(string: string)
+        attributedString2.addAttribute(.font, value: UIFont.systemFont(ofSize: 55), range: nsRange)
+        
+        XCTAssertEqual(attributedString1, attributedString2)
     }
     
 }

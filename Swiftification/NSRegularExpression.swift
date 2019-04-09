@@ -1,5 +1,5 @@
 //
-// Copyright (c) 2016 Hilton Campbell
+// Copyright (c) 2019 Hilton Campbell
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -24,7 +24,7 @@ import Foundation
 
 public extension NSRegularExpression {
     
-    public func stringByReplacingMatches(in string: String, options: NSRegularExpression.MatchingOptions = [], range: Range<String.Index>? = nil, withReplacer replacer: (NSTextCheckingResult, String) -> String?) -> String {
+    func stringByReplacingMatches(in string: String, options: NSRegularExpression.MatchingOptions = [], range: Range<String.Index>? = nil, withReplacer replacer: (NSTextCheckingResult, String) -> String?) -> String {
         var string = string
         var offset = 0
         
@@ -35,27 +35,31 @@ public extension NSRegularExpression {
             guard let replaced = replacer(match, original), let range = Range<String.Index>(nsRange, in: string) else { continue }
             
             string.replaceSubrange(range, with: replaced)
-            
-            offset += (NSRange(replaced.startIndex..<replaced.endIndex, in: replaced).length - nsRange.length)
+            offset += (replaced.nsRange.length - nsRange.length)
         }
         
         return string
     }
     
-    public func firstMatch(in string: String, options: NSRegularExpression.MatchingOptions = [], range: Range<String.Index>? = nil) -> NSTextCheckingResult? {
-        let nsRange = range.flatMap { NSRange($0, in: string) } ?? NSRange(string.startIndex..<string.endIndex, in: string)
+    func stringByReplacingMatches(in string: String, options: NSRegularExpression.MatchingOptions = [], range: Range<String.Index>? = nil, withTemplate template: String) -> String {
+        let nsRange = range.flatMap { NSRange($0, in: string) } ?? string.nsRange
+        return stringByReplacingMatches(in: string, options: options, range: nsRange, withTemplate: template)
+    }
+    
+    func firstMatch(in string: String, options: NSRegularExpression.MatchingOptions = [], range: Range<String.Index>? = nil) -> NSTextCheckingResult? {
+        let nsRange = range.flatMap { NSRange($0, in: string) } ?? string.nsRange
         
         return firstMatch(in: string, options: options, range: nsRange)
     }
     
-    public func matches(in string: String, options: NSRegularExpression.MatchingOptions = [], range: Range<String.Index>? = nil) -> [NSTextCheckingResult] {
-        let nsRange = range.flatMap { NSRange($0, in: string) } ?? NSRange(string.startIndex..<string.endIndex, in: string)
+    func matches(in string: String, options: NSRegularExpression.MatchingOptions = [], range: Range<String.Index>? = nil) -> [NSTextCheckingResult] {
+        let nsRange = range.flatMap { NSRange($0, in: string) } ?? string.nsRange
         
         return matches(in: string, options: options, range: nsRange)
     }
     
-    public func numberOfMatches(in string: String, options: NSRegularExpression.MatchingOptions = [], range: Range<String.Index>? = nil) -> Int {
-        let nsRange = range.flatMap { NSRange($0, in: string) } ?? NSRange(string.startIndex..<string.endIndex, in: string)
+    func numberOfMatches(in string: String, options: NSRegularExpression.MatchingOptions = [], range: Range<String.Index>? = nil) -> Int {
+        let nsRange = range.flatMap { NSRange($0, in: string) } ?? string.nsRange
         
         return numberOfMatches(in: string, options: options, range: nsRange)
     }

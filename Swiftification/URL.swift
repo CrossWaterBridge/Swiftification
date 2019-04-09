@@ -22,18 +22,12 @@
 
 import Foundation
 
-public extension Int {
-    /// Random integer between min and max (inclusive)
-    static func random(_ range: Range<Int>) -> Int {
-        let offset = range.lowerBound < 0 ? abs(range.lowerBound) : 0
-        let min = UInt32(range.lowerBound + offset)
-        let max = UInt32(range.upperBound + offset)
-        
-        return Int(min + arc4random_uniform(max - min)) - offset
+public extension URL {
+    
+    func replacing(queryParameters parameters: [String: String]) -> URL? {
+        guard !parameters.isEmpty, var components = URLComponents(url: self, resolvingAgainstBaseURL: false) else { return nil }
+        components.queryItems = parameters.map { URLQueryItem(name: $0, value: $1) }.sorted { $0.name < $1.name }
+        return components.url
     }
     
-    static func random(_ range: ClosedRange<Int>) -> Int {
-        let range = Range(range)
-        return Int.random(range)
-    }
 }

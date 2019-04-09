@@ -1,5 +1,5 @@
 //
-// Copyright (c) 2016 Hilton Campbell
+// Copyright (c) 2019 Hilton Campbell
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -129,7 +129,7 @@ class NSRegularExpressionTests: XCTestCase {
         XCTAssertEqual("The quick brown hen jumps over the lazy dog", replaced)
     }
     
-    func testStringByReplacingMatchesWithRange() throws {
+    func testStringByReplacingMatchesWithRangeWithReplacer() throws {
         let string = "The quick brown fox jumps over the lazy dog"
         let range = string.range(of: "fox jumps")!
         
@@ -143,6 +143,19 @@ class NSRegularExpressionTests: XCTestCase {
         let replaced2 = regex2.stringByReplacingMatches(in: string, range: range) { _, _ -> String? in
             return "cat"
         }
+        XCTAssertEqual(string, replaced2)
+    }
+    
+    func testStringByReplacingMatchesWithRangeWithTemplate() throws {
+        let string = "The quick brown fox jumps over the lazy dog"
+        let range = string.range(of: "fox jumps")!
+        
+        let regex1 = try NSRegularExpression(pattern: "fox", options: [])
+        let replaced1 = regex1.stringByReplacingMatches(in: string, range: range, withTemplate: "hen")
+        XCTAssertEqual("The quick brown hen jumps over the lazy dog", replaced1)
+        
+        let regex2 = try NSRegularExpression(pattern: "dog", options: [])
+        let replaced2 = regex2.stringByReplacingMatches(in: string, range: range, withTemplate: "cat")
         XCTAssertEqual(string, replaced2)
     }
     

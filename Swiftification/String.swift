@@ -1,5 +1,5 @@
 //
-// Copyright (c) 2016 Hilton Campbell
+// Copyright (c) 2019 Hilton Campbell
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -21,13 +21,9 @@
 //
 
 import Foundation
+import CommonCrypto
 
 public extension StringProtocol {
-    /// Return the character length of self.
-    @available(*, deprecated, message: "Use `.count` instead.")
-    public var length: Int {
-        return Int(count)
-    }
     
     /// Safely access the character at the given index, returning `nil` if `index` is out of bounds
     /// This should be used in conjunction with indexes `advancedBy(_:limit)` to avoid crashes
@@ -58,6 +54,25 @@ public extension StringProtocol {
         str.insert(contentsOf: string, at: index)
         return str
     }
+    
+    func md5() -> String {
+        let context = UnsafeMutablePointer<CC_MD5_CTX>.allocate(capacity: 1)
+        var digest = Array<UInt8>(repeating: 0, count: Int(CC_MD5_DIGEST_LENGTH))
+        CC_MD5_Init(context)
+        CC_MD5_Update(context, String(self), CC_LONG(lengthOfBytes(using: .utf8)))
+        CC_MD5_Final(&digest, context)
+        context.deallocate()
+        return digest.map { String(format:"%02x", $0) }.joined()
+    }
+    
+    var range: Range<String.Index> {
+        return startIndex..<endIndex
+    }
+    
+    var nsRange: NSRange {
+        return NSRange(range, in: self)
+    }
+    
 }
 
 public func + (lhs: String?, rhs: String?) -> String? {

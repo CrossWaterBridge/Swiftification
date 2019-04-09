@@ -1,5 +1,5 @@
 //
-// Copyright (c) 2016 Hilton Campbell
+// Copyright (c) 2019 Hilton Campbell
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -24,12 +24,6 @@ import XCTest
 import Swiftification
 
 class StringTests: XCTestCase {
-    
-    @available(*, deprecated)
-    func testLength() {
-        let string = "123456789"
-        XCTAssertTrue(string.length == 9)
-    }
     
     func testTrimmed() {
         let string = "\n       Test        "
@@ -106,6 +100,21 @@ class StringTests: XCTestCase {
         XCTAssertEqual("string".inserting("TEST", at: 0), "TESTstring")
         XCTAssertEqual("string".inserting("TEST", at: 3), "strTESTing")
         XCTAssertEqual("string".inserting("TEST", at: 100), "stringTEST")
+    }
+    
+    func testMD5() {
+        let string = "This is a string"
+        XCTAssertEqual(string.md5(), "41fb5b5ae4d57c5ee528adb00e5e8e74")
+    }
+
+    func testRange() {
+        let string = "Test String"
+        XCTAssertEqual(string.range, string.startIndex..<string.endIndex)
+    }
+    
+    func testNSRange() {
+        let string = "Test String"
+        XCTAssertEqual(string.nsRange, NSRange(location: 0, length: string.count))
     }
     
 }

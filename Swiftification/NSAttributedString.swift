@@ -1,5 +1,5 @@
 //
-// Copyright (c) 2016 Hilton Campbell
+// Copyright (c) 2019 Hilton Campbell
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -21,6 +21,30 @@
 //
 
 import Foundation
+
+public extension NSAttributedString {
+ 
+    func substring(from range: Range<String.Index>) -> String {
+        return String(self.string[range])
+    }
+    
+    func attributedSubstring(from range: Range<String.Index>) -> NSAttributedString {
+        return attributedSubstring(from: NSRange(range, in: string))
+    }
+    
+    subscript(range: Range<String.Index>) -> NSAttributedString {
+        return attributedSubstring(from: range)
+    }
+    
+}
+
+public extension NSMutableAttributedString {
+    
+    func addAttribute(_ name: NSAttributedString.Key, value: Any, range: Range<String.Index>) {
+        addAttribute(name, value: value, range: NSRange(range, in: string))
+    }
+    
+}
 
 /// Returns the second attributed string appended to the first.
 public func + (lhs: NSAttributedString, rhs: NSAttributedString) -> NSAttributedString {

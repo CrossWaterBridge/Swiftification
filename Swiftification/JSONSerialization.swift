@@ -22,18 +22,16 @@
 
 import Foundation
 
-public extension Int {
-    /// Random integer between min and max (inclusive)
-    static func random(_ range: Range<Int>) -> Int {
-        let offset = range.lowerBound < 0 ? abs(range.lowerBound) : 0
-        let min = UInt32(range.lowerBound + offset)
-        let max = UInt32(range.upperBound + offset)
-        
-        return Int(min + arc4random_uniform(max - min)) - offset
+public extension JSONSerialization {
+    
+    static func string(withJSONObject jsonObject: Any, options: WritingOptions = []) throws -> String? {
+        let jsonData = try data(withJSONObject: jsonObject, options: options)
+        return String(data: jsonData, encoding: .utf8)
     }
     
-    static func random(_ range: ClosedRange<Int>) -> Int {
-        let range = Range(range)
-        return Int.random(range)
+    static func jsonObject(with string: String, options: ReadingOptions = []) throws -> Any? {
+        guard let data = string.data(using: .utf8) else { return nil }
+        return try jsonObject(with: data, options: options)
     }
+    
 }
