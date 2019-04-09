@@ -27,7 +27,7 @@ class URLTests: XCTestCase {
     
     func testAppendingQueryString() {
         let url = URL(string: "http://www.google.com")
-        XCTAssertEqual(URL(string: "http://www.google.com?test1=true&test2=false"), url?.appendingQueryString(parameters: ["test1": "true", "test2": "false" ]))
+        XCTAssertEqual(URL(string: "http://www.google.com?test1=true&test2=false"), url?.replacing(queryParameters: ["test1": "true", "test2": "false" ]))
     }
 
 }

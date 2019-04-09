@@ -102,9 +102,9 @@ class StringTests: XCTestCase {
         XCTAssertEqual("string".inserting("TEST", at: 100), "stringTEST")
     }
     
-    func testMD5Hash() {
+    func testMD5() {
         let string = "This is a string"
-        XCTAssertEqual(string.md5Hash(), "41fb5b5ae4d57c5ee528adb00e5e8e74")
+        XCTAssertEqual(string.md5(), "41fb5b5ae4d57c5ee528adb00e5e8e74")
     }
 
     func testRange() {

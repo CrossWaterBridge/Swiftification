@@ -24,8 +24,12 @@ import Foundation
 
 public extension NSAttributedString {
  
-    func attributedSubstring(from range: Range<String.Index>) -> String {
+    func substring(from range: Range<String.Index>) -> String {
         return String(self.string[range])
+    }
+    
+    subscript(range: Range<String.Index>) -> String {
+        return substring(from: range)
     }
     
 }

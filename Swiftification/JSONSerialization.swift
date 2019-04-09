@@ -24,12 +24,12 @@ import Foundation
 
 public extension JSONSerialization {
     
-    static func string(withJSONObject jsonObject: Any, options: JSONSerialization.WritingOptions = []) throws -> String? {
+    static func string(withJSONObject jsonObject: Any, options: WritingOptions = []) throws -> String? {
         let jsonData = try data(withJSONObject: jsonObject, options: options)
         return String(data: jsonData, encoding: .utf8)
     }
     
-    static func jsonObject(with string: String, options: JSONSerialization.ReadingOptions = []) throws -> Any? {
+    static func jsonObject(with string: String, options: ReadingOptions = []) throws -> Any? {
         guard let data = string.data(using: .utf8) else { return nil }
         return try jsonObject(with: data, options: options)
     }

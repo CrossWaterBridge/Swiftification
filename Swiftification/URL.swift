@@ -24,18 +24,10 @@ import Foundation
 
 public extension URL {
     
-    private func fallbackURLByAppendingQueryString(parameters: [String: String]) -> URL {
-        guard !parameters.isEmpty, let scheme = scheme, let host = host else { return self }
-        let urlString = scheme + "://" + host + path + "?" + parameters.map { "\($0)=\($1)" }.sorted().joined(separator: "&")
-        return URL(string: urlString) ?? self
-    }
-    
-    func appendingQueryString(parameters: [String: String]) -> URL {
-        guard !parameters.isEmpty, var components = URLComponents(url: self, resolvingAgainstBaseURL: false) else {
-            return fallbackURLByAppendingQueryString(parameters: parameters)
-        }
+    func replacing(queryParameters parameters: [String: String]) -> URL? {
+        guard !parameters.isEmpty, var components = URLComponents(url: self, resolvingAgainstBaseURL: false) else { return nil }
         components.queryItems = parameters.map { URLQueryItem(name: $0, value: $1) }.sorted { $0.name < $1.name }
-        return components.url ?? fallbackURLByAppendingQueryString(parameters: parameters)
+        return components.url
     }
     
 }
