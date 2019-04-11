@@ -25,9 +25,14 @@ import Swiftification
 
 class URLTests: XCTestCase {
     
-    func testAppendingQueryString() {
+    func testReplacingQueryString() {
         let url = URL(string: "http://www.google.com")
         XCTAssertEqual(URL(string: "http://www.google.com?test1=true&test2=false"), url?.replacing(queryParameters: ["test1": "true", "test2": "false" ]))
     }
 
+    func testURLReplacingQueryStringNoParameters() {
+        let url = URL(string: "http://www.google.com")
+        let replacedURL = url?.replacing(queryParameters: [:])
+        XCTAssertEqual(replacedURL, url)
+    }
 }
