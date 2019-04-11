@@ -25,7 +25,8 @@ import Foundation
 public extension URL {
     
     func replacing(queryParameters parameters: [String: String]) -> URL? {
-        guard !parameters.isEmpty, var components = URLComponents(url: self, resolvingAgainstBaseURL: false) else { return nil }
+        guard !parameters.isEmpty else { return self }
+        guard var components = URLComponents(url: self, resolvingAgainstBaseURL: false) else { return nil }
         components.queryItems = parameters.map { URLQueryItem(name: $0, value: $1) }.sorted { $0.name < $1.name }
         return components.url
     }
