@@ -1,4 +1,0 @@
-module Swiftification {
-    header "/Users/jessicalemon/Projects/Swiftification/.build/x86_64-apple-macosx/debug/Swiftification.build/Swiftification-Swift.h"
-    requires objc
-}
