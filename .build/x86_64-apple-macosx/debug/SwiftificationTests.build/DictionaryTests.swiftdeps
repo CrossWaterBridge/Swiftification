@@ -1,0 +1,491 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "DictionaryTests"
+provides-nominal:
+- "19SwiftificationTests010DictionaryB0C"
+provides-member:
+- ["19SwiftificationTests010DictionaryB0C", ""]
+provides-dynamic-lookup:
+- "testFormUnion1"
+- "testFormUnion2"
+- "testFormUnionOperator1"
+- "testFormUnionOperator2"
+- "testInit"
+- "testSafeSubscript"
+- "testToArray"
+- "testUnion1"
+- "testUnion2"
+- "testUnionOperator1"
+- "testUnionOperator2"
+depends-top-level:
+- !private "Array"
+- "AssignmentPrecedence"
+- !private "Dictionary"
+- "DictionaryTests"
+- !private "FloatLiteralType"
+- !private "IntegerLiteralType"
+- !private "StringLiteralType"
+- "UnicodeScalarType"
+- !private "XCTAssertEqual"
+- "XCTAssertTrue"
+- "XCTestCase"
+- !private "|"
+- !private "|="
+depends-member:
+- !private ["Sa", "contains"]
+- !private ["Sa", "forEach"]
+- !private ["SK", ""]
+- !private ["SK", "contains"]
+- !private ["SK", "forEach"]
+- !private ["8CloudKit21CKRecordValueProtocolP", "contains"]
+- !private ["8CloudKit21CKRecordValueProtocolP", "forEach"]
+- !private ["s7CVarArgP", "Dictionary"]
+- !private ["s7CVarArgP", "XCTAssertEqual"]
+- !private ["s7CVarArgP", "XCTAssertTrue"]
+- ["s7CVarArgP", ""]
+- !private ["s7CVarArgP", "contains"]
+- !private ["s7CVarArgP", "forEach"]
+- !private ["s7CVarArgP", "formUnion"]
+- !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "subscript"]
+- !private ["s7CVarArgP", "testFormUnion1"]
+- !private ["s7CVarArgP", "testFormUnion2"]
+- !private ["s7CVarArgP", "testFormUnionOperator1"]
+- !private ["s7CVarArgP", "testFormUnionOperator2"]
+- !private ["s7CVarArgP", "testInit"]
+- !private ["s7CVarArgP", "testSafeSubscript"]
+- !private ["s7CVarArgP", "testToArray"]
+- !private ["s7CVarArgP", "testUnion1"]
+- !private ["s7CVarArgP", "testUnion2"]
+- !private ["s7CVarArgP", "testUnionOperator1"]
+- !private ["s7CVarArgP", "testUnionOperator2"]
+- !private ["s7CVarArgP", "toArray"]
+- !private ["s7CVarArgP", "union"]
+- !private ["Sl", ""]
+- !private ["Sl", "contains"]
+- !private ["Sl", "forEach"]
+- !private ["Sl", "formUnion"]
+- !private ["Sl", "init"]
+- !private ["Sl", "subscript"]
+- !private ["Sl", "toArray"]
+- !private ["Sl", "union"]
+- !private ["10Foundation15ContiguousBytesP", "contains"]
+- !private ["10Foundation15ContiguousBytesP", "forEach"]
+- !private ["s28CustomDebugStringConvertibleP", "Dictionary"]
+- !private ["s28CustomDebugStringConvertibleP", "XCTAssertEqual"]
+- !private ["s28CustomDebugStringConvertibleP", "XCTAssertTrue"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s28CustomDebugStringConvertibleP", "contains"]
+- !private ["s28CustomDebugStringConvertibleP", "forEach"]
+- !private ["s28CustomDebugStringConvertibleP", "formUnion"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "subscript"]
+- !private ["s28CustomDebugStringConvertibleP", "testFormUnion1"]
+- !private ["s28CustomDebugStringConvertibleP", "testFormUnion2"]
+- !private ["s28CustomDebugStringConvertibleP", "testFormUnionOperator1"]
+- !private ["s28CustomDebugStringConvertibleP", "testFormUnionOperator2"]
+- !private ["s28CustomDebugStringConvertibleP", "testInit"]
+- !private ["s28CustomDebugStringConvertibleP", "testSafeSubscript"]
+- !private ["s28CustomDebugStringConvertibleP", "testToArray"]
+- !private ["s28CustomDebugStringConvertibleP", "testUnion1"]
+- !private ["s28CustomDebugStringConvertibleP", "testUnion2"]
+- !private ["s28CustomDebugStringConvertibleP", "testUnionOperator1"]
+- !private ["s28CustomDebugStringConvertibleP", "testUnionOperator2"]
+- !private ["s28CustomDebugStringConvertibleP", "toArray"]
+- !private ["s28CustomDebugStringConvertibleP", "union"]
+- !private ["s17CustomReflectableP", "contains"]
+- !private ["s17CustomReflectableP", "forEach"]
+- !private ["s17CustomReflectableP", "formUnion"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "subscript"]
+- !private ["s17CustomReflectableP", "toArray"]
+- !private ["s17CustomReflectableP", "union"]
+- !private ["s23CustomStringConvertibleP", "Dictionary"]
+- !private ["s23CustomStringConvertibleP", "XCTAssertEqual"]
+- !private ["s23CustomStringConvertibleP", "XCTAssertTrue"]
+- ["s23CustomStringConvertibleP", ""]
+- !private ["s23CustomStringConvertibleP", "appendInterpolation"]
+- !private ["s23CustomStringConvertibleP", "appendLiteral"]
+- !private ["s23CustomStringConvertibleP", "contains"]
+- !private ["s23CustomStringConvertibleP", "forEach"]
+- !private ["s23CustomStringConvertibleP", "formUnion"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "subscript"]
+- !private ["s23CustomStringConvertibleP", "testFormUnion1"]
+- !private ["s23CustomStringConvertibleP", "testFormUnion2"]
+- !private ["s23CustomStringConvertibleP", "testFormUnionOperator1"]
+- !private ["s23CustomStringConvertibleP", "testFormUnionOperator2"]
+- !private ["s23CustomStringConvertibleP", "testInit"]
+- !private ["s23CustomStringConvertibleP", "testSafeSubscript"]
+- !private ["s23CustomStringConvertibleP", "testToArray"]
+- !private ["s23CustomStringConvertibleP", "testUnion1"]
+- !private ["s23CustomStringConvertibleP", "testUnion2"]
+- !private ["s23CustomStringConvertibleP", "testUnionOperator1"]
+- !private ["s23CustomStringConvertibleP", "testUnionOperator2"]
+- !private ["s23CustomStringConvertibleP", "toArray"]
+- !private ["s23CustomStringConvertibleP", "union"]
+- !private ["10Foundation12DataProtocolP", ""]
+- !private ["10Foundation12DataProtocolP", "contains"]
+- !private ["10Foundation12DataProtocolP", "forEach"]
+- !private ["Se", "contains"]
+- !private ["Se", "forEach"]
+- !private ["Se", "formUnion"]
+- !private ["Se", "init"]
+- !private ["Se", "subscript"]
+- !private ["Se", "toArray"]
+- !private ["Se", "union"]
+- !private ["s26DefaultStringInterpolationV", "appendInterpolation"]
+- !private ["s26DefaultStringInterpolationV", "appendLiteral"]
+- !private ["SD", "formUnion"]
+- !private ["SD", "init"]
+- !private ["SD", "subscript"]
+- !private ["SD", "toArray"]
+- !private ["SD", "union"]
+- !private ["19SwiftificationTests010DictionaryB0C", "Dictionary"]
+- !private ["19SwiftificationTests010DictionaryB0C", "XCTAssertEqual"]
+- !private ["19SwiftificationTests010DictionaryB0C", "XCTAssertTrue"]
+- ["19SwiftificationTests010DictionaryB0C", ""]
+- ["19SwiftificationTests010DictionaryB0C", "deinit"]
+- ["19SwiftificationTests010DictionaryB0C", "init"]
+- ["19SwiftificationTests010DictionaryB0C", "testFormUnion1"]
+- ["19SwiftificationTests010DictionaryB0C", "testFormUnion2"]
+- ["19SwiftificationTests010DictionaryB0C", "testFormUnionOperator1"]
+- ["19SwiftificationTests010DictionaryB0C", "testFormUnionOperator2"]
+- ["19SwiftificationTests010DictionaryB0C", "testInit"]
+- ["19SwiftificationTests010DictionaryB0C", "testSafeSubscript"]
+- ["19SwiftificationTests010DictionaryB0C", "testToArray"]
+- ["19SwiftificationTests010DictionaryB0C", "testUnion1"]
+- ["19SwiftificationTests010DictionaryB0C", "testUnion2"]
+- ["19SwiftificationTests010DictionaryB0C", "testUnionOperator1"]
+- ["19SwiftificationTests010DictionaryB0C", "testUnionOperator2"]
+- !private ["SE", "contains"]
+- !private ["SE", "forEach"]
+- !private ["SE", "formUnion"]
+- !private ["SE", "init"]
+- !private ["SE", "subscript"]
+- !private ["SE", "toArray"]
+- !private ["SE", "union"]
+- !private ["SQ", "Dictionary"]
+- !private ["SQ", "XCTAssertEqual"]
+- !private ["SQ", "XCTAssertTrue"]
+- ["SQ", ""]
+- !private ["SQ", "contains"]
+- !private ["SQ", "forEach"]
+- !private ["SQ", "formUnion"]
+- !private ["SQ", "init"]
+- !private ["SQ", "subscript"]
+- !private ["SQ", "testFormUnion1"]
+- !private ["SQ", "testFormUnion2"]
+- !private ["SQ", "testFormUnionOperator1"]
+- !private ["SQ", "testFormUnionOperator2"]
+- !private ["SQ", "testInit"]
+- !private ["SQ", "testSafeSubscript"]
+- !private ["SQ", "testToArray"]
+- !private ["SQ", "testUnion1"]
+- !private ["SQ", "testUnion2"]
+- !private ["SQ", "testUnionOperator1"]
+- !private ["SQ", "testUnionOperator2"]
+- !private ["SQ", "toArray"]
+- !private ["SQ", "union"]
+- !private ["s25ExpressibleByArrayLiteralP", ""]
+- !private ["s25ExpressibleByArrayLiteralP", "contains"]
+- !private ["s25ExpressibleByArrayLiteralP", "forEach"]
+- !private ["s25ExpressibleByArrayLiteralP", "init"]
+- !private ["s30ExpressibleByDictionaryLiteralP", "Key"]
+- !private ["s30ExpressibleByDictionaryLiteralP", "Value"]
+- !private ["s30ExpressibleByDictionaryLiteralP", "formUnion"]
+- !private ["s30ExpressibleByDictionaryLiteralP", "init"]
+- !private ["s30ExpressibleByDictionaryLiteralP", "subscript"]
+- !private ["s30ExpressibleByDictionaryLiteralP", "toArray"]
+- !private ["s30ExpressibleByDictionaryLiteralP", "union"]
+- !private ["s32ExpressibleByStringInterpolationP", "StringInterpolation"]
+- !private ["s32ExpressibleByStringInterpolationP", "init"]
+- !private ["SH", "Dictionary"]
+- !private ["SH", "XCTAssertEqual"]
+- !private ["SH", "XCTAssertTrue"]
+- ["SH", ""]
+- !private ["SH", "contains"]
+- !private ["SH", "forEach"]
+- !private ["SH", "formUnion"]
+- !private ["SH", "init"]
+- !private ["SH", "subscript"]
+- !private ["SH", "testFormUnion1"]
+- !private ["SH", "testFormUnion2"]
+- !private ["SH", "testFormUnionOperator1"]
+- !private ["SH", "testFormUnionOperator2"]
+- !private ["SH", "testInit"]
+- !private ["SH", "testSafeSubscript"]
+- !private ["SH", "testToArray"]
+- !private ["SH", "testUnion1"]
+- !private ["SH", "testUnion2"]
+- !private ["SH", "testUnionOperator1"]
+- !private ["SH", "testUnionOperator2"]
+- !private ["SH", "toArray"]
+- !private ["SH", "union"]
+- !private ["SM", ""]
+- !private ["SM", "contains"]
+- !private ["SM", "forEach"]
+- !private ["10Foundation19MutableDataProtocolP", "contains"]
+- !private ["10Foundation19MutableDataProtocolP", "forEach"]
+- !private ["So8NSCodingP", ""]
+- !private ["So8NSObjectC", "Dictionary"]
+- !private ["So8NSObjectC", "XCTAssertEqual"]
+- !private ["So8NSObjectC", "XCTAssertTrue"]
+- ["So8NSObjectC", ""]
+- ["So8NSObjectC", "init"]
+- ["So8NSObjectC", "testCaseWithInvocation"]
+- ["So8NSObjectC", "testCaseWithSelector"]
+- ["So8NSObjectC", "testFormUnion1"]
+- ["So8NSObjectC", "testFormUnion2"]
+- ["So8NSObjectC", "testFormUnionOperator1"]
+- ["So8NSObjectC", "testFormUnionOperator2"]
+- ["So8NSObjectC", "testInit"]
+- ["So8NSObjectC", "testSafeSubscript"]
+- ["So8NSObjectC", "testToArray"]
+- ["So8NSObjectC", "testUnion1"]
+- ["So8NSObjectC", "testUnion2"]
+- ["So8NSObjectC", "testUnionOperator1"]
+- ["So8NSObjectC", "testUnionOperator2"]
+- !private ["So8NSObjectP", "Dictionary"]
+- !private ["So8NSObjectP", "XCTAssertEqual"]
+- !private ["So8NSObjectP", "XCTAssertTrue"]
+- ["So8NSObjectP", ""]
+- ["So8NSObjectP", "init"]
+- ["So8NSObjectP", "testCaseWithInvocation"]
+- ["So8NSObjectP", "testCaseWithSelector"]
+- ["So8NSObjectP", "testFormUnion1"]
+- ["So8NSObjectP", "testFormUnion2"]
+- ["So8NSObjectP", "testFormUnionOperator1"]
+- ["So8NSObjectP", "testFormUnionOperator2"]
+- ["So8NSObjectP", "testInit"]
+- ["So8NSObjectP", "testSafeSubscript"]
+- ["So8NSObjectP", "testToArray"]
+- ["So8NSObjectP", "testUnion1"]
+- ["So8NSObjectP", "testUnion2"]
+- ["So8NSObjectP", "testUnionOperator1"]
+- ["So8NSObjectP", "testUnionOperator2"]
+- !private ["Sk", ""]
+- !private ["Sk", "contains"]
+- !private ["Sk", "forEach"]
+- !private ["Sm", ""]
+- !private ["Sm", "contains"]
+- !private ["Sm", "forEach"]
+- !private ["ST", ""]
+- !private ["ST", "contains"]
+- !private ["ST", "forEach"]
+- !private ["ST", "formUnion"]
+- !private ["ST", "init"]
+- !private ["ST", "subscript"]
+- !private ["ST", "toArray"]
+- !private ["ST", "union"]
+- !private ["s27StringInterpolationProtocolP", "appendInterpolation"]
+- !private ["s27StringInterpolationProtocolP", "appendLiteral"]
+- !private ["s27StringInterpolationProtocolP", "init"]
+- !private ["s16TextOutputStreamP", "appendInterpolation"]
+- !private ["s16TextOutputStreamP", "appendLiteral"]
+- !private ["So11XCTActivityP", "Dictionary"]
+- !private ["So11XCTActivityP", "XCTAssertEqual"]
+- !private ["So11XCTActivityP", "XCTAssertTrue"]
+- ["So11XCTActivityP", ""]
+- ["So11XCTActivityP", "init"]
+- ["So11XCTActivityP", "testFormUnion1"]
+- ["So11XCTActivityP", "testFormUnion2"]
+- ["So11XCTActivityP", "testFormUnionOperator1"]
+- ["So11XCTActivityP", "testFormUnionOperator2"]
+- ["So11XCTActivityP", "testInit"]
+- ["So11XCTActivityP", "testSafeSubscript"]
+- ["So11XCTActivityP", "testToArray"]
+- ["So11XCTActivityP", "testUnion1"]
+- ["So11XCTActivityP", "testUnion2"]
+- ["So11XCTActivityP", "testUnionOperator1"]
+- ["So11XCTActivityP", "testUnionOperator2"]
+- !private ["So17XCTWaiterDelegateP", "Dictionary"]
+- !private ["So17XCTWaiterDelegateP", "XCTAssertEqual"]
+- !private ["So17XCTWaiterDelegateP", "XCTAssertTrue"]
+- ["So17XCTWaiterDelegateP", ""]
+- ["So17XCTWaiterDelegateP", "init"]
+- ["So17XCTWaiterDelegateP", "testFormUnion1"]
+- ["So17XCTWaiterDelegateP", "testFormUnion2"]
+- ["So17XCTWaiterDelegateP", "testFormUnionOperator1"]
+- ["So17XCTWaiterDelegateP", "testFormUnionOperator2"]
+- ["So17XCTWaiterDelegateP", "testInit"]
+- ["So17XCTWaiterDelegateP", "testSafeSubscript"]
+- ["So17XCTWaiterDelegateP", "testToArray"]
+- ["So17XCTWaiterDelegateP", "testUnion1"]
+- ["So17XCTWaiterDelegateP", "testUnion2"]
+- ["So17XCTWaiterDelegateP", "testUnionOperator1"]
+- ["So17XCTWaiterDelegateP", "testUnionOperator2"]
+- !private ["So6XCTestC", "Dictionary"]
+- !private ["So6XCTestC", "XCTAssertEqual"]
+- !private ["So6XCTestC", "XCTAssertTrue"]
+- ["So6XCTestC", ""]
+- ["So6XCTestC", "init"]
+- ["So6XCTestC", "testCaseWithInvocation"]
+- ["So6XCTestC", "testCaseWithSelector"]
+- ["So6XCTestC", "testFormUnion1"]
+- ["So6XCTestC", "testFormUnion2"]
+- ["So6XCTestC", "testFormUnionOperator1"]
+- ["So6XCTestC", "testFormUnionOperator2"]
+- ["So6XCTestC", "testInit"]
+- ["So6XCTestC", "testSafeSubscript"]
+- ["So6XCTestC", "testToArray"]
+- ["So6XCTestC", "testUnion1"]
+- ["So6XCTestC", "testUnion2"]
+- ["So6XCTestC", "testUnionOperator1"]
+- ["So6XCTestC", "testUnionOperator2"]
+- !private ["So10XCTestCaseC", "Dictionary"]
+- !private ["So10XCTestCaseC", "XCTAssertEqual"]
+- !private ["So10XCTestCaseC", "XCTAssertTrue"]
+- ["So10XCTestCaseC", ""]
+- ["So10XCTestCaseC", "init"]
+- ["So10XCTestCaseC", "testFormUnion1"]
+- ["So10XCTestCaseC", "testFormUnion2"]
+- ["So10XCTestCaseC", "testFormUnionOperator1"]
+- ["So10XCTestCaseC", "testFormUnionOperator2"]
+- ["So10XCTestCaseC", "testInit"]
+- ["So10XCTestCaseC", "testSafeSubscript"]
+- ["So10XCTestCaseC", "testToArray"]
+- ["So10XCTestCaseC", "testUnion1"]
+- ["So10XCTestCaseC", "testUnion2"]
+- ["So10XCTestCaseC", "testUnionOperator1"]
+- ["So10XCTestCaseC", "testUnionOperator2"]
+- !private ["s14_ArrayProtocolP", "contains"]
+- !private ["s14_ArrayProtocolP", "forEach"]
+- !private ["s24_DestructorSafeContainerP", "contains"]
+- !private ["s24_DestructorSafeContainerP", "forEach"]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s19_HasContiguousBytesP", "contains"]
+- !private ["s19_HasContiguousBytesP", "forEach"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "contains"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "forEach"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "formUnion"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "init"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "subscript"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "toArray"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "union"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "Dictionary"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "XCTAssertEqual"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "XCTAssertTrue"]
+- ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "testFormUnion1"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "testFormUnion2"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "testFormUnionOperator1"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "testFormUnionOperator2"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "testInit"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "testSafeSubscript"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "testToArray"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "testUnion1"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "testUnion2"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "testUnionOperator1"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "testUnionOperator2"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "Dictionary"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "XCTAssertEqual"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "XCTAssertTrue"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", ""]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "testFormUnion1"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "testFormUnion2"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "testFormUnionOperator1"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "testFormUnionOperator2"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "testInit"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "testSafeSubscript"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "testToArray"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "testUnion1"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "testUnion2"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "testUnionOperator1"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "testUnionOperator2"]
+- !private ["s21_ObjectiveCBridgeableP", "contains"]
+- !private ["s21_ObjectiveCBridgeableP", "forEach"]
+- !private ["s21_ObjectiveCBridgeableP", "formUnion"]
+- !private ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "subscript"]
+- !private ["s21_ObjectiveCBridgeableP", "toArray"]
+- !private ["s21_ObjectiveCBridgeableP", "union"]
+depends-nominal:
+- !private "Sa"
+- !private "SK"
+- !private "8CloudKit21CKRecordValueProtocolP"
+- "s7CVarArgP"
+- !private "Sl"
+- !private "10Foundation15ContiguousBytesP"
+- "s28CustomDebugStringConvertibleP"
+- !private "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- !private "10Foundation12DataProtocolP"
+- !private "Se"
+- !private "s26DefaultStringInterpolationV"
+- !private "SD"
+- "19SwiftificationTests010DictionaryB0C"
+- !private "SE"
+- "SQ"
+- !private "s25ExpressibleByArrayLiteralP"
+- !private "s30ExpressibleByDictionaryLiteralP"
+- !private "s32ExpressibleByStringInterpolationP"
+- "SH"
+- !private "SM"
+- !private "10Foundation19MutableDataProtocolP"
+- !private "So8NSCodingP"
+- "So8NSObjectC"
+- "So8NSObjectP"
+- !private "Sk"
+- !private "Sm"
+- !private "ST"
+- !private "s27StringInterpolationProtocolP"
+- !private "s16TextOutputStreamP"
+- "So11XCTActivityP"
+- "So17XCTWaiterDelegateP"
+- "So6XCTestC"
+- "So10XCTestCaseC"
+- !private "s14_ArrayProtocolP"
+- !private "s24_DestructorSafeContainerP"
+- !private "s35_ExpressibleByBuiltinIntegerLiteralP"
+- !private "s34_ExpressibleByBuiltinStringLiteralP"
+- !private "s19_HasContiguousBytesP"
+- !private "s35_HasCustomAnyHashableRepresentationP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- "10Foundation37_KeyValueCodingAndObservingPublishingP"
+- !private "s21_ObjectiveCBridgeableP"
+depends-dynamic-lookup:
+depends-external:
+- "/Users/jessicalemon/Projects/Swiftification/.build/x86_64-apple-macosx/debug/Swiftification.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/XPC.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/ObjectiveC.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/CoreData.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/CoreImage.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/Combine.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/QuartzCore.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/Dispatch.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/Metal.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/Darwin.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/CoreLocation.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/Foundation.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/CoreFoundation.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/CoreGraphics.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/Swift.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/IOKit.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/CloudKit.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/AppKit.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/SwiftOnoneSupport.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib/XCTest.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk/usr/include/mach-o/dyld.modulemap"
+- "/Users/jessicalemon/Projects/Swiftification/.build/x86_64-apple-macosx/debug/Swiftification.build/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Modules/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk/usr/include/mach-o/compact_unwind_encoding.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk/usr/include/xpc/XPC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk/System/Library/Frameworks/CoreData.framework/Headers/CoreData.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/Dispatch.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CoreLocation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk/System/Library/Frameworks/ApplicationServices.framework/Headers/ApplicationServices.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk/System/Library/Frameworks/CloudKit.framework/Headers/CloudKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk/System/Library/Frameworks/AppKit.framework/Headers/AppKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTest.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "0c577391cdaf718797089282a9c2387e"

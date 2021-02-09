@@ -1,0 +1,620 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "NSAttributedStringTests"
+provides-nominal:
+- "19SwiftificationTests018NSAttributedStringB0C"
+provides-member:
+- ["19SwiftificationTests018NSAttributedStringB0C", ""]
+provides-dynamic-lookup:
+- "testAddAttribute"
+- "testAddOperator"
+- "testAttributedSubstring"
+- "testJoined"
+- "testSubstring"
+depends-top-level:
+- !private "+"
+- !private "Array"
+- !private "FloatLiteralType"
+- !private "IntegerLiteralType"
+- !private "NSAttributedString"
+- "NSAttributedStringTests"
+- !private "NSFont"
+- !private "NSMutableAttributedString"
+- !private "NSRange"
+- !private "String"
+- !private "StringLiteralType"
+- !private "UnicodeScalarType"
+- !private "XCTAssertEqual"
+- "XCTestCase"
+depends-member:
+- !private ["s18AdditiveArithmeticP", ""]
+- !private ["Sa", "joined"]
+- !private ["SK", ""]
+- !private ["SK", "callAsFunction"]
+- !private ["SK", "init"]
+- !private ["SK", "joined"]
+- !private ["SK", "range"]
+- !private ["SK", "subscript"]
+- !private ["8CloudKit21CKRecordValueProtocolP", "init"]
+- !private ["8CloudKit21CKRecordValueProtocolP", "joined"]
+- !private ["8CloudKit21CKRecordValueProtocolP", "range"]
+- !private ["8CloudKit21CKRecordValueProtocolP", "subscript"]
+- !private ["s7CVarArgP", "NSAttributedString"]
+- !private ["s7CVarArgP", "NSFont"]
+- !private ["s7CVarArgP", "NSMutableAttributedString"]
+- !private ["s7CVarArgP", "NSRange"]
+- !private ["s7CVarArgP", "String"]
+- !private ["s7CVarArgP", "XCTAssertEqual"]
+- ["s7CVarArgP", ""]
+- !private ["s7CVarArgP", "addAttribute"]
+- !private ["s7CVarArgP", "attributedSubstring"]
+- !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "joined"]
+- !private ["s7CVarArgP", "range"]
+- !private ["s7CVarArgP", "subscript"]
+- !private ["s7CVarArgP", "substring"]
+- !private ["s7CVarArgP", "systemFont"]
+- !private ["s7CVarArgP", "testAddAttribute"]
+- !private ["s7CVarArgP", "testAddOperator"]
+- !private ["s7CVarArgP", "testAttributedSubstring"]
+- !private ["s7CVarArgP", "testJoined"]
+- !private ["s7CVarArgP", "testSubstring"]
+- !private ["Sl", ""]
+- !private ["Sl", "callAsFunction"]
+- !private ["Sl", "init"]
+- !private ["Sl", "joined"]
+- !private ["Sl", "range"]
+- !private ["Sl", "subscript"]
+- !private ["SL", ""]
+- !private ["SL", "init"]
+- !private ["SL", "range"]
+- !private ["SL", "subscript"]
+- !private ["10Foundation15ContiguousBytesP", "joined"]
+- !private ["s28CustomDebugStringConvertibleP", "NSAttributedString"]
+- !private ["s28CustomDebugStringConvertibleP", "NSFont"]
+- !private ["s28CustomDebugStringConvertibleP", "NSMutableAttributedString"]
+- !private ["s28CustomDebugStringConvertibleP", "NSRange"]
+- !private ["s28CustomDebugStringConvertibleP", "String"]
+- !private ["s28CustomDebugStringConvertibleP", "XCTAssertEqual"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s28CustomDebugStringConvertibleP", "addAttribute"]
+- !private ["s28CustomDebugStringConvertibleP", "attributedSubstring"]
+- !private ["s28CustomDebugStringConvertibleP", "callAsFunction"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "joined"]
+- !private ["s28CustomDebugStringConvertibleP", "range"]
+- !private ["s28CustomDebugStringConvertibleP", "subscript"]
+- !private ["s28CustomDebugStringConvertibleP", "substring"]
+- !private ["s28CustomDebugStringConvertibleP", "systemFont"]
+- !private ["s28CustomDebugStringConvertibleP", "testAddAttribute"]
+- !private ["s28CustomDebugStringConvertibleP", "testAddOperator"]
+- !private ["s28CustomDebugStringConvertibleP", "testAttributedSubstring"]
+- !private ["s28CustomDebugStringConvertibleP", "testJoined"]
+- !private ["s28CustomDebugStringConvertibleP", "testSubstring"]
+- !private ["s17CustomReflectableP", "callAsFunction"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "joined"]
+- !private ["s17CustomReflectableP", "range"]
+- !private ["s17CustomReflectableP", "subscript"]
+- !private ["s23CustomStringConvertibleP", "Element"]
+- !private ["s23CustomStringConvertibleP", "NSAttributedString"]
+- !private ["s23CustomStringConvertibleP", "NSFont"]
+- !private ["s23CustomStringConvertibleP", "NSMutableAttributedString"]
+- !private ["s23CustomStringConvertibleP", "NSRange"]
+- !private ["s23CustomStringConvertibleP", "String"]
+- !private ["s23CustomStringConvertibleP", "XCTAssertEqual"]
+- ["s23CustomStringConvertibleP", ""]
+- !private ["s23CustomStringConvertibleP", "addAttribute"]
+- !private ["s23CustomStringConvertibleP", "attributedSubstring"]
+- !private ["s23CustomStringConvertibleP", "callAsFunction"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "joined"]
+- !private ["s23CustomStringConvertibleP", "range"]
+- !private ["s23CustomStringConvertibleP", "subscript"]
+- !private ["s23CustomStringConvertibleP", "substring"]
+- !private ["s23CustomStringConvertibleP", "systemFont"]
+- !private ["s23CustomStringConvertibleP", "testAddAttribute"]
+- !private ["s23CustomStringConvertibleP", "testAddOperator"]
+- !private ["s23CustomStringConvertibleP", "testAttributedSubstring"]
+- !private ["s23CustomStringConvertibleP", "testJoined"]
+- !private ["s23CustomStringConvertibleP", "testSubstring"]
+- !private ["10Foundation12DataProtocolP", ""]
+- !private ["10Foundation12DataProtocolP", "joined"]
+- !private ["Se", "callAsFunction"]
+- !private ["Se", "init"]
+- !private ["Se", "joined"]
+- !private ["Se", "range"]
+- !private ["Se", "subscript"]
+- !private ["SE", "callAsFunction"]
+- !private ["SE", "init"]
+- !private ["SE", "joined"]
+- !private ["SE", "range"]
+- !private ["SE", "subscript"]
+- !private ["SQ", "NSAttributedString"]
+- !private ["SQ", "NSFont"]
+- !private ["SQ", "NSMutableAttributedString"]
+- !private ["SQ", "NSRange"]
+- !private ["SQ", "String"]
+- !private ["SQ", "XCTAssertEqual"]
+- ["SQ", ""]
+- !private ["SQ", "addAttribute"]
+- !private ["SQ", "attributedSubstring"]
+- !private ["SQ", "callAsFunction"]
+- !private ["SQ", "font"]
+- !private ["SQ", "init"]
+- !private ["SQ", "joined"]
+- !private ["SQ", "range"]
+- !private ["SQ", "subscript"]
+- !private ["SQ", "substring"]
+- !private ["SQ", "systemFont"]
+- !private ["SQ", "testAddAttribute"]
+- !private ["SQ", "testAddOperator"]
+- !private ["SQ", "testAttributedSubstring"]
+- !private ["SQ", "testJoined"]
+- !private ["SQ", "testSubstring"]
+- !private ["s25ExpressibleByArrayLiteralP", ""]
+- !private ["s25ExpressibleByArrayLiteralP", "init"]
+- !private ["s25ExpressibleByArrayLiteralP", "joined"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", ""]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "range"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "subscript"]
+- !private ["s25ExpressibleByFloatLiteralP", ""]
+- !private ["s27ExpressibleByIntegerLiteralP", "IntegerLiteralType"]
+- !private ["s27ExpressibleByIntegerLiteralP", ""]
+- !private ["s27ExpressibleByIntegerLiteralP", "init"]
+- !private ["s32ExpressibleByStringInterpolationP", ""]
+- !private ["s32ExpressibleByStringInterpolationP", "init"]
+- !private ["s32ExpressibleByStringInterpolationP", "range"]
+- !private ["s32ExpressibleByStringInterpolationP", "subscript"]
+- !private ["s26ExpressibleByStringLiteralP", ""]
+- !private ["s26ExpressibleByStringLiteralP", "init"]
+- !private ["s26ExpressibleByStringLiteralP", "range"]
+- !private ["s26ExpressibleByStringLiteralP", "subscript"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", ""]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "range"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "subscript"]
+- !private ["SF", ""]
+- !private ["SH", "NSAttributedString"]
+- !private ["SH", "NSFont"]
+- !private ["SH", "NSMutableAttributedString"]
+- !private ["SH", "NSRange"]
+- !private ["SH", "String"]
+- !private ["SH", "XCTAssertEqual"]
+- ["SH", ""]
+- !private ["SH", "addAttribute"]
+- !private ["SH", "attributedSubstring"]
+- !private ["SH", "callAsFunction"]
+- !private ["SH", "font"]
+- !private ["SH", "init"]
+- !private ["SH", "joined"]
+- !private ["SH", "range"]
+- !private ["SH", "subscript"]
+- !private ["SH", "substring"]
+- !private ["SH", "systemFont"]
+- !private ["SH", "testAddAttribute"]
+- !private ["SH", "testAddOperator"]
+- !private ["SH", "testAttributedSubstring"]
+- !private ["SH", "testJoined"]
+- !private ["SH", "testSubstring"]
+- !private ["So21NSAttributedStringKeya", "font"]
+- !private ["s25LosslessStringConvertibleP", "Element"]
+- !private ["s25LosslessStringConvertibleP", ""]
+- !private ["s25LosslessStringConvertibleP", "init"]
+- !private ["s25LosslessStringConvertibleP", "range"]
+- !private ["s25LosslessStringConvertibleP", "subscript"]
+- !private ["s10MirrorPathP", "init"]
+- !private ["s10MirrorPathP", "range"]
+- !private ["s10MirrorPathP", "subscript"]
+- !private ["SM", ""]
+- !private ["SM", "joined"]
+- !private ["10Foundation19MutableDataProtocolP", "joined"]
+- ["So18NSAttributedStringC", ""]
+- !private ["So18NSAttributedStringC", "addAttribute"]
+- !private ["So18NSAttributedStringC", "attributedSubstring"]
+- !private ["So18NSAttributedStringC", "init"]
+- !private ["So18NSAttributedStringC", "subscript"]
+- !private ["So18NSAttributedStringC", "substring"]
+- !private ["19SwiftificationTests018NSAttributedStringB0C", "NSAttributedString"]
+- !private ["19SwiftificationTests018NSAttributedStringB0C", "NSFont"]
+- !private ["19SwiftificationTests018NSAttributedStringB0C", "NSMutableAttributedString"]
+- !private ["19SwiftificationTests018NSAttributedStringB0C", "NSRange"]
+- !private ["19SwiftificationTests018NSAttributedStringB0C", "String"]
+- !private ["19SwiftificationTests018NSAttributedStringB0C", "XCTAssertEqual"]
+- ["19SwiftificationTests018NSAttributedStringB0C", ""]
+- ["19SwiftificationTests018NSAttributedStringB0C", "deinit"]
+- ["19SwiftificationTests018NSAttributedStringB0C", "init"]
+- ["19SwiftificationTests018NSAttributedStringB0C", "testAddAttribute"]
+- ["19SwiftificationTests018NSAttributedStringB0C", "testAddOperator"]
+- ["19SwiftificationTests018NSAttributedStringB0C", "testAttributedSubstring"]
+- ["19SwiftificationTests018NSAttributedStringB0C", "testJoined"]
+- ["19SwiftificationTests018NSAttributedStringB0C", "testSubstring"]
+- !private ["So8NSCodingP", ""]
+- !private ["So8NSCodingP", "addAttribute"]
+- !private ["So8NSCodingP", "attributedSubstring"]
+- !private ["So8NSCodingP", "init"]
+- !private ["So8NSCodingP", "range"]
+- !private ["So8NSCodingP", "subscript"]
+- !private ["So8NSCodingP", "substring"]
+- !private ["So8NSCodingP", "systemFont"]
+- !private ["So9NSCopyingP", "addAttribute"]
+- !private ["So9NSCopyingP", "attributedSubstring"]
+- !private ["So9NSCopyingP", "init"]
+- !private ["So9NSCopyingP", "range"]
+- !private ["So9NSCopyingP", "subscript"]
+- !private ["So9NSCopyingP", "substring"]
+- !private ["So9NSCopyingP", "systemFont"]
+- !private ["So6NSFontC", "systemFont"]
+- !private ["So21NSItemProviderReadingP", "range"]
+- !private ["So21NSItemProviderReadingP", "subscript"]
+- !private ["So21NSItemProviderWritingP", "range"]
+- !private ["So21NSItemProviderWritingP", "subscript"]
+- !private ["So25NSMutableAttributedStringC", "addAttribute"]
+- !private ["So25NSMutableAttributedStringC", "init"]
+- !private ["So16NSMutableCopyingP", "addAttribute"]
+- !private ["So16NSMutableCopyingP", "attributedSubstring"]
+- !private ["So16NSMutableCopyingP", "init"]
+- !private ["So16NSMutableCopyingP", "range"]
+- !private ["So16NSMutableCopyingP", "subscript"]
+- !private ["So16NSMutableCopyingP", "substring"]
+- !private ["So8NSObjectC", "NSAttributedString"]
+- !private ["So8NSObjectC", "NSFont"]
+- !private ["So8NSObjectC", "NSMutableAttributedString"]
+- !private ["So8NSObjectC", "NSRange"]
+- !private ["So8NSObjectC", "String"]
+- !private ["So8NSObjectC", "XCTAssertEqual"]
+- ["So8NSObjectC", ""]
+- !private ["So8NSObjectC", "addAttribute"]
+- !private ["So8NSObjectC", "attributedStringWithAttachment"]
+- !private ["So8NSObjectC", "attributedSubstring"]
+- !private ["So8NSObjectC", "attributedSubstringFromRange"]
+- ["So8NSObjectC", "init"]
+- !private ["So8NSObjectC", "range"]
+- !private ["So8NSObjectC", "rangeOfString"]
+- !private ["So8NSObjectC", "subscript"]
+- !private ["So8NSObjectC", "substring"]
+- !private ["So8NSObjectC", "systemFont"]
+- !private ["So8NSObjectC", "systemFontOfSize"]
+- ["So8NSObjectC", "testAddAttribute"]
+- ["So8NSObjectC", "testAddOperator"]
+- ["So8NSObjectC", "testAttributedSubstring"]
+- ["So8NSObjectC", "testCaseWithInvocation"]
+- ["So8NSObjectC", "testCaseWithSelector"]
+- ["So8NSObjectC", "testJoined"]
+- ["So8NSObjectC", "testSubstring"]
+- !private ["So8NSObjectP", "NSAttributedString"]
+- !private ["So8NSObjectP", "NSFont"]
+- !private ["So8NSObjectP", "NSMutableAttributedString"]
+- !private ["So8NSObjectP", "NSRange"]
+- !private ["So8NSObjectP", "String"]
+- !private ["So8NSObjectP", "XCTAssertEqual"]
+- ["So8NSObjectP", ""]
+- !private ["So8NSObjectP", "addAttribute"]
+- !private ["So8NSObjectP", "attributedStringWithAttachment"]
+- !private ["So8NSObjectP", "attributedSubstring"]
+- !private ["So8NSObjectP", "attributedSubstringFromRange"]
+- ["So8NSObjectP", "init"]
+- !private ["So8NSObjectP", "range"]
+- !private ["So8NSObjectP", "rangeOfString"]
+- !private ["So8NSObjectP", "subscript"]
+- !private ["So8NSObjectP", "substring"]
+- !private ["So8NSObjectP", "systemFont"]
+- !private ["So8NSObjectP", "systemFontOfSize"]
+- ["So8NSObjectP", "testAddAttribute"]
+- ["So8NSObjectP", "testAddOperator"]
+- ["So8NSObjectP", "testAttributedSubstring"]
+- ["So8NSObjectP", "testCaseWithInvocation"]
+- ["So8NSObjectP", "testCaseWithSelector"]
+- ["So8NSObjectP", "testJoined"]
+- ["So8NSObjectP", "testSubstring"]
+- !private ["So19NSPasteboardReadingP", "addAttribute"]
+- !private ["So19NSPasteboardReadingP", "attributedSubstring"]
+- !private ["So19NSPasteboardReadingP", "init"]
+- !private ["So19NSPasteboardReadingP", "range"]
+- !private ["So19NSPasteboardReadingP", "subscript"]
+- !private ["So19NSPasteboardReadingP", "substring"]
+- !private ["So19NSPasteboardWritingP", "addAttribute"]
+- !private ["So19NSPasteboardWritingP", "attributedSubstring"]
+- !private ["So19NSPasteboardWritingP", "init"]
+- !private ["So19NSPasteboardWritingP", "range"]
+- !private ["So19NSPasteboardWritingP", "subscript"]
+- !private ["So19NSPasteboardWritingP", "substring"]
+- !private ["So14NSSecureCodingP", "addAttribute"]
+- !private ["So14NSSecureCodingP", "attributedSubstring"]
+- !private ["So14NSSecureCodingP", "init"]
+- !private ["So14NSSecureCodingP", "range"]
+- !private ["So14NSSecureCodingP", "subscript"]
+- !private ["So14NSSecureCodingP", "substring"]
+- !private ["So14NSSecureCodingP", "systemFont"]
+- !private ["So8NSStringC", "range"]
+- !private ["So8NSStringC", "subscript"]
+- !private ["Sj", ""]
+- !private ["Sk", ""]
+- !private ["Sk", "callAsFunction"]
+- !private ["Sk", "joined"]
+- !private ["Sn", "callAsFunction"]
+- !private ["SX", "callAsFunction"]
+- !private ["Sm", ""]
+- !private ["Sm", "init"]
+- !private ["Sm", "joined"]
+- !private ["Sm", "range"]
+- !private ["Sm", "subscript"]
+- !private ["SY", ""]
+- !private ["SY", "font"]
+- !private ["ST", "Element"]
+- !private ["ST", ""]
+- !private ["ST", "callAsFunction"]
+- !private ["ST", "init"]
+- !private ["ST", "joined"]
+- !private ["ST", "range"]
+- !private ["ST", "subscript"]
+- !private ["s13SignedNumericP", ""]
+- !private ["Sx", ""]
+- !private ["SS", "init"]
+- !private ["SS", "range"]
+- !private ["SS", "subscript"]
+- !private ["Sy", "init"]
+- !private ["Sy", "range"]
+- !private ["Sy", "subscript"]
+- !private ["s16TextOutputStreamP", ""]
+- !private ["s16TextOutputStreamP", "init"]
+- !private ["s16TextOutputStreamP", "range"]
+- !private ["s16TextOutputStreamP", "subscript"]
+- !private ["s20TextOutputStreamableP", ""]
+- !private ["s20TextOutputStreamableP", "init"]
+- !private ["s20TextOutputStreamableP", "range"]
+- !private ["s20TextOutputStreamableP", "subscript"]
+- !private ["So11XCTActivityP", "NSAttributedString"]
+- !private ["So11XCTActivityP", "NSFont"]
+- !private ["So11XCTActivityP", "NSMutableAttributedString"]
+- !private ["So11XCTActivityP", "NSRange"]
+- !private ["So11XCTActivityP", "String"]
+- !private ["So11XCTActivityP", "XCTAssertEqual"]
+- ["So11XCTActivityP", ""]
+- ["So11XCTActivityP", "init"]
+- ["So11XCTActivityP", "testAddAttribute"]
+- ["So11XCTActivityP", "testAddOperator"]
+- ["So11XCTActivityP", "testAttributedSubstring"]
+- ["So11XCTActivityP", "testJoined"]
+- ["So11XCTActivityP", "testSubstring"]
+- !private ["So17XCTWaiterDelegateP", "NSAttributedString"]
+- !private ["So17XCTWaiterDelegateP", "NSFont"]
+- !private ["So17XCTWaiterDelegateP", "NSMutableAttributedString"]
+- !private ["So17XCTWaiterDelegateP", "NSRange"]
+- !private ["So17XCTWaiterDelegateP", "String"]
+- !private ["So17XCTWaiterDelegateP", "XCTAssertEqual"]
+- ["So17XCTWaiterDelegateP", ""]
+- ["So17XCTWaiterDelegateP", "init"]
+- ["So17XCTWaiterDelegateP", "testAddAttribute"]
+- ["So17XCTWaiterDelegateP", "testAddOperator"]
+- ["So17XCTWaiterDelegateP", "testAttributedSubstring"]
+- ["So17XCTWaiterDelegateP", "testJoined"]
+- ["So17XCTWaiterDelegateP", "testSubstring"]
+- !private ["So6XCTestC", "NSAttributedString"]
+- !private ["So6XCTestC", "NSFont"]
+- !private ["So6XCTestC", "NSMutableAttributedString"]
+- !private ["So6XCTestC", "NSRange"]
+- !private ["So6XCTestC", "String"]
+- !private ["So6XCTestC", "XCTAssertEqual"]
+- ["So6XCTestC", ""]
+- ["So6XCTestC", "init"]
+- ["So6XCTestC", "testAddAttribute"]
+- ["So6XCTestC", "testAddOperator"]
+- ["So6XCTestC", "testAttributedSubstring"]
+- ["So6XCTestC", "testCaseWithInvocation"]
+- ["So6XCTestC", "testCaseWithSelector"]
+- ["So6XCTestC", "testJoined"]
+- ["So6XCTestC", "testSubstring"]
+- !private ["So10XCTestCaseC", "NSAttributedString"]
+- !private ["So10XCTestCaseC", "NSFont"]
+- !private ["So10XCTestCaseC", "NSMutableAttributedString"]
+- !private ["So10XCTestCaseC", "NSRange"]
+- !private ["So10XCTestCaseC", "String"]
+- !private ["So10XCTestCaseC", "XCTAssertEqual"]
+- ["So10XCTestCaseC", ""]
+- ["So10XCTestCaseC", "init"]
+- ["So10XCTestCaseC", "testAddAttribute"]
+- ["So10XCTestCaseC", "testAddOperator"]
+- ["So10XCTestCaseC", "testAttributedSubstring"]
+- ["So10XCTestCaseC", "testJoined"]
+- ["So10XCTestCaseC", "testSubstring"]
+- !private ["s14_ArrayProtocolP", "joined"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "init"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "range"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "subscript"]
+- !private ["s24_DestructorSafeContainerP", "joined"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", ""]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "range"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "subscript"]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "range"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "subscript"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", ""]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "range"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "subscript"]
+- !private ["s19_HasContiguousBytesP", "init"]
+- !private ["s19_HasContiguousBytesP", "joined"]
+- !private ["s19_HasContiguousBytesP", "range"]
+- !private ["s19_HasContiguousBytesP", "subscript"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", ""]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "font"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "joined"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "range"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "subscript"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "NSAttributedString"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "NSFont"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "NSMutableAttributedString"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "NSRange"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "String"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "XCTAssertEqual"]
+- ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "addAttribute"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "attributedSubstring"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "range"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "subscript"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "substring"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "systemFont"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "testAddAttribute"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "testAddOperator"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "testAttributedSubstring"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "testJoined"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "testSubstring"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "NSAttributedString"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "NSFont"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "NSMutableAttributedString"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "NSRange"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "String"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "XCTAssertEqual"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", ""]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "addAttribute"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "attributedSubstring"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "init"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "range"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "subscript"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "substring"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "systemFont"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "testAddAttribute"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "testAddOperator"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "testAttributedSubstring"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "testJoined"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "testSubstring"]
+- !private ["So8_NSRangeV", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "_ObjectiveCType"]
+- !private ["s21_ObjectiveCBridgeableP", "_bridgeToObjectiveC"]
+- !private ["s21_ObjectiveCBridgeableP", "_conditionallyBridgeFromObjectiveC"]
+- !private ["s21_ObjectiveCBridgeableP", "_forceBridgeFromObjectiveC"]
+- !private ["s21_ObjectiveCBridgeableP", "_unconditionallyBridgeFromObjectiveC"]
+- !private ["s21_ObjectiveCBridgeableP", "font"]
+- !private ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "joined"]
+- !private ["s21_ObjectiveCBridgeableP", "range"]
+- !private ["s21_ObjectiveCBridgeableP", "subscript"]
+- !private ["s20_SwiftNewtypeWrapperP", "font"]
+- !private ["So13CKRecordValueP", "range"]
+- !private ["So13CKRecordValueP", "subscript"]
+depends-nominal:
+- !private "s18AdditiveArithmeticP"
+- !private "Sa"
+- !private "SK"
+- !private "8CloudKit21CKRecordValueProtocolP"
+- "s7CVarArgP"
+- !private "Sl"
+- !private "SL"
+- !private "10Foundation15ContiguousBytesP"
+- "s28CustomDebugStringConvertibleP"
+- !private "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- !private "10Foundation12DataProtocolP"
+- !private "Se"
+- !private "SE"
+- "SQ"
+- !private "s25ExpressibleByArrayLiteralP"
+- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s25ExpressibleByFloatLiteralP"
+- !private "s27ExpressibleByIntegerLiteralP"
+- !private "s32ExpressibleByStringInterpolationP"
+- !private "s26ExpressibleByStringLiteralP"
+- !private "s33ExpressibleByUnicodeScalarLiteralP"
+- !private "SF"
+- "SH"
+- !private "So21NSAttributedStringKeya"
+- !private "s25LosslessStringConvertibleP"
+- !private "s10MirrorPathP"
+- !private "SM"
+- !private "10Foundation19MutableDataProtocolP"
+- "So18NSAttributedStringC"
+- "19SwiftificationTests018NSAttributedStringB0C"
+- !private "So8NSCodingP"
+- !private "So9NSCopyingP"
+- !private "So6NSFontC"
+- !private "So21NSItemProviderReadingP"
+- !private "So21NSItemProviderWritingP"
+- !private "So25NSMutableAttributedStringC"
+- !private "So16NSMutableCopyingP"
+- "So8NSObjectC"
+- "So8NSObjectP"
+- !private "So19NSPasteboardReadingP"
+- !private "So19NSPasteboardWritingP"
+- !private "So14NSSecureCodingP"
+- !private "So8NSStringC"
+- !private "Sj"
+- !private "Sk"
+- !private "Sn"
+- !private "SX"
+- !private "Sm"
+- !private "SY"
+- !private "ST"
+- !private "s13SignedNumericP"
+- !private "Sx"
+- !private "SS"
+- !private "Sy"
+- !private "s16TextOutputStreamP"
+- !private "s20TextOutputStreamableP"
+- "So11XCTActivityP"
+- "So17XCTWaiterDelegateP"
+- "So6XCTestC"
+- "So10XCTestCaseC"
+- !private "s14_ArrayProtocolP"
+- !private "s30_CustomPlaygroundQuickLookableP"
+- !private "s24_DestructorSafeContainerP"
+- !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- !private "s35_ExpressibleByBuiltinIntegerLiteralP"
+- !private "s34_ExpressibleByBuiltinStringLiteralP"
+- !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- !private "s19_HasContiguousBytesP"
+- !private "s35_HasCustomAnyHashableRepresentationP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- "10Foundation37_KeyValueCodingAndObservingPublishingP"
+- !private "So8_NSRangeV"
+- !private "s21_ObjectiveCBridgeableP"
+- !private "s20_SwiftNewtypeWrapperP"
+- !private "So13CKRecordValueP"
+depends-dynamic-lookup:
+depends-external:
+- "/Users/jessicalemon/Projects/Swiftification/.build/x86_64-apple-macosx/debug/Swiftification.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/XPC.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/ObjectiveC.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/CoreData.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/CoreImage.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/Combine.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/QuartzCore.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/Dispatch.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/Metal.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/Darwin.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/CoreLocation.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/Foundation.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/CoreFoundation.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/CoreGraphics.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/Swift.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/IOKit.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/CloudKit.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/AppKit.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/SwiftOnoneSupport.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib/XCTest.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk/usr/include/mach-o/dyld.modulemap"
+- "/Users/jessicalemon/Projects/Swiftification/.build/x86_64-apple-macosx/debug/Swiftification.build/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Modules/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk/usr/include/mach-o/compact_unwind_encoding.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk/usr/include/xpc/XPC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk/System/Library/Frameworks/CoreData.framework/Headers/CoreData.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/Dispatch.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CoreLocation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk/System/Library/Frameworks/ApplicationServices.framework/Headers/ApplicationServices.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk/System/Library/Frameworks/CloudKit.framework/Headers/CloudKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk/System/Library/Frameworks/AppKit.framework/Headers/AppKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTest.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "15b52f592b10b36fa844b0a2300deeb5"

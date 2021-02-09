@@ -1,0 +1,18 @@
+version: "Apple Swift version 5.3.2 (swiftlang-1200.0.45 clang-1200.0.32.28)"
+options: "86f9741d3fa4ed7cb08ab451f73720ee"
+build_time: [1612912825, 197920000]
+inputs:
+  "/Users/jessicalemon/Projects/Swiftification/Sources/Swiftification/Array.swift": [1612912147, 385855193]
+  "/Users/jessicalemon/Projects/Swiftification/Sources/Swiftification/CaseCountable.swift": [1612912147, 386163366]
+  "/Users/jessicalemon/Projects/Swiftification/Sources/Swiftification/Dictionary.swift": [1612912147, 386491111]
+  "/Users/jessicalemon/Projects/Swiftification/Sources/Swiftification/Double.swift": [1612912147, 386778382]
+  "/Users/jessicalemon/Projects/Swiftification/Sources/Swiftification/Int.swift": [1612912147, 387314525]
+  "/Users/jessicalemon/Projects/Swiftification/Sources/Swiftification/JSONSerialization.swift": [1612912147, 387600568]
+  "/Users/jessicalemon/Projects/Swiftification/Sources/Swiftification/Memoize.swift": [1612912147, 387916351]
+  "/Users/jessicalemon/Projects/Swiftification/Sources/Swiftification/NSAttributedString.swift": [1612912147, 388204347]
+  "/Users/jessicalemon/Projects/Swiftification/Sources/Swiftification/NSRegularExpression.swift": [1612912147, 388491610]
+  "/Users/jessicalemon/Projects/Swiftification/Sources/Swiftification/NSTextCheckingResult.swift": [1612912147, 388752937]
+  "/Users/jessicalemon/Projects/Swiftification/Sources/Swiftification/Sequence.swift": [1612912147, 389098043]
+  "/Users/jessicalemon/Projects/Swiftification/Sources/Swiftification/String.swift": [1612912147, 389404935]
+  "/Users/jessicalemon/Projects/Swiftification/Sources/Swiftification/URL.swift": [1612912147, 389975014]
+  "/Users/jessicalemon/Projects/Swiftification/.build/x86_64-apple-macosx/debug/Swiftification.build/DerivedSources/resource_bundle_accessor.swift": [1612912825, 150394981]

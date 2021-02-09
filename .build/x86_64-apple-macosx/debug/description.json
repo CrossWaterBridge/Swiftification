@@ -1,0 +1,46 @@
+{
+  "builtTestProducts" : [
+    {
+      "binaryPath" : "\/Users\/jessicalemon\/Projects\/Swiftification\/.build\/x86_64-apple-macosx\/debug\/SwiftificationPackageTests.xctest\/Contents\/MacOS\/SwiftificationPackageTests",
+      "packageName" : "Swiftification",
+      "productName" : "SwiftificationPackageTests"
+    }
+  ],
+  "copyCommands" : {
+    "\/Users\/jessicalemon\/Projects\/Swiftification\/.build\/x86_64-apple-macosx\/debug\/Swiftification_Swiftification.bundle\/Resources" : {
+      "inputs" : [
+        {
+          "kind" : "directory",
+          "name" : "\/Users\/jessicalemon\/Projects\/Swiftification\/Sources\/Swiftification\/Resources"
+        }
+      ],
+      "outputs" : [
+        {
+          "kind" : "directory",
+          "name" : "\/Users\/jessicalemon\/Projects\/Swiftification\/.build\/x86_64-apple-macosx\/debug\/Swiftification_Swiftification.bundle\/Resources"
+        }
+      ]
+    },
+    "\/Users\/jessicalemon\/Projects\/Swiftification\/.build\/x86_64-apple-macosx\/debug\/Swiftification_SwiftificationTests.bundle\/Resources" : {
+      "inputs" : [
+        {
+          "kind" : "directory",
+          "name" : "\/Users\/jessicalemon\/Projects\/Swiftification\/Tests\/SwiftificationTests\/Resources"
+        }
+      ],
+      "outputs" : [
+        {
+          "kind" : "directory",
+          "name" : "\/Users\/jessicalemon\/Projects\/Swiftification\/.build\/x86_64-apple-macosx\/debug\/Swiftification_SwiftificationTests.bundle\/Resources"
+        }
+      ]
+    }
+  },
+  "swiftTargetMap" : {
+    "C.Swiftification-debug.module" : "Swiftification",
+    "C.SwiftificationTests-debug.module" : "SwiftificationTests"
+  },
+  "testDiscoveryCommands" : {
+
+  }
+}

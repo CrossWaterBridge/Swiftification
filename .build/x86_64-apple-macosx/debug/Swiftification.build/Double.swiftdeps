@@ -1,0 +1,258 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+provides-nominal:
+provides-member:
+- ["Sd", ""]
+- ["Sd", "random"]
+provides-dynamic-lookup:
+depends-top-level:
+- !private "%"
+- !private "*"
+- !private "+"
+- !private "-"
+- !private "/"
+- "Double"
+- "FloatLiteralType"
+- "IntegerLiteralType"
+- !private "RAND_MAX"
+- !private "UInt32"
+- !private "arc4random"
+depends-member:
+- !private ["s18AdditiveArithmeticP", "Double"]
+- !private ["s18AdditiveArithmeticP", "RAND_MAX"]
+- !private ["s18AdditiveArithmeticP", "UInt32"]
+- !private ["s18AdditiveArithmeticP", ""]
+- !private ["s18AdditiveArithmeticP", "arc4random"]
+- !private ["s18AdditiveArithmeticP", "greatestFiniteMagnitude"]
+- !private ["s18AdditiveArithmeticP", "init"]
+- !private ["SB", "Double"]
+- !private ["SB", "RAND_MAX"]
+- !private ["SB", "UInt32"]
+- !private ["SB", "arc4random"]
+- !private ["SB", "greatestFiniteMagnitude"]
+- !private ["SB", "init"]
+- !private ["Sz", ""]
+- !private ["Sz", "init"]
+- !private ["s7CVarArgP", "Double"]
+- !private ["s7CVarArgP", "RAND_MAX"]
+- !private ["s7CVarArgP", "UInt32"]
+- !private ["s7CVarArgP", ""]
+- !private ["s7CVarArgP", "arc4random"]
+- !private ["s7CVarArgP", "greatestFiniteMagnitude"]
+- !private ["s7CVarArgP", "init"]
+- !private ["SL", "Double"]
+- !private ["SL", "RAND_MAX"]
+- !private ["SL", "UInt32"]
+- !private ["SL", ""]
+- !private ["SL", "arc4random"]
+- !private ["SL", "greatestFiniteMagnitude"]
+- !private ["SL", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "Double"]
+- !private ["s28CustomDebugStringConvertibleP", "RAND_MAX"]
+- !private ["s28CustomDebugStringConvertibleP", "UInt32"]
+- !private ["s28CustomDebugStringConvertibleP", "arc4random"]
+- !private ["s28CustomDebugStringConvertibleP", "greatestFiniteMagnitude"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s17CustomReflectableP", "Double"]
+- !private ["s17CustomReflectableP", "RAND_MAX"]
+- !private ["s17CustomReflectableP", "UInt32"]
+- !private ["s17CustomReflectableP", "arc4random"]
+- !private ["s17CustomReflectableP", "greatestFiniteMagnitude"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s23CustomStringConvertibleP", "Double"]
+- !private ["s23CustomStringConvertibleP", "RAND_MAX"]
+- !private ["s23CustomStringConvertibleP", "UInt32"]
+- !private ["s23CustomStringConvertibleP", ""]
+- !private ["s23CustomStringConvertibleP", "arc4random"]
+- !private ["s23CustomStringConvertibleP", "greatestFiniteMagnitude"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["Se", "Double"]
+- !private ["Se", "RAND_MAX"]
+- !private ["Se", "UInt32"]
+- !private ["Se", "arc4random"]
+- !private ["Se", "greatestFiniteMagnitude"]
+- !private ["Se", "init"]
+- ["Sd", "Double"]
+- !private ["Sd", "RAND_MAX"]
+- !private ["Sd", "UInt32"]
+- ["Sd", ""]
+- !private ["Sd", "arc4random"]
+- !private ["Sd", "greatestFiniteMagnitude"]
+- !private ["Sd", "init"]
+- ["Sd", "random"]
+- !private ["SE", "Double"]
+- !private ["SE", "RAND_MAX"]
+- !private ["SE", "UInt32"]
+- !private ["SE", "arc4random"]
+- !private ["SE", "greatestFiniteMagnitude"]
+- !private ["SE", "init"]
+- !private ["SQ", "Double"]
+- !private ["SQ", "RAND_MAX"]
+- !private ["SQ", "UInt32"]
+- !private ["SQ", ""]
+- !private ["SQ", "arc4random"]
+- !private ["SQ", "greatestFiniteMagnitude"]
+- !private ["SQ", "init"]
+- !private ["s25ExpressibleByFloatLiteralP", "Double"]
+- !private ["s25ExpressibleByFloatLiteralP", "RAND_MAX"]
+- !private ["s25ExpressibleByFloatLiteralP", "UInt32"]
+- !private ["s25ExpressibleByFloatLiteralP", ""]
+- !private ["s25ExpressibleByFloatLiteralP", "arc4random"]
+- !private ["s25ExpressibleByFloatLiteralP", "greatestFiniteMagnitude"]
+- !private ["s25ExpressibleByFloatLiteralP", "init"]
+- !private ["s27ExpressibleByIntegerLiteralP", "Double"]
+- !private ["s27ExpressibleByIntegerLiteralP", "RAND_MAX"]
+- !private ["s27ExpressibleByIntegerLiteralP", "UInt32"]
+- !private ["s27ExpressibleByIntegerLiteralP", ""]
+- !private ["s27ExpressibleByIntegerLiteralP", "arc4random"]
+- !private ["s27ExpressibleByIntegerLiteralP", "greatestFiniteMagnitude"]
+- !private ["s27ExpressibleByIntegerLiteralP", "init"]
+- !private ["s17FixedWidthIntegerP", "init"]
+- !private ["SF", "Double"]
+- !private ["SF", "RAND_MAX"]
+- !private ["SF", "UInt32"]
+- !private ["SF", ""]
+- !private ["SF", "arc4random"]
+- !private ["SF", "greatestFiniteMagnitude"]
+- !private ["SF", "init"]
+- !private ["SH", "Double"]
+- !private ["SH", "RAND_MAX"]
+- !private ["SH", "UInt32"]
+- !private ["SH", ""]
+- !private ["SH", "arc4random"]
+- !private ["SH", "greatestFiniteMagnitude"]
+- !private ["SH", "init"]
+- !private ["s25LosslessStringConvertibleP", "Double"]
+- !private ["s25LosslessStringConvertibleP", "RAND_MAX"]
+- !private ["s25LosslessStringConvertibleP", "UInt32"]
+- !private ["s25LosslessStringConvertibleP", ""]
+- !private ["s25LosslessStringConvertibleP", "arc4random"]
+- !private ["s25LosslessStringConvertibleP", "greatestFiniteMagnitude"]
+- !private ["s25LosslessStringConvertibleP", "init"]
+- !private ["So8NSCodingP", ""]
+- !private ["Sj", "Double"]
+- !private ["Sj", "RAND_MAX"]
+- !private ["Sj", "UInt32"]
+- !private ["Sj", ""]
+- !private ["Sj", "arc4random"]
+- !private ["Sj", "greatestFiniteMagnitude"]
+- !private ["Sj", "init"]
+- !private ["s10SIMDScalarP", "Double"]
+- !private ["s10SIMDScalarP", "RAND_MAX"]
+- !private ["s10SIMDScalarP", "UInt32"]
+- !private ["s10SIMDScalarP", "arc4random"]
+- !private ["s10SIMDScalarP", "greatestFiniteMagnitude"]
+- !private ["s10SIMDScalarP", "init"]
+- !private ["s13SignedNumericP", "Double"]
+- !private ["s13SignedNumericP", "RAND_MAX"]
+- !private ["s13SignedNumericP", "UInt32"]
+- !private ["s13SignedNumericP", ""]
+- !private ["s13SignedNumericP", "arc4random"]
+- !private ["s13SignedNumericP", "greatestFiniteMagnitude"]
+- !private ["s13SignedNumericP", "init"]
+- !private ["Sx", "Double"]
+- !private ["Sx", "RAND_MAX"]
+- !private ["Sx", "UInt32"]
+- !private ["Sx", ""]
+- !private ["Sx", "arc4random"]
+- !private ["Sx", "greatestFiniteMagnitude"]
+- !private ["Sx", "init"]
+- !private ["s20TextOutputStreamableP", "Double"]
+- !private ["s20TextOutputStreamableP", "RAND_MAX"]
+- !private ["s20TextOutputStreamableP", "UInt32"]
+- !private ["s20TextOutputStreamableP", "arc4random"]
+- !private ["s20TextOutputStreamableP", "greatestFiniteMagnitude"]
+- !private ["s20TextOutputStreamableP", "init"]
+- !private ["s6UInt32V", "init"]
+- !private ["SU", "init"]
+- !private ["s15_CVarArgAlignedP", "Double"]
+- !private ["s15_CVarArgAlignedP", "RAND_MAX"]
+- !private ["s15_CVarArgAlignedP", "UInt32"]
+- !private ["s15_CVarArgAlignedP", "arc4random"]
+- !private ["s15_CVarArgAlignedP", "greatestFiniteMagnitude"]
+- !private ["s15_CVarArgAlignedP", "init"]
+- !private ["s22_CVarArgPassedAsDoubleP", "Double"]
+- !private ["s22_CVarArgPassedAsDoubleP", "RAND_MAX"]
+- !private ["s22_CVarArgPassedAsDoubleP", "UInt32"]
+- !private ["s22_CVarArgPassedAsDoubleP", "arc4random"]
+- !private ["s22_CVarArgPassedAsDoubleP", "greatestFiniteMagnitude"]
+- !private ["s22_CVarArgPassedAsDoubleP", "init"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "Double"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "RAND_MAX"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "UInt32"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "arc4random"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "greatestFiniteMagnitude"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "init"]
+- !private ["s33_ExpressibleByBuiltinFloatLiteralP", "Double"]
+- !private ["s33_ExpressibleByBuiltinFloatLiteralP", "RAND_MAX"]
+- !private ["s33_ExpressibleByBuiltinFloatLiteralP", "UInt32"]
+- !private ["s33_ExpressibleByBuiltinFloatLiteralP", "arc4random"]
+- !private ["s33_ExpressibleByBuiltinFloatLiteralP", "greatestFiniteMagnitude"]
+- !private ["s33_ExpressibleByBuiltinFloatLiteralP", "init"]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "Double"]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "RAND_MAX"]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "UInt32"]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "arc4random"]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "greatestFiniteMagnitude"]
+- ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "Double"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "RAND_MAX"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "UInt32"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "arc4random"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "greatestFiniteMagnitude"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "Double"]
+- !private ["s21_ObjectiveCBridgeableP", "RAND_MAX"]
+- !private ["s21_ObjectiveCBridgeableP", "UInt32"]
+- !private ["s21_ObjectiveCBridgeableP", "arc4random"]
+- !private ["s21_ObjectiveCBridgeableP", "greatestFiniteMagnitude"]
+- !private ["s21_ObjectiveCBridgeableP", "init"]
+depends-nominal:
+- !private "s18AdditiveArithmeticP"
+- !private "SB"
+- !private "Sz"
+- !private "s7CVarArgP"
+- !private "SL"
+- !private "s28CustomDebugStringConvertibleP"
+- !private "s17CustomReflectableP"
+- !private "s23CustomStringConvertibleP"
+- !private "Se"
+- "Sd"
+- !private "SE"
+- !private "SQ"
+- !private "s25ExpressibleByFloatLiteralP"
+- !private "s27ExpressibleByIntegerLiteralP"
+- !private "s17FixedWidthIntegerP"
+- !private "SF"
+- !private "SH"
+- !private "s25LosslessStringConvertibleP"
+- !private "So8NSCodingP"
+- !private "Sj"
+- !private "s10SIMDScalarP"
+- !private "s13SignedNumericP"
+- !private "Sx"
+- !private "s20TextOutputStreamableP"
+- !private "s6UInt32V"
+- !private "SU"
+- !private "s15_CVarArgAlignedP"
+- !private "s22_CVarArgPassedAsDoubleP"
+- !private "s30_CustomPlaygroundQuickLookableP"
+- !private "s33_ExpressibleByBuiltinFloatLiteralP"
+- "s35_ExpressibleByBuiltinIntegerLiteralP"
+- !private "s35_HasCustomAnyHashableRepresentationP"
+- !private "s21_ObjectiveCBridgeableP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk/usr/include/mach-o/dyld.modulemap"
+- "/Users/jessicalemon/Projects/Swiftification/.build/x86_64-apple-macosx/debug/Swiftification.build/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk/usr/include/mach-o/compact_unwind_encoding.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk/usr/include/xpc/XPC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/Dispatch.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk/System/Library/Frameworks/ApplicationServices.framework/Headers/ApplicationServices.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "986403e4c1e1b919eece7b698d53d8bf"
