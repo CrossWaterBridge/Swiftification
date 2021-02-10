@@ -62,12 +62,18 @@ class NSAttributedStringTests: XCTestCase {
         let string = "This is a string with some good stuff in it"
         let range = string.range(of: "good")!
         let nsRange = NSRange(range, in: string)
-        
+
+        #if os(iOS) || os(watchOS) || os(tvOS)
+        let font = UIFont.systemFont(ofSize: 55)
+        #elseif os(macOS)
+        let font = NSFont.systemFont(ofSize: 55)
+        #endif
+
         let attributedString1 = NSMutableAttributedString(string: string)
-        attributedString1.addAttribute(.font, value: UIFont.systemFont(ofSize: 55), range: range)
+        attributedString1.addAttribute(.font, value: font, range: range)
         
         let attributedString2 = NSMutableAttributedString(string: string)
-        attributedString2.addAttribute(.font, value: UIFont.systemFont(ofSize: 55), range: nsRange)
+        attributedString2.addAttribute(.font, value: font, range: nsRange)
         
         XCTAssertEqual(attributedString1, attributedString2)
     }
